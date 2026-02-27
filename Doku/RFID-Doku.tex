@@ -1,9 +1,11 @@
 \documentclass[a4paper,11pt]{article}
+
 \usepackage{htlprotokoll}
+\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-\usepackage{lmodern} %Schriftart
+\usepackage{lmodern} % Schriftart
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -12,7 +14,8 @@
 \crefname{figure}{Abb.}{Abb.}
 \crefname{table}{Tab.}{Tab.}
 \usepackage{float}
-
+\usepackage{tikz}
+\setlength{\parindent}{0pt}
 
 \labortext{zum Projekt}
 \titel{RFID}
@@ -26,94 +29,22 @@
 {Mitarbeiter}{}
 {Mitarbeiter}{}
 
-\messobjekte{Messung A \\ Messung B}
-\geraete{TTi 24-6.1 \\ Tektronix TBS 1052B}
+\messobjekte{RFID-Lesegerät \\ RFID-Tag}
+\geraete{Voltcraft VC271 TRMS \\ Tektronix TBS 1052B \\ HAMEG LC-Meter 1880 \\ EMG 18135 Power Supply \\ Hameg 10Mhz Function Generator HM8030-6 \\ RSDS 1104CFL Digital Storage Oscilloscope}
 
 \begin{document}
-	
-	% Deckblatt
-	\protokolldeckblatt
-	
-	% Inhaltsverzeichnis
-	\tableofcontents
-	\newpage
-	
-	
-	% Start mit Text
-	\section*{Vorgaben}
-	\begin{Center}
-		$U_{e}=12V,U_{a}=9V,f_{r}=60kHz,P_{e}=P_{a}=3W$
-	\end{Center}
-	\section{Aufbau der NE555 Timerschaltung}
-	Ziel dieser Aufgabe ist es mithilfe eines NE555-Timers ein Rechteckssignal für die weitere Schaltung zu erzeugen.
-	\subsection{Schaltung}
-	Die Schaltung \cref{fig:schaltung_ne555} besteht aus einem NE555 Timerbaustein
-	\begin{figure}[h]
-		\centering
-		
+  % Deckblatt
+  \protokolldeckblatt
 
-		\caption{Schaltung der Timerschaltung}
-		\label{fig:schaltung_ne555}
-	\end{figure}
-	
-	\subsection{Messvorgang}
-	\subsection{Messergebnis}
-	\subsection{Interpretation}
-	
-	
-	\section{Aufbau der Signalverzögerung und MOSFET-Endstufe}
-	In dieser Aufgabe soll die bestehende Schaltung um eine Signalverzögerung, eine MOSFET-Treiberstufe und eine MOSFET-Gegentaktendstufe erweitert werden. Diese Erweiterungen dienen dazu, das PWM-Signal zu verzögern, die MOSFETs sicher anzusteuern und eine leistungsfähige Endstufe zu realisieren.
-	
-	\subsection{Schaltung}
-	
-	\begin{figure}[h]
-		\centering
-		
+  % Inhaltsverzeichnis
+  \tableofcontents
+  \newpage
 
-		\caption{Schaltung der Signalverzögerung und MOSFET-Endstufe}
-		\label{fig:schaltung_endstufe}
-	\end{figure}
-	
-	
-	
-	
-	\noindent
-	\textbf{Signalverzögerung:} Das PWM-Signal wird durch die NAND-Gatter in Kombination mit den RC-Gliedern verzögert. Dies sorgt für eine Totzeit, um gleichzeitiges Durchschalten der MOSFETs zu vermeiden.
-	\\
-	\textbf{MOSFET-Treiber:} Die verzögerten Signale werden durch mehrere CMOS-Inverter verstärkt. Diese dienen als Treiberstufe, um die MOSFETs mit ausreichend Spannung und Strom anzusteuern und schnelles Schalten zu ermöglichen.
-	\\
-	\textbf{MOSFET Gegentakt-Endstufe:} Die verstärkten Signale steuern die MOSFET-Endstufe, welche aus Q4 und Q5 besteht. Diese erzeugt ein leistungsstarkes PWM-Signal.
-	
-	\subsection{Messvorgang}
-	\subsection{Messergebnis}
-	\subsection{Interpretation}
-	
-	\section{Aufbau des Übertragers}
-	In dieser Aufgabe soll die bestehende Schaltung um eine Signalverzögerung, eine MOSFET-Treiberstufe und eine MOSFET-Gegentaktendstufe erweitert werden. Diese Erweiterungen dienen dazu, das PWM-Signal zu verzögern, die MOSFETs sicher anzusteuern und eine leistungsfähige Endstufe zu realisieren.
-	
-	\subsection{Schaltung und Berechnung}
-	Berechnet wird aus der Formel für eine Rahmenspule:
-	\[
-		L = N^2 \cdot d \cdot 10^{-6}
-	\]
-	wird zu:
-	\[		
-		d = \frac{L}{N^2 \cdot 10^{-6}} = \frac{150\,\mu H}{30^2 \cdot 10^{-6}} = 0,166666
-	\]
-	
-	
-	\begin{figure}[h]
-		\centering
-		
-		
-		\caption{Schaltung der Signalverzögerung und MOSFET-Endstufe}
-		\label{fig:schaltung_übertrager}
-	\end{figure}
-	
+  % Start mit Text
+  \section*{EInleitung: RFID}
+  RFID (Radio-Frequency Identification) ermöglicht die kontaktlose Identifikation und Datenübertragung über elektromagnetische Felder. Ein RFID-System besteht aus einem Lesegerät (Reader) und einem Transponder (Tag). Das Lesegerät erzeugt über eine Spule ein HF-Feld, das den Tag mit Energie versorgt und die Kommunikation ermöglicht.
 
-	
-	\subsection{Messvorgang}
-	\subsection{Messergebnis}
-	\subsection{Interpretation}
-	
+  \input{kapitel1_ne555}
+  \input{kapitel2_signalverzoegerung}
+  \input{kapitel3_uebertrager}
 \end{document}

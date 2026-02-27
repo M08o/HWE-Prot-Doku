@@ -1,0 +1,31 @@
+\section{Aufbau des Übertragers}
+In dieser Aufgabe wird die bestehende Schaltung um einen gleichspannungssperrenden Ausgangskondensator und den Übertrager erweitert. Der Kondensator blockiert den Gleichspannungsanteil der MOSFET-Endstufe, sodass am Übertrager nur der Wechselspannungsanteil anliegt. Der Übertrager wird als Rahmenspule ausgeführt und auf eine gewünschte Induktivität von $150\,\mu H$ ausgelegt.
+
+\subsection{Schaltung und Berechnung}
+Berechnet wird aus der Formel für eine Rahmenspule:
+\[ 
+  L = N^2 \cdot d \cdot 10^{-6}
+\]
+Umgestellt auf die Windungszahl:
+\[ 
+  N = \sqrt{\frac{L}{d \cdot 10^{-6}}}
+\]
+mit $L=150\,\mu H$ und $d=6{,}5\,cm$:
+\[ 
+  N = \sqrt{\frac{150\,\mu H}{0{,}65\, m \cdot 10^{-6}}} \approx 48 \,\text{Windungen}
+\]
+Anschließend wird die Schaltung \cref{fig:uebertrager_ausgang} aufgebaut.
+
+\begin{figure}[H]
+  \centering
+  \caption{Ausgangsschaltung des Lesegeräts}
+  \label{fig:uebertrager_ausgang}
+\end{figure}
+
+\subsection{Messvorgang}
+Der Übertrager wird daher mit rund 48 Windungen gewickelt und die Induktivität mithilfe des LCR-Meters bestimmt.
+
+\subsection{Messergebnis}
+
+\subsection{Interpretation}
+Die Dimensionierung mit $d=6{,}5\,cm$ ergibt eine Windungszahl von etwa fünf und erfüllt damit die geforderte Induktivität von $150\,\mu H$. Der Serienkondensator erfüllt seine Aufgabe, indem er den Gleichspannungsanteil sperrt und den Übertrager ausschließlich mit Wechselspannung speist.
