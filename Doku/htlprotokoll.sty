@@ -1,0 +1,165 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{htlprotokoll}[2026/02/20 Protokoll-Deckblatt]
+
+% --- Pakete ---
+\RequirePackage[margin=18mm]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[ngerman]{babel}
+\RequirePackage{array}
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage{tabularx}
+\RequirePackage{ragged2e}
+\RequirePackage{helvet}
+\RequirePackage{tikz}
+
+% HTL Farben
+\definecolor{htlgreen}{RGB}{156, 206, 43}
+\definecolor{htlgray}{RGB}{89, 91, 96}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- helpers ---
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}m{#1}}
+\newcommand{\cellpad}{\rule{0pt}{6ex}} % consistent row height
+
+% --- Platzhalter ---
+\newcommand{\leer}{}
+
+% =================================================
+% Defaults (werden über Setter überschrieben)
+% =================================================
+\newcommand{\htl@titel}{}
+\newcommand{\htl@klasse}{}
+\newcommand{\htl@datum}{}
+\newcommand{\htl@lehrer}{}
+\newcommand{\htl@labortext}{zur Laborübung}
+\newcommand{\htl@messobjekte}{}
+\newcommand{\htl@geraete}{}
+
+% 4 Personen (Rolle + Name)
+\newcommand{\htl@roleA}{Protokollführer}\newcommand{\htl@nameA}{}
+\newcommand{\htl@roleB}{Mitarbeiter}\newcommand{\htl@nameB}{}
+\newcommand{\htl@roleC}{Mitarbeiter}\newcommand{\htl@nameC}{}
+\newcommand{\htl@roleD}{Mitarbeiter}\newcommand{\htl@nameD}{}
+
+% =================================================
+% Setter-Befehle
+% =================================================
+\newcommand{\titel}[1]{\renewcommand{\htl@titel}{#1}}
+\newcommand{\klasse}[1]{\renewcommand{\htl@klasse}{#1}}
+\newcommand{\datum}[1]{\renewcommand{\htl@datum}{#1}}
+\newcommand{\lehrer}[1]{\renewcommand{\htl@lehrer}{#1}}
+\newcommand{\labortext}[1]{\renewcommand{\htl@labortext}{#1}}
+\newcommand{\messobjekte}[1]{\renewcommand{\htl@messobjekte}{#1}}
+\newcommand{\geraete}[1]{\renewcommand{\htl@geraete}{#1}}
+
+% 4 Personen setzen:
+% \personen{RoleA}{NameA}{RoleB}{NameB}{RoleC}{NameC}{RoleD}{NameD}
+\newcommand{\personen}[8]{%
+	\renewcommand{\htl@roleA}{#1}\renewcommand{\htl@nameA}{#2}%
+	\renewcommand{\htl@roleB}{#3}\renewcommand{\htl@nameB}{#4}%
+	\renewcommand{\htl@roleC}{#5}\renewcommand{\htl@nameC}{#6}%
+	\renewcommand{\htl@roleD}{#7}\renewcommand{\htl@nameD}{#8}%
+}
+
+% =================================================
+% Deckblatt (keine Argumente mehr)
+% =================================================
+\newcommand{\protokolldeckblatt}{%
+	\thispagestyle{empty}
+	\noindent
+	\setlength{\fboxsep}{0pt}%
+	\fbox{%
+		\begin{minipage}[t][\dimexpr\textheight-\topskip-2\fboxrule\relax][t]
+			{\dimexpr\textwidth-2\fboxrule\relax}
+			\vspace{0pt}
+			
+			% --- header block ---
+			\begin{tabularx}{\linewidth}{X|C{3.3cm}}
+				\cellpad
+				\begin{minipage}[t]{\linewidth}
+					\centering
+					{\bfseries\LARGE PROTOKOLL\par}
+					\vspace{2mm}
+					{\htl@labortext\par}
+					\vspace{4mm}
+					{\bfseries\fontsize{30}{34}\selectfont \htl@titel\par}
+					\vspace{3mm}
+				\end{minipage}
+				&
+				\begin{minipage}[c][5.0cm][c]{\linewidth}
+					\begin{center}
+						\begin{tikzpicture}[scale=0.3]
+							
+							% Linkes grünes L
+							\fill[htlgreen] 
+							(0,0) -- (0,3) -- (1.5,3) -- (1.5,2.25) -- 
+							(3,2.25) -- (3,0.75) -- (1.5,0.75) -- (1.5,0) -- cycle;
+							
+							% Mittleres graues L
+							\fill[htlgray] 
+							(3.2,0) -- (3.2,3) -- (6.2,3) -- (6.2,1.5) --
+							(4.7,1.5) -- (4.7,0) -- cycle;
+							
+							% Rechtes grünes L
+							\fill[htlgreen] 
+							(6.4,0) -- (6.4,3) -- (7.9,3) -- (7.9,1.5) --
+							(9.4,1.5) -- (9.4,0) -- cycle;
+							
+							\node[
+							font=\sffamily\fontseries{bx}\fontsize{7}{7}\selectfont,
+							text=htlgray,
+							anchor=west
+							] at (-0.5,-0.7) {HTL ST.\ P\"OLTEN};
+							
+						\end{tikzpicture}
+					\end{center}
+				\end{minipage}
+				\\\hline
+			\end{tabularx}
+			
+			\vspace{4mm}
+			
+			% --- info table ---
+			\begin{tabularx}{\linewidth}{L{0.34\linewidth}|L{0.33\linewidth}|L{0.33\linewidth}} \hline
+				{\small Gruppe / Klasse} & {\small \htl@roleA} & {\small Unterschrift} \\\hline
+				\centering \htl@klasse & \centering \htl@nameA & \cellpad \\\hline
+				
+				{\small Übungs- / Abgabedatum} & {\small \htl@roleB} & {\small Unterschrift} \\\hline
+				\centering \htl@datum & \centering \htl@nameB & \cellpad \\\hline
+				
+				{\small Lehrer} & {\small \htl@roleC} & {\small Unterschrift} \\\hline
+				\centering \htl@lehrer & \centering \htl@nameC & \cellpad\\\hline
+				
+				{\small Note} & {\small \htl@roleD} & {\small Unterschrift} \\\hline
+				\cellpad & \centering \htl@nameD & \\\hline
+			\end{tabularx}
+			
+			% --- Messobjekte ---
+			\begin{minipage}[t][7cm][t]{\dimexpr\linewidth-2\fboxrule\relax}
+				\vspace{6mm}
+				\centering{\bfseries MESSOBJEKTE:}\par
+				\vspace{6mm}
+				{\small\centering \htl@messobjekte\par}
+				\vfill
+				\hrule
+			\end{minipage}
+			
+			% --- Geräte ---
+			\vspace{-\fboxrule}
+			\begin{minipage}[t][6.1cm][t]{\dimexpr\linewidth-2\fboxrule\relax}
+				\vspace{6mm}
+				\centering{\bfseries VERWENDETE GERÄTE:}\par
+				\vspace{6mm}
+				{\small\centering \htl@geraete\par}
+				\vfill
+			\end{minipage}
+			
+		\end{minipage}%
+	}%
+}
