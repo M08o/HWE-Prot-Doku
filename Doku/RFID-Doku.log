@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.23)  27 FEB 2026 23:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.23)  5 MAR 2026 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -994,77 +994,107 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}])
 \openout5 = `RFID-Doku.toc'.
 
  [2] (kapitel1_ne555.tex
-<Timerschaltung/NE555_Output_kalibriert.jpg, id=94, 361.35pt x 602.25pt>
+<Schaltungen/Timerschaltung.png, id=119, 485.4135pt x 445.665pt>
+File: Schaltungen/Timerschaltung.png Graphic file (type png)
+<use Schaltungen/Timerschaltung.png>
+Package pdftex.def Info: Schaltungen/Timerschaltung.png  used on input line 9.
+(pdftex.def)             Requested size: 198.02815pt x 181.81259pt.
+<Timerschaltung/NE555_Output_kalibriert.jpg, id=121, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_kalibriert.jpg Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_kalibriert.jpg>
 Package pdftex.def Info: Timerschaltung/NE555_Output_kalibriert.jpg  used on in
-put line 19.
-(pdftex.def)             Requested size: 198.02815pt x 330.04387pt.
-) (kapitel2_signalverzoegerung.tex
+put line 20.
+(pdftex.def)             Requested size: 173.2803pt x 288.80103pt.
+) (kapitel2_signalverzoegerung.tex [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \section
+            {Aufbau der Signalverzögerung und MOSFET-Endstufe}{C:/Users/morit/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \section
+            {Aufbau der Signalverzögerung und MOSFET-Endstufe} <./Schaltungen/
+Timerschaltung.png> <./Timerschaltung/NE555_Output_kalibriert.jpg>]
 Overfull \hbox (2.98412pt too wide) in paragraph at lines 2--3
 \T1/lmss/m/n/10.95 In die-ser �bung wird die Schal-tung um drei Funk-ti-ons-bl�
 -cke er-g�nzt: Si-gnal-ver-z�-ge-rung, MOSFET-Treiberstufe
  []
 
-[3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.7 \textbf{Signalverzögerung:}
-                                 Das PWM-Signal wird durch NAND-Gatter in Ko...
-{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.7 \textbf{Signalverzögerung:}
-                                 Das PWM-Signal wird durch NAND-Gatter in Ko...
-{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
-{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./
-Timerschaltung/NE555_Output_kalibriert.jpg>]
-<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=109, 361.35pt x 602.2
+<Schaltungen/Signalaufbereitung.png, id=134, 675.7245pt x 554.07pt>
+File: Schaltungen/Signalaufbereitung.png Graphic file (type png)
+<use Schaltungen/Signalaufbereitung.png>
+Package pdftex.def Info: Schaltungen/Signalaufbereitung.png  used on input line
+ 20.
+(pdftex.def)             Requested size: 247.53899pt x 202.97363pt.
+<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=136, 361.35pt x 602.2
 5pt>
 File: Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg Graphic file (type j
 pg)
 <use Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg>
 Package pdftex.def Info: Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg  
 used on input line 33.
-(pdftex.def)             Requested size: 198.02815pt x 330.04387pt.
-) (kapitel3_uebertrager.tex
-[4
+(pdftex.def)             Requested size: 173.2803pt x 288.80103pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (kapitel3_uebertrager.tex [4{C:/Users/morit/AppData/Local/Programs/MiKTeX/fon
+ts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/morit/AppData/Local/Programs/MiKTeX/fon
+ts/enc/dvips/lm/lm-rm.enc}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.8 \]
-      
+l.3 
+     <./Schaltungen/Signalaufbereitung.png>]
+<Schaltungen/Lesegerät.png, id=149, 995.51926pt x 495.0495pt>
+File: Schaltungen/Lesegerät.png Graphic file (type png)
+<use Schaltungen/Lesegerät.png>
+Package pdftex.def Info: Schaltungen/Lesegerät.png  used on input line 21.
+(pdftex.def)             Requested size: 346.55305pt x 172.33324pt.
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.8 \]
-       <./Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg>]) [5{C:/Users/m
-orit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}
+l.28 
+     {C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex
+.enc}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.50 \end{document}
-                   ] (RFID-Doku.aux)
+l.28 
+      <./Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg> <./Schaltungen/L
+esegerät.png>]) (kapitel4_rfid_tag.tex
+<Schaltungen/Tag.png, id=158, 608.87476pt x 222.8325pt>
+File: Schaltungen/Tag.png Graphic file (type png)
+<use Schaltungen/Tag.png>
+Package pdftex.def Info: Schaltungen/Tag.png  used on input line 10.
+(pdftex.def)             Requested size: 346.55305pt x 126.83563pt.
+) [6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.51 \end{document}
+                    <./Schaltungen/Tag.png>] (RFID-Doku.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `RFID-Doku.out' has not changed.
-(rerunfilecheck)             Checksum: 6D53B0AB6837C793681FCBADD9EE0A5C;2128.
+(rerunfilecheck)             Checksum: 729ED3B61B1DF7669AE441E393B0499D;2740.
  ) 
 Here is how much of TeX's memory you used:
- 33722 strings out of 467866
- 793478 string characters out of 5418325
+ 33788 strings out of 467866
+ 795400 string characters out of 5418325
  1314203 words of memory out of 5000000
- 62047 multiletter control sequences out of 15000+600000
+ 62103 multiletter control sequences out of 15000+600000
  673069 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,19n,108p,732b,937s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1077,9 +1107,9 @@ b><C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb
 :/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
 <C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 <C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on RFID-Doku.pdf (5 pages, 522194 bytes).
+Output written on RFID-Doku.pdf (6 pages, 827787 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

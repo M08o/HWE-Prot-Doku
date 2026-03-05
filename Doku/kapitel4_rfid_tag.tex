@@ -1,0 +1,22 @@
+\section{Aufbau des RFID-Tags}
+In dieser Aufgabe wird der passive RFID-Tag aufgebaut.
+Das Lesegerät versorgt den Tag über das magnetische Wechselfeld mit Energie.
+
+\subsection{Schaltung}
+Der Tag in \cref{fig:rfid_tag_schaltung} wird als Resonanzkreis aus Spule und parallel geschaltetem Kondensator ausgeführt. Die Resonanzfrequenz wird so gewählt, dass sie zur Anregungsfrequenz des Lesegeräts passt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{Schaltungen/Tag}
+  \caption{Schaltung des RFID-Tags}
+  \label{fig:rfid_tag_schaltung}
+\end{figure}
+
+\subsection{Messvorgang}
+
+
+\subsection{Messergebnis}
+
+
+\subsection{Interpretation}
+Die Schaltung in \cref{fig:rfid_tag_schaltung} zeigt den typischen Aufbau eines passiven Tags: Links bildet L2 mit C5 den Resonanzkreis zur Energieaufnahme, über D1 und C7 wird die Gleichspannung gepuffert, D2 schützt vor Überspannung. Der 5V-Regler stellt eine stabile Versorgung bereit. Q3 ermöglicht die Lastmodulation, indem er den Resonanzkreis gezielt belastet. Die Stufe aus Q4/Q5 mit R6 und $R_i$ sorgt für eine definierte Last bzw. Schaltstrecke. Die beobachtete Modulation bestätigt die induktive Kopplung zwischen Reader und Tag; Abstand und Ausrichtung beeinflussen die Kopplung und damit die Modulationstiefe.
