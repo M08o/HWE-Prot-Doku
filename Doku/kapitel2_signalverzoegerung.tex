@@ -1,4 +1,5 @@
 \section{Aufbau der Signalverzögerung und MOSFET-Endstufe}
+\label{chap:Signalaufbereitung}
 In dieser Übung wird die Schaltung um drei Funktionsblöcke ergänzt: Signalverzögerung, MOSFET-Treiberstufe und MOSFET-Gegentaktendstufe. Ziel ist es, das PWM-Signal mit definierter Totzeit aufzubereiten, die MOSFETs sicher und schnell anzusteuern und am Ausgang eine leistungsfähige Endstufe bereitzustellen.
 
 \subsection{Schaltung}
@@ -13,11 +14,11 @@ Damit wird eine Totzeit erzeugt, die ein gleichzeitiges Durchschalten der MOSFET
 \textbf{MOSFET-Treiber:} Die verzögerten Signale werden durch mehrere CMOS-Inverter verstärkt. Diese dienen als Treiberstufe, um die MOSFETs mit ausreichend Strom anzusteuern und schnelles Schalten zu ermöglichen.
 
 \textbf{MOSFET-Gegentakt-Endstufe:} Die verstärkten Signale steuern die Endstufe, die aus Q1 und Q2 besteht. Dadurch entsteht ein leistungsfähiges PWM-Signal am Ausgang.
-
+\\
+Der Übertrager am Ausgang ist schon in der Schaltung inkludiert, wird aber erst in \cref*{chap:Aufbau des Übertragers} beschrieben.
 \begin{figure}[H]
   \centering
-  % TODO: ALtium Bild neu einfügen
-  \includegraphics[width=0.5\linewidth]{Schaltungen/Signalaufbereitung}
+  \includegraphics[width=0.8\linewidth]{Schaltungen/Signalaufbereitung}
   \caption{Schaltung der Signalverzögerung, MOSFET-Treiber und MOSFET-Endstufe}
   \label{fig:schaltung_endstufe}
 \end{figure}
@@ -28,7 +29,7 @@ Zunächst wird die Schaltung bis einschließlich der Treiberstufe aufgebaut, um 
 \subsection{Messergebnis}
 In \cref{fig:signalaufbereitungvorendstufe}, auf CH1 ist der P-Channel, auf CH2 der N-Channel zu sehen. Der P-Channel sperrt etwa $280\,ns$ vor dem Leiten des N-Channels.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.35\linewidth, angle = -90]{Signalaufbereitung/SignalaufbereitungVorEndstufe}
   \caption{Messung am Ausgang der Signalaufbereitung}

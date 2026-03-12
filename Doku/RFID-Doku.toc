@@ -7,15 +7,15 @@
 \contentsline {section}{\numberline {2}Aufbau der Signalverzögerung und MOSFET-Endstufe}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Schaltung}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Messvorgang}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Messergebnis}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Interpretation}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.3}Messergebnis}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Interpretation}{5}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Aufbau des Übertragers}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Schaltung und Berechnung}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Messvorgang}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Messvorgang}{5}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Messergebnis}{6}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Interpretation}{6}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Aufbau des RFID-Tags}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Schaltung}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Messvorgang}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Messergebnis}{6}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Interpretation}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Interpretation}{7}{subsection.4.4}%

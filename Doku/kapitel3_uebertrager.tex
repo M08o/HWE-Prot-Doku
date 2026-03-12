@@ -1,4 +1,5 @@
 \section{Aufbau des Übertragers}
+\label{chap:Aufbau des Übertragers}
 In dieser Aufgabe wird die bestehende Schaltung um einen gleichspannungssperrenden Ausgangskondensator und den Übertrager erweitert. Der Kondensator blockiert den Gleichspannungsanteil der MOSFET-Endstufe, sodass am Übertrager nur der Wechselspannungsanteil anliegt. Der Übertrager wird als Rahmenspule ausgeführt und auf eine Zielinduktivität von $150\,\mu H$ ausgelegt.
 
 \subsection{Schaltung und Berechnung}
@@ -14,14 +15,7 @@ Mit $L=150\,\mu H$ und $d=6{,}5\,cm$ folgt:
 \[
   N = \sqrt{\frac{150\,\mu H}{0{,}065\,m \cdot 10^{-6}}} \approx 48 \,\text{Windungen}
 \]
-Anschließend wird die Schaltung gemäß \cref{fig:lesegerat} aufgebaut.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Schaltungen/Lesegerät}
-	\caption{Schaltung des Lesegeräts}
-	\label{fig:lesegerat}
-\end{figure}
+Anschließend wird die Schaltung gemäß \cref{fig:schaltung_endstufe} aus \cref{chap:Signalaufbereitung} aufgebaut.
 
 \subsection{Messvorgang}
 Der Übertrager wird zunächst mit rund 48 Windungen gewickelt. Die Sekundärspule wird dabei in gleicher Weise ausgeführt. Danach wird die resultierende Induktivität mit einem LCR-Meter gemessen und mit dem Sollwert verglichen.
