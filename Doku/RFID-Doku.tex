@@ -9,7 +9,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
+\usepackage[hypertexnames=false]{hyperref}
 \usepackage{cleveref}
 \crefname{figure}{Abb.}{Abb.}
 \crefname{table}{Tab.}{Tab.}
@@ -25,13 +25,17 @@
 \lehrer{TILLICH und CHRA}
 
 \personen
-{Protokollführer}{Moritz Klein}
-{Protokollführer}{Christoph Hackl}
+{Protokollf\"uhrer}{Moritz Klein}
+{Protokollf\"uhrer}{Christoph Hackl}
 {Mitarbeiter}{}
 {Mitarbeiter}{}
 
-\messobjekte{RFID-Lesegerät \\ RFID-Tag}
+\messobjekte{RFID-Leseger\"at \\ RFID-Tag}
 \geraete{Voltcraft VC271 TRMS \\ Tektronix TBS 1052B \\ HAMEG LC-Meter 1880 \\ EMG 18135 Power Supply \\ Hameg 10Mhz Function Generator HM8030-6 \\ RSDS 1104CFL Digital Storage Oscilloscope}
+
+%TODO Bei den ganzen Bildern noch dazuschreiben welcher Channel
+%TODO Den ganzen KI schaß ausbessern
+
 
 \begin{document}
   % Deckblatt
@@ -42,11 +46,13 @@
   \newpage
 
   % Start mit Text
-  \section*{EInleitung: RFID}
-  RFID (Radio-Frequency Identification) ermöglicht die kontaktlose Identifikation und Datenübertragung über elektromagnetische Felder. Ein RFID-System besteht aus einem Lesegerät (Reader) und einem Transponder (Tag). Das Lesegerät erzeugt über eine Spule ein HF-Feld, das den Tag mit Energie versorgt und die Kommunikation ermöglicht.
+  \section*{Einleitung: RFID}
+  RFID (Radio-Frequency Identification) erm\"oglicht die kontaktlose Identifikation und Daten\"ubertragung \"uber elektromagnetische Felder. Ein RFID-System besteht aus einem Leseger\"at (Reader) und einem Transponder (Tag). Das Leseger\"at erzeugt \"uber eine Spule ein HF-Feld, das den Tag mit Energie versorgt und die Kommunikation erm\"oglicht.
 
   \input{kapitel1_ne555}
   \input{kapitel2_signalverzoegerung}
   \input{kapitel3_uebertrager}
   \input{kapitel4_rfid_tag}
+  \input{kapitel5_modulation}
+  \input{kapitel6_ask_lesegeraet_tag}
 \end{document}

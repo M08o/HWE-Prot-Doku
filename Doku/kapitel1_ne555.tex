@@ -1,8 +1,8 @@
 \section{Aufbau der NE555 Timerschaltung}
-Ziel dieser Aufgabe ist es mithilfe eines NE555-Timers ein Rechteckssignal für die weitere Schaltung zu erzeugen.
+Ziel dieser Aufgabe ist es, mithilfe eines NE555-Timers ein Rechteckssignal f\"ur die weitere Schaltung zu erzeugen.
 
 \subsection{Schaltung}
-Die Schaltung \cref{fig:timerschaltung} besteht aus einem NE555 Timer-Baustein der auf \(t_{ON} = t_{OFF}\) ausgelegt ist und dessen PWM-Frequenz über das Potentiometer R3 gesteuert werden kann..
+Die Schaltung \cref{fig:timerschaltung} besteht aus einem NE555-Timer-Baustein, der auf \(t_{ON} = t_{OFF}\) ausgelegt ist und dessen PWM-Frequenz \"uber das Potentiometer R3 gesteuert werden kann.
 
 \begin{figure}[h]
 	\centering
@@ -11,15 +11,16 @@ Die Schaltung \cref{fig:timerschaltung} besteht aus einem NE555 Timer-Baustein d
 	\label{fig:timerschaltung}
 \end{figure}
 
+
 \subsection{Messvorgang}
-Es wurde das Ausgangssignal $U_{PWM}$ der Schaltung mithilfe des Oszilloskops gemessen und die Frequenz mit Hilfe des Potentiometers an die gewünschten $130\,\mathrm{kHz}$ angeglichen und die $t_{ON}$ und $t_{OFF}$ zeit mithilfe des Cursors gemessen.
+Es wurde das Ausgangssignal $U_{PWM}$ der Schaltung mithilfe des Oszilloskops gemessen und die Frequenz mit Hilfe des Potentiometers an die gew\"unschten $130\,\mathrm{kHz}$ angeglichen. Zus\"atzlich wurden die Zeiten $t_{ON}$ und $t_{OFF}$ mithilfe des Cursors gemessen.
 
 \subsection{Messergebnis}
 \begin{figure}[H]
 	\centering
 	\begin{minipage}[t]{0.42\linewidth}
 		\centering
-		\includegraphics[height=8cm, keepaspectratio, angle=-90]{Timerschaltung/NE555_Output_toff_kalibriert.JPG}
+		\includegraphics[height=7.3cm, keepaspectratio, angle=-90]{Timerschaltung/NE555_Output_toff_kalibriert.JPG}
 		
 		\caption{$t_{OFF}$-Messung von $U_{PWM}$}
 		\label{fig:ne555outputtoffkalibriert}
@@ -27,7 +28,7 @@ Es wurde das Ausgangssignal $U_{PWM}$ der Schaltung mithilfe des Oszilloskops ge
 	\hfill
 	\begin{minipage}[t]{0.42\linewidth}
 		\centering
-		\includegraphics[height=8cm, keepaspectratio, angle=-90]{Timerschaltung/NE555_Output_ton_kalibriert.JPG}
+		\includegraphics[height=7.3cm, keepaspectratio, angle=-90]{Timerschaltung/NE555_Output_ton_kalibriert.JPG}
 		
 		\caption{$t_{ON}$-Messung von $U_{PWM}$}
 		\label{fig:ne555outputtonkalibriert}
@@ -35,4 +36,4 @@ Es wurde das Ausgangssignal $U_{PWM}$ der Schaltung mithilfe des Oszilloskops ge
 \end{figure}
 
 \subsection{Interpretation}
-In \cref{fig:ne555outputtoffkalibriert} und \cref{fig:ne555outputtonkalibriert} ist zu erkennen, dass für $U_{PWM}$ die gewünschte Frequenz von etwa $130\,\mathrm{kHz}$ erreicht wird und die Voraussetzung von \(t_{ON} = t_{OFF} = 3,8 \,\mu\mathrm{F}\) erreicht wird. 
+In \cref{fig:ne555outputtoffkalibriert} und \cref{fig:ne555outputtonkalibriert} ist zu erkennen, dass f\"ur $U_{PWM}$ die gew\"unschte Frequenz von etwa $130\,\mathrm{kHz}$ erreicht wird und die Voraussetzung von \(t_{ON} = t_{OFF}\) erf\"ullt ist.

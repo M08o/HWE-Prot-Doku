@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.23)  12 MAR 2026 21:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  26 MAR 2026 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -27,7 +27,7 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 Package: htlprotokoll 2026/02/20 Protokoll-Deckblatt
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+Package: geometry 2026/03/07 v6.0 Page Geometry
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
@@ -62,7 +62,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@posthook=\toks20
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/01/26 v26.2 The multilingual framework for LuaLaTeX, pdfLaT
+Package: babel 2026/03/08 v26.4 The multilingual framework for LuaLaTeX, pdfLaT
 eX and XeLaTeX
 \babel@savecnt=\count286
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
@@ -107,7 +107,7 @@ Language: ngerman
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\babel-germ
 an.def
-Package babel Info: Making " an active character on input line 470.
+Package babel Info: Making " an active character on input line 476.
 )))
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
@@ -487,8 +487,41 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))))
-(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+)))
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count310
+\lst@gtempboxa=\box66
+\lst@token=\toks35
+\lst@length=\count311
+\lst@currlwidth=\dimen273
+\lst@column=\count312
+\lst@pos=\count313
+\lst@lostspace=\dimen274
+\lst@width=\dimen275
+\lst@newlines=\count314
+\lst@lineno=\count315
+\lst@maxwidth=\dimen276
+
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count316
+\lst@skipnumbers=\count317
+\lst@framebox=\box67
+)
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+) (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip67
 
@@ -498,61 +531,61 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks35
-\ex@=\dimen273
+\@emptytoks=\toks36
+\ex@=\dimen277
 ))
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen274
+\pmbraise@=\dimen278
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count310
+\inf@bad=\count318
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count311
-\leftroot@=\count312
+\uproot@=\count319
+\leftroot@=\count320
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count313
-\DOTSCASE@=\count314
+\classnum@=\count321
+\DOTSCASE@=\count322
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box66
-\strutbox@=\box67
+\Mathstrutbox@=\box68
+\strutbox@=\box69
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen275
+\big@size=\dimen279
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count315
+\macc@depth=\count323
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count316
+\c@MaxMatrixCols=\count324
 \dotsspace@=\muskip17
-\c@parentequation=\count317
-\dspbrk@lvl=\count318
-\tag@help=\toks36
-\row@=\count319
-\column@=\count320
-\maxfields@=\count321
-\andhelp@=\toks37
-\eqnshift@=\dimen276
-\alignsep@=\dimen277
-\tagshift@=\dimen278
-\tagwidth@=\dimen279
-\totwidth@=\dimen280
-\lineht@=\dimen281
-\@envbody=\toks38
+\c@parentequation=\count325
+\dspbrk@lvl=\count326
+\tag@help=\toks37
+\row@=\count327
+\column@=\count328
+\maxfields@=\count329
+\andhelp@=\toks38
+\eqnshift@=\dimen280
+\alignsep@=\dimen281
+\tagshift@=\dimen282
+\tagwidth@=\dimen283
+\totwidth@=\dimen284
+\lineht@=\dimen285
+\@envbody=\toks39
 \multlinegap=\skip68
 \multlinetaggap=\skip69
-\mathdisplay@stack=\toks39
+\mathdisplay@stack=\toks40
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -565,12 +598,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 e.tex
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
 .code.tex
-\t@pgfplots@toka=\toks40
-\t@pgfplots@tokb=\toks41
-\t@pgfplots@tokc=\toks42
-\pgfplots@tmpa=\dimen282
-\c@pgfplots@coordindex=\count322
-\c@pgfplots@scanlineindex=\count323
+\t@pgfplots@toka=\toks41
+\t@pgfplots@tokb=\toks42
+\t@pgfplots@tokc=\toks43
+\pgfplots@tmpa=\dimen286
+\c@pgfplots@coordindex=\count330
+\c@pgfplots@scanlineindex=\count331
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
 sysgeneric.code.tex))
@@ -581,9 +614,9 @@ ib\pgfplotsoldpgfsupp_loader.code.tex
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks43
-\t@pgf@tokb=\toks44
-\t@pgf@tokc=\toks45
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
 ib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
@@ -595,14 +628,14 @@ e\pgfplotsliststructure.code.tex)
 e\pgfplotsliststructureext.code.tex)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count324
+\c@pgfplotsarray@tmp=\count332
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsmatrix.code.tex)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
 plotstableshared.code.tex
-\c@pgfplotstable@counta=\count325
-\t@pgfplotstable@a=\toks46
+\c@pgfplotstable@counta=\count333
+\t@pgfplotstable@a=\toks47
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsdeque.code.tex)
@@ -614,7 +647,7 @@ sbinary.data.code.tex))
 sutil.verb.code.tex)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
 arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count326
+\c@pgfplotslibrarysurf@no=\count334
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
 rypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -646,16 +679,16 @@ hs.code.tex)
 z/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 decorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen283
-\pgfdecoratedremainingdistance=\dimen284
-\pgfdecoratedinputsegmentcompleteddistance=\dimen285
-\pgfdecoratedinputsegmentremainingdistance=\dimen286
-\pgf@decorate@distancetomove=\dimen287
-\pgf@decorate@repeatstate=\count327
-\pgfdecorationsegmentamplitude=\dimen288
-\pgfdecorationsegmentlength=\dimen289
+\pgfdecoratedcompleteddistance=\dimen287
+\pgfdecoratedremainingdistance=\dimen288
+\pgfdecoratedinputsegmentcompleteddistance=\dimen289
+\pgfdecoratedinputsegmentremainingdistance=\dimen290
+\pgf@decorate@distancetomove=\dimen291
+\pgf@decorate@repeatstate=\count335
+\pgfdecorationsegmentamplitude=\dimen292
+\pgfdecorationsegmentlength=\dimen293
 )
-\tikz@lib@dec@box=\box68
+\tikz@lib@dec@box=\box70
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -667,13 +700,13 @@ z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 ions\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
 rarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count328
-\pgfplots@xmin@reg=\dimen290
-\pgfplots@xmax@reg=\dimen291
-\pgfplots@ymin@reg=\dimen292
-\pgfplots@ymax@reg=\dimen293
-\pgfplots@zmin@reg=\dimen294
-\pgfplots@zmax@reg=\dimen295
+\pgfplots@numplots=\count336
+\pgfplots@xmin@reg=\dimen294
+\pgfplots@xmax@reg=\dimen295
+\pgfplots@ymin@reg=\dimen296
+\pgfplots@ymax@reg=\dimen297
+\pgfplots@zmin@reg=\dimen298
+\pgfplots@zmax@reg=\dimen299
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibraryplotmarks.code.tex
@@ -772,20 +805,20 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count329
+\c@section@level=\count337
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count330
+\etb@tempcnta=\count338
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen296
-\Hy@linkcounter=\count331
-\Hy@pagecounter=\count332
+\@linkdim=\dimen300
+\Hy@linkcounter=\count339
+\Hy@pagecounter=\count340
  (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -793,12 +826,13 @@ Now handling font encoding PD1 ...
 ) (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count333
+\Hy@SavedSpaceFactor=\count341
  (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
+Package hyperref Info: Option `hypertexnames' set `false' on input line 4072.
 Package hyperref Info: Hyper figures OFF on input line 4201.
 Package hyperref Info: Link nesting OFF on input line 4206.
 Package hyperref Info: Hyper index ON on input line 4209.
@@ -806,14 +840,14 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count334
+\c@Hy@tempcnt=\count342
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen297
+\XeTeXLinkMargin=\dimen301
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -823,9 +857,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count335
-\Field@Width=\dimen298
-\Fld@charsize=\dimen299
+\Fld@menulength=\count343
+\Field@Width=\dimen302
+\Fld@charsize=\dimen303
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -833,16 +867,16 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring OFF on input line 6104.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count336
-\c@Item=\count337
-\c@Hfootnote=\count338
+\Hy@abspage=\count344
+\c@Item=\count345
+\c@Hfootnote=\count346
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
-\Fld@listcount=\count339
-\c@bookmark@seq@number=\count340
+\Fld@listcount=\count347
+\c@bookmark@seq@number=\count348
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -870,44 +904,45 @@ LaTeX Info: Redefining \cpagerefrange on input line 2370.
 LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `listings' support loaded on input line 3131.
 )
 ==> First Aid for cleveref.sty applied!
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count341
-\float@exts=\toks47
-\float@box=\box69
-\@float@everytoks=\toks48
-\@floatcapt=\box70
+\c@float@type=\count349
+\float@exts=\toks48
+\float@box=\box71
+\@float@everytoks=\toks49
+\@floatcapt=\box72
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count342
+\l__color_backend_stack_int=\count350
 ) (RFID-Doku.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 8.
 )
 \openout1 = `RFID-Doku.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -947,17 +982,17 @@ LaTeX Font Info:    ... okay on input line 36.
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
-\scratchdimen=\dimen300
-\scratchbox=\box71
-\nofMPsegments=\count344
-\nofMParguments=\count345
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count346
-\MPscratchDim=\dimen301
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count351
+\scratchdimen=\dimen304
+\scratchbox=\box73
+\nofMPsegments=\count352
+\nofMParguments=\count353
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count354
+\MPscratchDim=\dimen305
+\MPnumerator=\count355
+\makeMPintoPDFobject=\count356
+\everyMPtoPDFconversion=\toks51
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -969,10 +1004,12 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+\c@lstlisting=\count357
+
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 36.
+Package hyperref Info: Link coloring OFF on input line 40.
 (RFID-Doku.out) (RFID-Doku.out)
 \@outlinefile=\write4
 \openout4 = `RFID-Doku.out'.
@@ -982,10 +1019,6 @@ Package hyperref Info: Link coloring OFF on input line 36.
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
-Overfull \hbox (36.79996pt too wide) in alignment at lines 38--38
-[][][] 
- []
-
 (RFID-Doku.toc [1
 
 {C:/Users/morit/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/mori
@@ -994,137 +1027,168 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}])
 \openout5 = `RFID-Doku.toc'.
 
  [2] (kapitel1_ne555.tex
-<Schaltungen/Timerschaltung.png, id=119, 559.49025pt x 514.3215pt>
+<Schaltungen/Timerschaltung.png, id=169, 559.49025pt x 514.3215pt>
 File: Schaltungen/Timerschaltung.png Graphic file (type png)
 <use Schaltungen/Timerschaltung.png>
 Package pdftex.def Info: Schaltungen/Timerschaltung.png  used on input line 9.
 (pdftex.def)             Requested size: 198.02815pt x 182.03998pt.
-<Timerschaltung/NE555_Output_toff_kalibriert.JPG, id=121, 361.35pt x 602.25pt>
+<Timerschaltung/NE555_Output_toff_kalibriert.JPG, id=171, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_toff_kalibriert.JPG Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_toff_kalibriert.JPG>
 Package pdftex.def Info: Timerschaltung/NE555_Output_toff_kalibriert.JPG  used 
-on input line 22.
-(pdftex.def)             Requested size: 136.57558pt x 227.62204pt.
-
-Overfull \hbox (19.6902pt too wide) in paragraph at lines 22--23
- [][] 
- []
-
-<Timerschaltung/NE555_Output_ton_kalibriert.JPG, id=122, 361.35pt x 602.25pt>
+on input line 23.
+(pdftex.def)             Requested size: 124.62177pt x 207.7052pt.
+<Timerschaltung/NE555_Output_ton_kalibriert.JPG, id=172, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_ton_kalibriert.JPG Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_ton_kalibriert.JPG>
 Package pdftex.def Info: Timerschaltung/NE555_Output_ton_kalibriert.JPG  used o
-n input line 30.
-(pdftex.def)             Requested size: 136.57558pt x 227.62204pt.
-
-Overfull \hbox (19.6902pt too wide) in paragraph at lines 30--31
- [][] 
- []
-
+n input line 31.
+(pdftex.def)             Requested size: 124.62177pt x 207.7052pt.
 ) (kapitel2_signalverzoegerung.tex [3{C:/Users/morit/AppData/Local/Programs/MiK
 TeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/morit/AppData/Local/Programs/MiK
-TeX/fonts/enc/dvips/lm/lm-rm.enc}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Aufbau der SignalverzÃ¶gerung und MOSFET-Endstufe}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Aufbau der SignalverzÃ¶gerung und MOSFET-Endstufe}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Aufbau der SignalverzÃ¶gerung und MOSFET-Endstufe} <./Schaltungen/
-Timerschaltung.png> <./Timerschaltung/NE555_Output_toff_kalibriert.JPG> <./Time
-rschaltung/NE555_Output_ton_kalibriert.JPG>]
-Overfull \hbox (2.98412pt too wide) in paragraph at lines 3--4
-\T1/lmss/m/n/10.95 In die-ser Übung wird die Schal-tung um drei Funk-ti-ons-blö
--cke er-gänzt: Si-gnal-ver-zö-ge-rung, MOSFET-Treiberstufe
- []
-
-<Schaltungen/Signalaufbereitung.png, id=138, 749.199pt x 510.10574pt>
+TeX/fonts/enc/dvips/lm/lm-rm.enc} <./Schaltungen/Timerschaltung.png> <./Timersc
+haltung/NE555_Output_toff_kalibriert.JPG> <./Timerschaltung/NE555_Output_ton_ka
+libriert.JPG>]
+<Schaltungen/Signalaufbereitung.png, id=191, 749.199pt x 510.10574pt>
 File: Schaltungen/Signalaufbereitung.png Graphic file (type png)
 <use Schaltungen/Signalaufbereitung.png>
 Package pdftex.def Info: Schaltungen/Signalaufbereitung.png  used on input line
- 21.
+ 23.
 (pdftex.def)             Requested size: 396.06389pt x 269.6698pt.
-<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=140, 361.35pt x 602.2
+<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=193, 361.35pt x 602.2
 5pt>
 File: Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg Graphic file (type j
 pg)
 <use Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg>
 Package pdftex.def Info: Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg  
-used on input line 34.
+used on input line 36.
 (pdftex.def)             Requested size: 173.2803pt x 288.80103pt.
-[4{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
-c}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.37 \end{figure}
-                  <./Schaltungen/Signalaufbereitung.png>])
-(kapitel3_uebertrager.tex [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.26 \subsection
-                {Interpretation}{C:/Users/morit/AppData/Local/Programs/MiKTeX/f
-onts/enc/dvips/lm/lm-mathex.enc} <./Signalaufbereitung/SignalaufbereitungVorEnd
-stufe.jpg>]) (kapitel4_rfid_tag.tex
-<Schaltungen/Tag.png, id=159, 697.4055pt x 320.99925pt>
+ [4{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.e
+nc} <./Schaltungen/Signalaufbereitung.png>]) (kapitel3_uebertrager.tex [5{C:/Us
+ers/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Si
+gnalaufbereitung/SignalaufbereitungVorEndstufe.jpg>]) (kapitel4_rfid_tag.tex
+<Schaltungen/Tag.png, id=214, 697.4055pt x 320.99925pt>
 File: Schaltungen/Tag.png Graphic file (type png)
 <use Schaltungen/Tag.png>
 Package pdftex.def Info: Schaltungen/Tag.png  used on input line 10.
 (pdftex.def)             Requested size: 346.55305pt x 159.51471pt.
- [6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.48 \end{figure}
-                  <./Schaltungen/Tag.png>]) [7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.52 \end{document}
-                   ] (RFID-Doku.aux)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 47.
+ [6 <./Schaltungen/Tag.png>])
+(kapitel5_modulation.tex
+<Schaltungen/Lesegeraet_Modulation.png, id=226, 512.51476pt x 324.0105pt>
+File: Schaltungen/Lesegeraet_Modulation.png Graphic file (type png)
+<use Schaltungen/Lesegeraet_Modulation.png>
+Package pdftex.def Info: Schaltungen/Lesegeraet_Modulation.png  used on input l
+ine 11.
+(pdftex.def)             Requested size: 396.06389pt x 250.3936pt.
+ [7]
+<Schaltungen/Tag_Modulation.png, id=237, 315.579pt x 137.91525pt>
+File: Schaltungen/Tag_Modulation.png Graphic file (type png)
+<use Schaltungen/Tag_Modulation.png>
+Package pdftex.def Info: Schaltungen/Tag_Modulation.png  used on input line 18.
+
+(pdftex.def)             Requested size: 297.0498pt x 129.82343pt.
+<Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg, id=241, 361.35pt x 602.25pt>
+
+File: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg Graphic file (type jpg)
+<use Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg>
+Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg  used
+ on input line 37.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+ [8 <./Schaltungen/Lesegeraet_Modulation.png> <./Schaltungen/Tag_Modulation.png
+>]
+<Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg, id=253, 361.35pt x 602.25p
+t>
+File: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg Graphic file (type jpg
+)
+<use Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg>
+Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg  us
+ed on input line 44.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+<Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg, id=254, 361.35pt x 602.25pt>
+File: Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg Graphic file (type jpg)
+<use Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg>
+Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg  used on inpu
+t line 51.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+) (kapitel6_ask_lesegeraet_tag.tex [9 <./Modulation_Tag--Lesegeraet/Ue_t_Primae
+rseite.jpg> <./Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg> <./Modulatio
+n_Tag--Lesegeraet/Ue_t_Ua_t.jpg>]
+<Schaltungen/Lesegeraet_ModulationVonTag.png, id=264, 723.9045pt x 411.33675pt>
+
+File: Schaltungen/Lesegeraet_ModulationVonTag.png Graphic file (type png)
+<use Schaltungen/Lesegeraet_ModulationVonTag.png>
+Package pdftex.def Info: Schaltungen/Lesegeraet_ModulationVonTag.png  used on i
+nput line 11.
+(pdftex.def)             Requested size: 445.56714pt x 253.18713pt.
+<Schaltungen/Tag_ModulationVonTag.png, id=265, 337.86224pt x 335.45325pt>
+File: Schaltungen/Tag_ModulationVonTag.png Graphic file (type png)
+<use Schaltungen/Tag_ModulationVonTag.png>
+Package pdftex.def Info: Schaltungen/Tag_ModulationVonTag.png  used on input li
+ne 18.
+(pdftex.def)             Requested size: 247.53899pt x 245.77457pt.
+ [10 <./Schaltungen/Lesegeraet_ModulationVonTag.png>]
+<Modulation_Lesegeraet--Tag/NE555_Out.jpg, id=278, 361.35pt x 602.25pt>
+File: Modulation_Lesegeraet--Tag/NE555_Out.jpg Graphic file (type jpg)
+<use Modulation_Lesegeraet--Tag/NE555_Out.jpg>
+Package pdftex.def Info: Modulation_Lesegeraet--Tag/NE555_Out.jpg  used on inpu
+t line 39.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+ [11 <./Schaltungen/Tag_ModulationVonTag.png>]
+<Modulation_Lesegeraet--Tag/Primaer_Out.jpg, id=289, 361.35pt x 602.25pt>
+File: Modulation_Lesegeraet--Tag/Primaer_Out.jpg Graphic file (type jpg)
+<use Modulation_Lesegeraet--Tag/Primaer_Out.jpg>
+Package pdftex.def Info: Modulation_Lesegeraet--Tag/Primaer_Out.jpg  used on in
+put line 46.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+<Modulation_Lesegeraet--Tag/Sekundaer_In.jpg, id=290, 361.35pt x 602.25pt>
+File: Modulation_Lesegeraet--Tag/Sekundaer_In.jpg Graphic file (type jpg)
+<use Modulation_Lesegeraet--Tag/Sekundaer_In.jpg>
+Package pdftex.def Info: Modulation_Lesegeraet--Tag/Sekundaer_In.jpg  used on i
+nput line 53.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+<Modulation_Lesegeraet--Tag/Sekundaer_out.jpg, id=291, 361.35pt x 602.25pt>
+File: Modulation_Lesegeraet--Tag/Sekundaer_out.jpg Graphic file (type jpg)
+<use Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>
+Package pdftex.def Info: Modulation_Lesegeraet--Tag/Sekundaer_out.jpg  used on 
+input line 60.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+ [12 <./Modulation_Lesegeraet--Tag/NE555_Out.jpg> <./Modulation_Lesegeraet--Tag
+/Primaer_Out.jpg> <./Modulation_Lesegeraet--Tag/Sekundaer_In.jpg>])
+[13 <./Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>] (RFID-Doku.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `RFID-Doku.out' has not changed.
-(rerunfilecheck)             Checksum: 729ED3B61B1DF7669AE441E393B0499D;2740.
+(rerunfilecheck)             Checksum: 0019EB1AD9FBEEF4FB24A973E4E17DDA;4145.
  ) 
 Here is how much of TeX's memory you used:
- 34184 strings out of 467866
- 807200 string characters out of 5418325
- 1314203 words of memory out of 5000000
- 62497 multiletter control sequences out of 15000+600000
- 673069 words of font info for 64 fonts, out of 8000000 for 9000
+ 35775 strings out of 467867
+ 835093 string characters out of 5418334
+ 1336479 words of memory out of 5000000
+ 64019 multiletter control sequences out of 15000+600000
+ 683855 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,19n,108p,732b,2022s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,19n,108p,732b,2038s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
 b><C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
-b><C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb
-><C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
-<C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C
-:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C
-:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-<C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-<C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on RFID-Doku.pdf (7 pages, 889733 bytes).
+b><C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb
+><C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb>
+<C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
+C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:
+/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:
+/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><
+C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><
+C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on RFID-Doku.pdf (13 pages, 2395482 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

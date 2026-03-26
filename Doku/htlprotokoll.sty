@@ -13,11 +13,36 @@
 \RequirePackage{ragged2e}
 \RequirePackage{helvet}
 \RequirePackage{tikz}
+\RequirePackage{listings}
 
 % HTL Farben
 \definecolor{htlgreen}{RGB}{156, 206, 43}
 \definecolor{htlgray}{RGB}{89, 91, 96}
+\definecolor{codebg}{RGB}{248,248,248}
+\definecolor{codeframe}{RGB}{190,190,190}
 
+\lstdefinestyle{arduinocode}{
+	language=C++,
+	basicstyle=\ttfamily\small,
+	columns=fullflexible,
+	keepspaces=true,
+	breaklines=true,
+	breakatwhitespace=false,
+	showstringspaces=false,
+	frame=single,
+	framesep=6pt,
+	framerule=0.5pt,
+	rulecolor=\color{codeframe},
+	backgroundcolor=\color{codebg},
+	xleftmargin=0.5em,
+	xrightmargin=0.5em,
+	aboveskip=0.8em,
+	belowskip=0.8em
+}
+
+\lstnewenvironment{codeblock}{
+	\lstset{style=arduinocode}
+}{}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -31,18 +56,18 @@
 \newcommand{\leer}{}
 
 % =================================================
-% Defaults (werden über Setter überschrieben)
+% Defaults (werden \"uber Setter \"uberschrieben)
 % =================================================
 \newcommand{\htl@titel}{}
 \newcommand{\htl@klasse}{}
 \newcommand{\htl@datum}{}
 \newcommand{\htl@lehrer}{}
-\newcommand{\htl@labortext}{zur Laborübung}
+\newcommand{\htl@labortext}{zur Labor\"ubung}
 \newcommand{\htl@messobjekte}{}
 \newcommand{\htl@geraete}{}
 
 % 4 Personen (Rolle + Name)
-\newcommand{\htl@roleA}{Protokollführer}\newcommand{\htl@nameA}{}
+\newcommand{\htl@roleA}{Protokollf\"uhrer}\newcommand{\htl@nameA}{}
 \newcommand{\htl@roleB}{Mitarbeiter}\newcommand{\htl@nameB}{}
 \newcommand{\htl@roleC}{Mitarbeiter}\newcommand{\htl@nameC}{}
 \newcommand{\htl@roleD}{Mitarbeiter}\newcommand{\htl@nameD}{}
@@ -71,6 +96,8 @@
 % Deckblatt (keine Argumente mehr)
 % =================================================
 \newcommand{\protokolldeckblatt}{%
+	\begingroup
+	\hbadness=10000
 	\thispagestyle{empty}
 	\noindent
 	\setlength{\fboxsep}{0pt}%
@@ -96,18 +123,18 @@
 					\begin{center}
 						\begin{tikzpicture}[scale=0.3]
 							
-							% Linkes grünes L
-							\fill[htlgreen] 
-							(0,0) -- (0,3) -- (1.5,3) -- (1.5,2.25) -- 
+							% Linkes gr\"unes L
+							\fill[htlgreen]
+							(0,0) -- (0,3) -- (1.5,3) -- (1.5,2.25) --
 							(3,2.25) -- (3,0.75) -- (1.5,0.75) -- (1.5,0) -- cycle;
 							
 							% Mittleres graues L
-							\fill[htlgray] 
+							\fill[htlgray]
 							(3.2,0) -- (3.2,3) -- (6.2,3) -- (6.2,1.5) --
 							(4.7,1.5) -- (4.7,0) -- cycle;
 							
-							% Rechtes grünes L
-							\fill[htlgreen] 
+							% Rechtes gr\"unes L
+							\fill[htlgreen]
 							(6.4,0) -- (6.4,3) -- (7.9,3) -- (7.9,1.5) --
 							(9.4,1.5) -- (9.4,0) -- cycle;
 							
@@ -126,11 +153,11 @@
 			\vspace{4mm}
 			
 			% --- info table ---
-			\begin{tabularx}{\linewidth}{L{0.34\linewidth}|L{0.33\linewidth}|L{0.33\linewidth}} \hline
+			\begin{tabularx}{\linewidth}{L{0.31\linewidth}|L{0.30\linewidth}|L{0.30\linewidth}} \hline
 				{\small Gruppe / Klasse} & {\small \htl@roleA} & {\small Unterschrift} \\\hline
 				\centering \htl@klasse & \centering \htl@nameA & \cellpad \\\hline
 				
-				{\small Übungs- / Abgabedatum} & {\small \htl@roleB} & {\small Unterschrift} \\\hline
+				{\small \"Ubungs- / Abgabedatum} & {\small \htl@roleB} & {\small Unterschrift} \\\hline
 				\centering \htl@datum & \centering \htl@nameB & \cellpad \\\hline
 				
 				{\small Lehrer} & {\small \htl@roleC} & {\small Unterschrift} \\\hline
@@ -150,11 +177,11 @@
 				\hrule
 			\end{minipage}
 			
-			% --- Geräte ---
+			% --- Ger\"ate ---
 			\vspace{-\fboxrule}
 			\begin{minipage}[t][6.1cm][t]{\dimexpr\linewidth-2\fboxrule\relax}
 				\vspace{6mm}
-				\centering{\bfseries VERWENDETE GERÄTE:}\par
+				\centering{\bfseries VERWENDETE GER\"ATE:}\par
 				\vspace{6mm}
 				{\small\centering \htl@geraete\par}
 				\vfill
@@ -162,4 +189,5 @@
 			
 		\end{minipage}%
 	}%
+	\endgroup
 }

@@ -1,9 +1,9 @@
 \section{Aufbau des RFID-Tags}
 In dieser Aufgabe wird der passive RFID-Tag aufgebaut.
-Das Lesegerät versorgt den Tag über das magnetische Wechselfeld mit Energie.
+Das Leseger\"at versorgt den Tag \"uber das magnetische Wechselfeld mit Energie.
 
 \subsection{Schaltung}
-Der Tag in \cref{fig:rfid_tag_schaltung} wird als Resonanzkreis aus Spule und parallel geschaltetem Kondensator ausgeführt. Die Resonanzfrequenz wird so gewählt, dass sie zur Anregungsfrequenz des Lesegeräts passt.
+Der Tag in \cref{fig:rfid_tag_schaltung} wird als Resonanzkreis aus Spule und parallel geschaltetem Kondensator ausgef\"uhrt. Die Resonanzfrequenz wird so gew\"ahlt, dass sie zur Anregungsfrequenz des Leseger\"ats passt.
 
 \begin{figure}[H]
   \centering
@@ -13,14 +13,14 @@ Der Tag in \cref{fig:rfid_tag_schaltung} wird als Resonanzkreis aus Spule und pa
 \end{figure}
 
 \subsection{Messvorgang}
-Zu Beginn wird auf der Primärseite die Resonanzfrequenz des Lesegeräts abgeglichen, um die höchstmögliche Energieübertragung auf den Tag zu erreichen. Dazu wird die Frequenz des Anregungssignals so lange verändert, bis am Ausgang des Tags die maximale Gleichspannung gemessen wird.
+Zu Beginn wird auf der Prim\"arseite die Resonanzfrequenz des Leseger\"ats abgeglichen, um die h\"ochstm\"ogliche Energie\"ubertragung auf den Tag zu erreichen. Dazu wird die Frequenz des Anregungssignals so lange ver\"andert, bis am Ausgang des Tags die maximale Gleichspannung gemessen wird.
 
-Anschließend werden am Tag die Ausgangsspannung und der Ausgangsstrom gemessen. Die Kopplung zwischen Reader und Tag bleibt dabei unverändert, damit nur der Einfluss der Last untersucht wird. Die Last am Ausgang wird über das Potentiometer schrittweise erhöht. Mit sinkendem Lastwiderstand steigt der Ausgangsstrom des Tags an. Für jeden Einstellpunkt werden die Ausgangsspannung hinter dem 5V-Wandler sowie der zugehörige Ausgangsstrom aufgenommen.
+Anschlie\ss end werden am Tag die Ausgangsspannung und der Ausgangsstrom gemessen. Die Kopplung zwischen Reader und Tag bleibt dabei unver\"andert, damit nur der Einfluss der Last untersucht wird. Die Last am Ausgang wird \"uber das Potentiometer schrittweise erh\"oht. Mit sinkendem Lastwiderstand steigt der Ausgangsstrom des Tags an. F\"ur jeden Einstellpunkt werden die Ausgangsspannung hinter dem 5V-Wandler sowie der zugeh\"orige Ausgangsstrom aufgenommen.
 
-Wird die Last weiter erhöht, erreicht der 5V-Wandler seine Belastungsgrenze. Ab diesem Punkt kann die Ausgangsspannung nicht mehr konstant auf $5\,V$ gehalten werden und bricht deutlich ein. Dieser Bereich markiert den maximal nutzbaren Ausgangsstrom des Tags.
+Wird die Last weiter erh\"oht, erreicht der 5V-Wandler seine Belastungsgrenze. Ab diesem Punkt kann die Ausgangsspannung nicht mehr konstant auf $5\,V$ gehalten werden und bricht deutlich ein. Dieser Bereich markiert den maximal nutzbaren Ausgangsstrom des Tags.
 
 \subsection{Messergebnis}
-Die Messung zeigt, dass der 5V-Wandler die Ausgangsspannung bis zu einem Strom von etwa $71\,mA$ stabil bei $5\,V$ halten kann. Bei einer weiteren Erhöhung des Laststroms fällt die Ausgangsspannung jedoch ab. Ab ungefähr $72\,mA$ beginnt der Spannungsregler einzubrechen, bei $79\,mA$ liegen nur noch etwa $1{,}8\,V$ an.
+Die Messung zeigt, dass der 5V-Wandler die Ausgangsspannung bis zu einem Strom von etwa $71\,mA$ stabil bei $5\,V$ halten kann. Bei einer weiteren Erh\"ohung des Laststroms f\"allt die Ausgangsspannung jedoch ab. Ab ungef\"ahr $72\,mA$ beginnt der Spannungsregler einzubrechen, bei $79\,mA$ liegen nur noch etwa $1{,}8\,V$ an.
 
 \begin{figure}[H]
   \centering
@@ -29,14 +29,16 @@ Die Messung zeigt, dass der 5V-Wandler die Ausgangsspannung bis zu einem Strom v
       width=0.8\linewidth,
       height=7cm,
       grid=major,
-      xlabel={Ausgangsstrom $I_{out} [mA]$},
-      ylabel={Ausgangsspannung $U_{out} [V]$},
+      label style={font=\small},
+      xlabel={Ausgangsstrom $I_{out}$ [mA]},
+      ylabel={Ausgangsspannung $U_{out}$ [V]},
       xmin=25, xmax=80,
       ymin=0, ymax=5.5,
       mark=*,
       thick
     ]
-      \addplot coordinates {
+      \addplot
+      coordinates {
         (25,5.0) (30,5.0) (35,5.0) (40,5.0) (45,5.0)
         (50,5.0) (55,5.0) (60,5.0) (65,5.0) (70,5.0)
         (71,5.0) (72,4.5) (73,4.0) (74,3.6) (75,3.0)
@@ -49,6 +51,6 @@ Die Messung zeigt, dass der 5V-Wandler die Ausgangsspannung bis zu einem Strom v
 \end{figure}
 
 \subsection{Interpretation}
-Die Kennlinie in \cref{fig:kennlinie_tag_5v_wandler} zeigt das typische Verhalten eines belasteten, kontaktlos versorgten Systems. Bis etwa $71\,mA$ steht am Ausgang eine stabile Versorgung von $5\,V$ zur Verfügung. Wird die Last darüber hinaus erhöht, reicht die übertragene Leistung nicht mehr aus und die Ausgangsspannung bricht ein. Damit ist der maximale sinnvoll nutzbare Arbeitspunkt des Tags erreicht.
+Die Kennlinie in \cref{fig:kennlinie_tag_5v_wandler} zeigt das typische Verhalten eines belasteten, kontaktlos versorgten Systems. Bis etwa $71\,mA$ steht am Ausgang eine stabile Versorgung von $5\,V$ zur Verf\"ugung. Wird die Last dar\"uber hinaus erh\"oht, reicht die \"ubertragene Leistung nicht mehr aus und die Ausgangsspannung bricht ein. Damit ist der maximale sinnvoll nutzbare Arbeitspunkt des Tags erreicht.
 
-Die Schaltung in \cref{fig:rfid_tag_schaltung} zeigt den typischen Aufbau eines passiven Tags: Links bildet L2 mit C5 den Resonanzkreis zur Energieaufnahme, über D1 und C7 wird die Gleichspannung gepuffert, D2 schützt vor Überspannung. Der 5V-Regler stellt eine stabile Versorgung bereit. Q3 ermöglicht die Lastmodulation, indem er den Resonanzkreis gezielt belastet. Die Stufe aus Q4/Q5 mit R6 und $R_i$ sorgt für eine definierte Last bzw. Schaltstrecke. Die beobachtete Modulation bestätigt die induktive Kopplung zwischen Reader und Tag; Abstand und Ausrichtung beeinflussen die Kopplung und damit die Modulationstiefe.
+Die Schaltung in \cref{fig:rfid_tag_schaltung} zeigt den typischen Aufbau eines passiven Tags: Links bildet L2 mit C5 den Resonanzkreis zur Energieaufnahme, \"uber D1 und C7 wird die Gleichspannung gepuffert, D2 sch\"utzt vor \"Uberspannung. Der 5V-Regler stellt eine stabile Versorgung bereit. Q3 erm\"oglicht die Lastmodulation, indem er den Resonanzkreis gezielt belastet. Die Stufe aus Q4/Q5 mit R6 und $R_i$ sorgt f\"ur eine definierte Last bzw. Schaltstrecke. Die beobachtete Modulation best\"atigt die induktive Kopplung zwischen Reader und Tag; Abstand und Ausrichtung beeinflussen die Kopplung und damit die Modulationstiefe.
