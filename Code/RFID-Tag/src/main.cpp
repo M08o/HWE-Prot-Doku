@@ -13,6 +13,7 @@
 
 void setup() {
     // CPU-Frequenz so weit wie möglich reduzieren.
+    setCpuFrequencyMhz(10);
     ledInit();
     tagInit();
 }

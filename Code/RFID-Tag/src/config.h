@@ -28,7 +28,7 @@ static constexpr uint32_t CPU_TARGET_MHZ     = 10;
 // ─── UART ────────────────────────────────────────────────────
 static constexpr int      UART_RX_PIN        = 16;
 static constexpr int      UART_TX_PIN        = 17;
-static constexpr uint32_t BAUD_RATE          = 2400;
+static constexpr uint32_t BAUD_RATE          = 1200;
 static constexpr uint32_t UART_CONFIG        = SERIAL_8N1;
 static constexpr uint8_t  UART_PORT          = 2;
 

@@ -1,0 +1,27 @@
+\section{ESP32-Kommunikation und experimenteller Aufbau}
+Nach der Schaltungserweiterung wird festgelegt, welche Aufgaben die beiden ESP32 \"ubernehmen sollen. Dazu werden zwei Programme vorgesehen: eines f\"ur das Leseger\"at und eines f\"ur den Tag.
+
+\subsection{Aufgabe der beiden ESP32}
+Der ESP32 beim Leseger\"at arbeitet als \texttt{esp-lesegeraet}. Er soll das digitale Sendesignal f\"ur die ASK-Modulation erzeugen und anschlie\ss end die Antwort des Tags empfangen. Das empfangene Byte wird im Serial Monitor ausgegeben. Danach sendet das Leseger\"at wieder ein eigenes Byte zur\"uck.
+
+Der ESP32 beim Tag arbeitet als \texttt{esp-tag}. Sobald der Tag versorgt wird, startet dieser ESP32. Danach soll er ein erstes Byte an das Leseger\"at senden, auf die Antwort warten und anschlie\ss end im Wechselbetrieb weiter kommunizieren.
+
+\subsection{Geplante UART-Kommunikation}
+F\"ur die Daten\"ubertragung wird eine UART-Verbindung mit $1200\,Baud$ und 8-N-1 vorgesehen. Die niedrige Baudrate ist f\"ur den Versuchsaufbau sinnvoll, weil die Modulations- und Demodulationsschaltungen dadurch mehr Zeit haben, die einzelnen Signalzust\"ande sauber abzubilden.
+
+Das Sendesignal des Leseger\"ats wird dabei als ASK-Signal interpretiert. Ist TX logisch High, dann ist das Sendesignal aktiv. Ist TX logisch Low, dann ist das Sendesignal aus. Der Tag empf\"angt dieses Signal und sendet anschlie\ss end \"uber seine Modulationsstufe zur\"uck.
+
+\subsection{Vorversuch ohne vollst\"andige RFID-Schaltung}
+Bevor die ESP32 mit der vollst\"andigen Tag- und Leseger\"at-Schaltung verbunden werden, wurde die Kommunikation zuerst ohne die HF- beziehungsweise RFID-Schaltung getestet. Dazu wurden die beiden ESP32 direkt miteinander verbunden. Der TX-Ausgang des einen ESP32 wurde mit dem RX-Eingang des anderen ESP32 verbunden und umgekehrt.
+
+Dieser direkte Vorversuch ist wichtig, weil damit die Software und die UART-Kommunikation unabh\"angig von der analogen Modulationsstrecke gepr\"uft werden k\"onnen. Wenn die Daten direkt zwischen den beiden ESP32 korrekt \"ubertragen werden, kann ein sp\"aterer Fehler leichter der Modulationsschaltung, der Demodulation oder der Kopplung zwischen den Spulen zugeordnet werden.
+
+\subsection{Geplanter Ablauf}
+Der Ablauf beginnt damit, dass sich der Tag dem Leseger\"at n\"ahert und dadurch versorgt wird. Nach dem Einschalten startet der ESP32 des Tags und sendet sofort ein erstes Byte an das Leseger\"at. Das Leseger\"at empf\"angt dieses Byte, gibt den Wert im Serial Monitor aus und sendet anschlie\ss end ein eigenes Byte zur\"uck.
+
+Danach soll ein dauerhafter Wechselbetrieb entstehen. Tag und Leseger\"at senden sich jeweils ein Byte und warten anschlie\ss end auf die Antwort der Gegenseite. Zwischen den einzelnen \"Ubertragungen ist ein Abstand von ungef\"ahr $3\,s$ vorgesehen. Dieser Ablauf l\"auft so lange weiter, bis die Versorgung des Tags wieder wegf\"allt.
+
+\subsection{Hinweise zur Software}
+Die Programme sollen im Arduino-Framework f\"ur den ESP32 erstellt werden. Die Pinbelegung wird im Code \"ubersichtlich am Anfang angegeben. Zus\"atzlich soll der Tag-ESP32 seine CPU- beziehungsweise Taktfrequenz direkt nach dem Start so weit wie praktikabel reduzieren, damit die Leistungsaufnahme auf der Tag-Seite kleiner wird.
+
+Die TX- und RX-LEDs sollen nicht durch zus\"atzliche Blinkprogramme simuliert werden. Falls ein sichtbares Aufleuchten nicht direkt durch die Leitung m\"oglich ist, wird entweder eine einfache externe Beschaltung oder eine minimale Flankenerkennung im ESP32 verwendet.

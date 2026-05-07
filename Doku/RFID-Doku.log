@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  9 APR 2026 09:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  6 MAY 2026 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,18 +1027,18 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}])
 \openout5 = `RFID-Doku.toc'.
 
  [2] (kapitel1_ne555.tex
-<Schaltungen/Timerschaltung.png, id=169, 559.49025pt x 514.3215pt>
+<Schaltungen/Timerschaltung.png, id=219, 559.49025pt x 514.3215pt>
 File: Schaltungen/Timerschaltung.png Graphic file (type png)
 <use Schaltungen/Timerschaltung.png>
 Package pdftex.def Info: Schaltungen/Timerschaltung.png  used on input line 9.
 (pdftex.def)             Requested size: 198.02815pt x 182.03998pt.
-<Timerschaltung/NE555_Output_toff_kalibriert.JPG, id=171, 361.35pt x 602.25pt>
+<Timerschaltung/NE555_Output_toff_kalibriert.JPG, id=221, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_toff_kalibriert.JPG Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_toff_kalibriert.JPG>
 Package pdftex.def Info: Timerschaltung/NE555_Output_toff_kalibriert.JPG  used 
 on input line 23.
 (pdftex.def)             Requested size: 124.62177pt x 207.7052pt.
-<Timerschaltung/NE555_Output_ton_kalibriert.JPG, id=172, 361.35pt x 602.25pt>
+<Timerschaltung/NE555_Output_ton_kalibriert.JPG, id=222, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_ton_kalibriert.JPG Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_ton_kalibriert.JPG>
 Package pdftex.def Info: Timerschaltung/NE555_Output_ton_kalibriert.JPG  used o
@@ -1049,13 +1049,13 @@ TeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/morit/AppData/Local/Programs/MiK
 TeX/fonts/enc/dvips/lm/lm-rm.enc} <./Schaltungen/Timerschaltung.png> <./Timersc
 haltung/NE555_Output_toff_kalibriert.JPG> <./Timerschaltung/NE555_Output_ton_ka
 libriert.JPG>]
-<Schaltungen/Signalaufbereitung.png, id=191, 749.199pt x 510.10574pt>
+<Schaltungen/Signalaufbereitung.png, id=241, 749.199pt x 510.10574pt>
 File: Schaltungen/Signalaufbereitung.png Graphic file (type png)
 <use Schaltungen/Signalaufbereitung.png>
 Package pdftex.def Info: Schaltungen/Signalaufbereitung.png  used on input line
  23.
 (pdftex.def)             Requested size: 396.06389pt x 269.6698pt.
-<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=193, 361.35pt x 602.2
+<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=243, 361.35pt x 602.2
 5pt>
 File: Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg Graphic file (type j
 pg)
@@ -1067,7 +1067,7 @@ used on input line 36.
 nc} <./Schaltungen/Signalaufbereitung.png>]) (kapitel3_uebertrager.tex [5{C:/Us
 ers/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Si
 gnalaufbereitung/SignalaufbereitungVorEndstufe.jpg>]) (kapitel4_rfid_tag.tex
-<Schaltungen/Tag.png, id=214, 697.4055pt x 320.99925pt>
+<Schaltungen/Tag.png, id=264, 697.4055pt x 320.99925pt>
 File: Schaltungen/Tag.png Graphic file (type png)
 <use Schaltungen/Tag.png>
 Package pdftex.def Info: Schaltungen/Tag.png  used on input line 10.
@@ -1080,20 +1080,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 47.
  [6 <./Schaltungen/Tag.png>])
 (kapitel5_modulation.tex
-<Schaltungen/Lesegeraet_Modulation.png, id=226, 512.51476pt x 324.0105pt>
+<Schaltungen/Lesegeraet_Modulation.png, id=276, 512.51476pt x 324.0105pt>
 File: Schaltungen/Lesegeraet_Modulation.png Graphic file (type png)
 <use Schaltungen/Lesegeraet_Modulation.png>
 Package pdftex.def Info: Schaltungen/Lesegeraet_Modulation.png  used on input l
 ine 11.
 (pdftex.def)             Requested size: 396.06389pt x 250.3936pt.
  [7]
-<Schaltungen/Tag_Modulation.png, id=237, 315.579pt x 137.91525pt>
+<Schaltungen/Tag_Modulation.png, id=287, 315.579pt x 137.91525pt>
 File: Schaltungen/Tag_Modulation.png Graphic file (type png)
 <use Schaltungen/Tag_Modulation.png>
 Package pdftex.def Info: Schaltungen/Tag_Modulation.png  used on input line 18.
 
 (pdftex.def)             Requested size: 297.0498pt x 129.82343pt.
-<Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg, id=241, 361.35pt x 602.25pt>
+<Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg, id=291, 361.35pt x 602.25pt>
 
 File: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg Graphic file (type jpg)
 <use Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg>
@@ -1102,7 +1102,7 @@ Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg  used
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
  [8 <./Schaltungen/Lesegeraet_Modulation.png> <./Schaltungen/Tag_Modulation.png
 >]
-<Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg, id=253, 361.35pt x 602.25p
+<Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg, id=303, 361.35pt x 602.25p
 t>
 File: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg Graphic file (type jpg
 )
@@ -1110,7 +1110,7 @@ File: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg Graphic file (type jpg
 Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg  us
 ed on input line 44.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-<Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg, id=254, 361.35pt x 602.25pt>
+<Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg, id=304, 361.35pt x 602.25pt>
 File: Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg Graphic file (type jpg)
 <use Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg>
 Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg  used on inpu
@@ -1119,40 +1119,40 @@ t line 51.
 ) (kapitel6_ask_lesegeraet_tag.tex [9 <./Modulation_Tag--Lesegeraet/Ue_t_Primae
 rseite.jpg> <./Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg> <./Modulatio
 n_Tag--Lesegeraet/Ue_t_Ua_t.jpg>]
-<Schaltungen/Lesegeraet_ModulationVonTag.png, id=264, 723.9045pt x 411.33675pt>
+<Schaltungen/Lesegeraet_ModulationVonTag.png, id=314, 723.9045pt x 411.33675pt>
 
 File: Schaltungen/Lesegeraet_ModulationVonTag.png Graphic file (type png)
 <use Schaltungen/Lesegeraet_ModulationVonTag.png>
 Package pdftex.def Info: Schaltungen/Lesegeraet_ModulationVonTag.png  used on i
 nput line 11.
 (pdftex.def)             Requested size: 445.56714pt x 253.18713pt.
-<Schaltungen/Tag_ModulationVonTag.png, id=265, 337.86224pt x 337.26pt>
+<Schaltungen/Tag_ModulationVonTag.png, id=315, 337.86224pt x 337.26pt>
 File: Schaltungen/Tag_ModulationVonTag.png Graphic file (type png)
 <use Schaltungen/Tag_ModulationVonTag.png>
 Package pdftex.def Info: Schaltungen/Tag_ModulationVonTag.png  used on input li
 ne 18.
 (pdftex.def)             Requested size: 247.53899pt x 247.09833pt.
  [10 <./Schaltungen/Lesegeraet_ModulationVonTag.png>]
-<Modulation_Lesegeraet--Tag/NE555_Out.jpg, id=278, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/NE555_Out.jpg, id=328, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/NE555_Out.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/NE555_Out.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/NE555_Out.jpg  used on inpu
 t line 39.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
  [11 <./Schaltungen/Tag_ModulationVonTag.png>]
-<Modulation_Lesegeraet--Tag/Primaer_Out.jpg, id=289, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/Primaer_Out.jpg, id=339, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/Primaer_Out.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/Primaer_Out.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/Primaer_Out.jpg  used on in
 put line 46.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-<Modulation_Lesegeraet--Tag/Sekundaer_In.jpg, id=290, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/Sekundaer_In.jpg, id=340, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/Sekundaer_In.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/Sekundaer_In.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/Sekundaer_In.jpg  used on i
 nput line 53.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-<Modulation_Lesegeraet--Tag/Sekundaer_out.jpg, id=291, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/Sekundaer_out.jpg, id=341, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/Sekundaer_out.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/Sekundaer_out.jpg  used on 
@@ -1160,20 +1160,35 @@ input line 60.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
  [12 <./Modulation_Lesegeraet--Tag/NE555_Out.jpg> <./Modulation_Lesegeraet--Tag
 /Primaer_Out.jpg> <./Modulation_Lesegeraet--Tag/Sekundaer_In.jpg>])
-[13 <./Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>] (RFID-Doku.aux)
+(kapitel7_esp32_integration.tex
+LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
+14.
+
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
+File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [13{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.en
+c} <./Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>] [14])
+(kapitel8_esp32_kommunikation.tex
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+.
+
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [15]
+[16] (RFID-Doku.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `RFID-Doku.out' has not changed.
-(rerunfilecheck)             Checksum: 0019EB1AD9FBEEF4FB24A973E4E17DDA;4145.
+(rerunfilecheck)             Checksum: 61687C5CDD6575645E2606CA2C61287A;6223.
  ) 
 Here is how much of TeX's memory you used:
- 35775 strings out of 467867
- 835093 string characters out of 5418334
- 1336479 words of memory out of 5000000
- 64019 multiletter control sequences out of 15000+600000
- 683855 words of font info for 73 fonts, out of 8000000 for 9000
+ 35898 strings out of 467867
+ 837736 string characters out of 5418334
+ 1335479 words of memory out of 5000000
+ 64110 multiletter control sequences out of 15000+600000
+ 684544 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,19n,108p,732b,2038s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
@@ -1185,10 +1200,11 @@ C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:
 /Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:
 /Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><
 C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><
-C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on RFID-Doku.pdf (13 pages, 2384986 bytes).
+C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C
+:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on RFID-Doku.pdf (16 pages, 2425002 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 338 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 418 words of extra memory for PDF output out of 10000 (max. 10000000)
 

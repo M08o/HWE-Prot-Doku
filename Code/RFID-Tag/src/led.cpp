@@ -16,7 +16,6 @@ void ledInit() {
     digitalWrite(LED_TX_PIN, LOW);
     digitalWrite(LED_RX_PIN, LOW);
     digitalWrite(INTERANL_LED_PIN, LOW);
-    
 }
 
 void triggerTxLed() {
@@ -31,6 +30,7 @@ void triggerRxLed() {
 
 void updateLeds() {
     const unsigned long now = millis();
+
     if (s_txLedOffTime != 0 && now >= s_txLedOffTime) {
         digitalWrite(LED_TX_PIN, LOW);
         s_txLedOffTime = 0;
