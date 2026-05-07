@@ -1,4 +1,4 @@
-\section{Modulation zwischen Leseger\"at und Tag}
+\section{Modulation vom Tag zum Leseger\"at}
 In dieser Aufgabe wird die Kommunikation zwischen Leseger\"at und RFID-Tag betrachtet. Ziel ist es, die Lastmodulation des Tags sichtbar zu machen und das daraus entstehende demodulierte Signal am Ausgang des Leseger\"ats zu untersuchen.
 
 \subsection{Schaltung}
@@ -26,11 +26,11 @@ Am Tag wird ein Rechtecksignal angelegt, das die Lastmodulation ansteuert. Als A
 Dabei wird gepr\"uft, ob das am Tag angelegte Rechtecksignal im demodulierten Verlauf am Leseger\"at wieder erkennbar ist. Die Messung soll zeigen, dass die vom Tag verursachte Last\"anderung erfolgreich \"uber die induktive Kopplung zum Leseger\"at \"ubertragen wird.
 
 \subsection{Messergebnis}
-In \cref{fig:modulation_primaerseite} ist das Signal auf der Prim\"arseite des Leseger\"ats zu sehen. Die hochfrequente Anregung bleibt erhalten, gleichzeitig ist jedoch eine durch die Lastmodulation hervorgerufene \"Anderung der Signalamplitude erkennbar.
+In \cref{fig:modulation_primaerseite} ist auf CH1 das Eingangssignal und auf CH2 das modulierte Signal auf der Prim\"arseite des Leseger\"ats zu sehen. Die hochfrequente Anregung bleibt erhalten, gleichzeitig ist jedoch eine durch die Lastmodulation hervorgerufene \"Anderung der Signalamplitude erkennbar.
 
-In \cref{fig:modulation_sekundaerseite} ist das Verhalten auf der Sekund\"arseite dargestellt. Auch dort zeigt sich, dass die Belastungs\"anderung des Tags auf das gekoppelte System \"ubertragen wird.
+In \cref{fig:modulation_sekundaerseite} ist auf CH1 wieder das Eingangssignal und auf CH2 das modulierte Signal auf der Sekund\"arseite dargestellt. Auch dort zeigt sich, dass die Belastungs\"anderung des Tags auf das gekoppelte System \"ubertragen wird.
 
-Besonders deutlich wird die Modulation in \cref{fig:modulation_ue_ua}. Dort ist zu erkennen, dass das am Tag angelegte Rechtecksignal $U_e(t)$ nach der Demodulation als Ausgangssignal $U_a(t)$ am Leseger\"at wieder erscheint. Der Verlauf des Ausgangssignals folgt dem angelegten Rechtecksignal und best\"atigt damit die erfolgreiche Signal\"ubertragung vom Tag zum Leseger\"at.
+Besonders deutlich wird die Modulation in \cref{fig:modulation_ue_ua}. Dort ist auf CH1 das Eingangssignal $U_e(t)$ und auf CH2 das modulierte beziehungsweise demodulierte Ausgangssignal $U_a(t)$ zu sehen. Das am Tag angelegte Rechtecksignal erscheint nach der Demodulation als Ausgangssignal $U_a(t)$ am Leseger\"at wieder. Der Verlauf des Ausgangssignals folgt dem angelegten Rechtecksignal und best\"atigt damit die erfolgreiche Signal\"ubertragung vom Tag zum Leseger\"at.
 
 \begin{figure}[H]
   \centering

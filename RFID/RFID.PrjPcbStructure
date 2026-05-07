@@ -1,8 +1,10 @@
 Record=TopLevelDocument|FileName=Lesegerät.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Lesegerät_Lastmodulation_ESP32.SchDoc|SheetNumber=9
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Lesegerät_Lastmodulation_Primär.SchDoc|SheetNumber=7
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Lesegerät_Lastmodulation_Sekundär.SchDoc|SheetNumber=5
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Lesegerät_RC-Ozillator.SchDoc|SheetNumber=2
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Lesegerät_SigA_MosT_GegE.SchDoc|SheetNumber=3
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Tag.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Tag_Lastmodulation_ESP32.SchDoc|SheetNumber=10
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Tag_Lastmodulation_Primär.SchDoc|SheetNumber=8
 Record=NoMainPathDocument|SourceDocument=Lesegerät.SchDoc|FileName=Tag_Lastmodulation_Sekundär.SchDoc|SheetNumber=6

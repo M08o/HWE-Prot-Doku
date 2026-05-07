@@ -26,13 +26,13 @@ Als Träger der Modulation wird das Ausgangssignal des NE555 verwendet, welches 
 Dabei wird untersucht, ob das vom Leseger\"at vorgegebene Rechtecksignal entlang der gesamten \"Ubertragungskette wiedererkennbar bleibt. Insbesondere soll gezeigt werden, dass sich die Ein- und Ausschaltvorg\"ange des HF-Tr\"agers am Tag nach der Demodulation erneut als niederfrequenter Rechteckverlauf darstellen lassen.
 
 \subsection{Messergebnis}
-In \cref{fig:ask_ne555_out} ist auf CH1 das Steuerungssignal der Modulation zu erkennen. Auf CH2 ist das Signal am Ausgang des NE555 zu sehen. Wie zu erwarten wird je nach Status des Funktionsgenerators das Rehctecksignal des NE555 aktiviert oder deaktiviert und erzeugt dann eine Hüllkurve von $495\,Hz$.
+In \cref{fig:ask_ne555_out} ist auf CH1 das Steuerungssignal der Modulation zu erkennen. Auf CH2 ist das Signal am Ausgang des NE555 zu sehen. Wie zu erwarten wird je nach Status des Funktionsgenerators das Rechtecksignal des NE555 aktiviert oder deaktiviert und erzeugt dann eine H\"ullkurve von $495\,Hz$.
 
-Die Wirkung auf das HF-Signal des Leseger\"ats ist in \cref{fig:ask_primaer_out} erkennbar. Die Tr\"agerschwingung ist nur w\"ahrend der High-Phasen des Steuersignals vorhanden. Dadurch entsteht die Amplitudenumtastung des Sendesignals.
+Die Wirkung auf das HF-Signal des Leseger\"ats ist in \cref{fig:ask_primaer_out} erkennbar. Auf CH1 ist der Eingang beziehungsweise das Reset-/Run-Signal zu sehen, auf CH2 das daraus entstehende ASK-Signal auf der Prim\"arseite. Die Tr\"agerschwingung ist nur w\"ahrend der High-Phasen des Steuersignals vorhanden. Dadurch entsteht die Amplitudenumtastung des Sendesignals.
 
-In \cref{fig:ask_sekundaer_in} ist das auf den Tag \"ubertragene Signal dargestellt. Das modulierte Tr\"agersignal wird \"uber die induktive Kopplung auf den Resonanzkreis des Tags \"ubertragen und liegt dort mit kleinerer Amplitude, aber gleichem zeitlichem Verlauf vor.
+In \cref{fig:ask_sekundaer_in} ist das auf den Tag \"ubertragene Signal dargestellt. Auch hier zeigt CH1 den Eingang beziehungsweise das Reset-/Run-Signal und CH2 das ASK-Signal am Tag. Das modulierte Tr\"agersignal wird \"uber die induktive Kopplung auf den Resonanzkreis des Tags \"ubertragen und liegt dort mit kleinerer Amplitude, aber gleichem zeitlichem Verlauf vor.
 
-Besonders deutlich wird das Ergebnis in \cref{fig:ask_sekundaer_out}. Nach der Gleichrichtung und Gl\"attung am Tag wird aus dem amplitudenmodulierten HF-Signal wieder ein niederfrequenter Spannungsverlauf. Dieser folgt dem urspr\"unglichen Rechtecksignal des Leseger\"ats und best\"atigt damit die erfolgreiche ASK-\"Ubertragung vom Leseger\"at zum Tag.
+Besonders deutlich wird das Ergebnis in \cref{fig:ask_sekundaer_out}. CH1 zeigt den Eingang beziehungsweise das Reset-/Run-Signal, CH2 zeigt das ASK-Signal nach der Empfangs- beziehungsweise Demodulationsstufe. Nach der Gleichrichtung und Gl\"attung am Tag wird aus dem amplitudenmodulierten HF-Signal wieder ein niederfrequenter Spannungsverlauf. Dieser folgt dem urspr\"unglichen Rechtecksignal des Leseger\"ats und best\"atigt damit die erfolgreiche ASK-\"Ubertragung vom Leseger\"at zum Tag.
 
 \begin{figure}[H]
   \centering
