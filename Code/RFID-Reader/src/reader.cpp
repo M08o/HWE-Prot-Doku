@@ -1,25 +1,20 @@
 /**
  * reader.cpp - Zustandsautomat des Readers.
  *
- * Dieser Reader arbeitet jetzt mit Manchester-kodierten Nutzdaten:
- * - logisch wird weiterhin mit einzelnen Bytes gearbeitet
- * - physisch werden pro logischem Byte zwei UART-Bytes uebertragen
- *
- * Manchester-Kodierung:
- *   Datenbit 0 -> 10
- *   Datenbit 1 -> 01
- *
- * Reader-Ablauf:
- * 1. Auf logisches Startbyte 0xAA warten.
- * 2. ACK 0xAC senden.
- * 3. Im aktiven Modus ein logisches Byte empfangen.
+ * Ablauf:
+ * 1. Auf Startbyte 0xAA warten.
+ * 2. Danach ACK 0xAC senden.
+ * 3. Im aktiven Modus ein Byte empfangen.
  * 4. Nach 3 Sekunden ein Antwortbyte aus der B-Reihe senden.
- * 5. Bei 4 Sekunden Inaktivitaet oder drei 0x00 hintereinander resetten.
+ * 5. Bei 4 Sekunden Inaktivitaet oder drei 0x00-Bytes hintereinander resetten.
+ *
+ * Wichtige LED-Regel:
+ * Die RX-LED reagiert auf jedes empfangene Byte auf der UART-Leitung,
+ * auch wenn dieses Byte spaeter als falsches Startbyte verworfen wird.
  */
 
 #include "reader.h"
 #include "config.h"
-#include "manchester.h"
 
 #include <Arduino.h>
 #include <HardwareSerial.h>
@@ -100,39 +95,15 @@ static void toggleLedOverrideMode() {
     applyLatchedLedStates();
 }
 
+// Diese Funktion wird direkt nach jedem erfolgreichen UART-read() aufgerufen.
+// Damit leuchtet die RX-LED bei jedem ankommenden Byte kurz auf.
 static void noteReceivedByte(const uint8_t value) {
     startLedPulse(RX_ACTIVITY_LED_PIN, s_rxLedUntilMs);
     printByte("[READER] Received:   ", value);
 }
 
-// Liest genau ein logisches Manchester-Byte. Erst wenn zwei UART-Bytes voll
-// vorliegen und korrekt dekodiert werden koennen, wird true geliefert.
-static bool readManchesterByte(uint8_t& valueOut) {
-    if (TagSerial.available() < 2) {
-        return false;
-    }
-
-    const uint8_t hi = static_cast<uint8_t>(TagSerial.read());
-    const uint8_t lo = static_cast<uint8_t>(TagSerial.read());
-    const uint16_t encoded = static_cast<uint16_t>(hi << 8) | lo;
-
-    if (!manchesterDecodeWord(encoded, valueOut)) {
-        Serial.print("[READER] Invalid Manchester word: 0x");
-        Serial.println(encoded, HEX);
-        return false;
-    }
-
-    return true;
-}
-
-// Sendet ein logisches Byte als zwei UART-Bytes mit Manchester-Kodierung.
-static void sendManchesterByte(const uint8_t value) {
-    const uint16_t encoded = manchesterEncodeByte(value);
-    const uint8_t hi = static_cast<uint8_t>((encoded >> 8) & 0xFF);
-    const uint8_t lo = static_cast<uint8_t>(encoded & 0xFF);
-
-    TagSerial.write(hi);
-    TagSerial.write(lo);
+static void sendByte(const uint8_t value) {
+    TagSerial.write(value);
     TagSerial.flush();
 
     // Eventuelles Echo entfernen, damit das eigene Senden nicht als Empfang
@@ -177,21 +148,21 @@ void readerInit() {
     TagSerial.begin(BAUD_RATE, UART_CONFIG, UART_RX_PIN, UART_TX_PIN);
     clearInputBuffer();
 
-    Serial.println("UART2 ready: 2400-8-N-1 for Manchester transport");
+    Serial.println("UART2 ready: 1200-8-N-1");
     Serial.printf("  RX: GPIO %d\n", UART_RX_PIN);
     Serial.printf("  TX: GPIO %d\n", UART_TX_PIN);
     Serial.printf("  RX LED: GPIO %d\n", RX_ACTIVITY_LED_PIN);
     Serial.printf("  TX LED: GPIO %d\n", TX_ACTIVITY_LED_PIN);
-    Serial.println("Waiting for logical start byte 0xAA...");
+    Serial.println("Waiting for start byte 0xAA...");
 }
 
 void readerUpdate() {
     updateActivityLeds();
 
     switch (s_state) {
-        case ReaderState::WaitForStart: {
-            uint8_t received = 0;
-            if (readManchesterByte(received)) {
+        case ReaderState::WaitForStart:
+            if (TagSerial.available() > 0) {
+                const uint8_t received = static_cast<uint8_t>(TagSerial.read());
                 noteReceivedByte(received);
 
                 if (received == START_BYTE) {
@@ -202,19 +173,18 @@ void readerUpdate() {
                 }
             }
             break;
-        }
 
         case ReaderState::SendAck:
-            sendManchesterByte(ACK_BYTE);
+            sendByte(ACK_BYTE);
             Serial.println("[READER] Active mode started.");
             s_timeoutMs = millis() + TAG_TIMEOUT_MS;
             s_zeroCount = 0;
             s_state = ReaderState::WaitForByte;
             break;
 
-        case ReaderState::WaitForByte: {
-            uint8_t received = 0;
-            if (readManchesterByte(received)) {
+        case ReaderState::WaitForByte:
+            if (TagSerial.available() > 0) {
+                const uint8_t received = static_cast<uint8_t>(TagSerial.read());
                 noteReceivedByte(received);
 
                 if (received == LED_TOGGLE_BYTE) {
@@ -240,13 +210,12 @@ void readerUpdate() {
                 resetToStart("[READER] Timeout in WaitForByte, waiting for 0xAA again.");
             }
             break;
-        }
 
         case ReaderState::WaitBeforeReply:
             if (timeoutExpired(s_timeoutMs)) {
                 resetToStart("[READER] Timeout during reply delay, waiting for 0xAA again.");
             } else if (timeoutExpired(s_replyTimeMs)) {
-                sendManchesterByte(s_replyByte);
+                sendByte(s_replyByte);
                 advanceReplyByte();
                 s_timeoutMs = millis() + TAG_TIMEOUT_MS;
                 s_state = ReaderState::WaitForByte;

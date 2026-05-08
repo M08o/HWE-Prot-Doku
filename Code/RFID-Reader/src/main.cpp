@@ -10,7 +10,8 @@
 #include "config.h"
 #include "reader.h"
 
-void setup() {
+void setup()
+{
     // Serielle Verbindung zum PC starten. Darueber sehen wir Debug-Ausgaben
     // im PlatformIO/Arduino Serial Monitor.
     Serial.begin(MONITOR_BAUD);
@@ -25,7 +26,8 @@ void setup() {
     readerInit();
 }
 
-void loop() {
+void loop()
+{
     // Nicht-blockierende Hauptlogik. Diese Funktion wird sehr oft aufgerufen
     // und prueft jedes Mal, ob neue Daten eingetroffen sind oder eine Antwort
     // faellig ist.
