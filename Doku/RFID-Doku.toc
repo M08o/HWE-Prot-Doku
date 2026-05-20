@@ -4,50 +4,47 @@
 \contentsline {subsection}{\numberline {1.2}Messvorgang}{4}{subsection.7}%
 \contentsline {subsection}{\numberline {1.3}Messergebnis}{4}{subsection.8}%
 \contentsline {subsection}{\numberline {1.4}Interpretation}{5}{subsection.13}%
-\contentsline {section}{\numberline {2}Aufbau der Signalverz\"ogerung und MOSFET-Endstufe}{5}{section.14}%
+\contentsline {section}{\numberline {2}Aufbau der Signalverzögerung und MOSFET-Endstufe}{5}{section.14}%
 \contentsline {subsection}{\numberline {2.1}Schaltung}{5}{subsection.15}%
 \contentsline {subsection}{\numberline {2.2}Messvorgang}{5}{subsection.18}%
 \contentsline {subsection}{\numberline {2.3}Messergebnis}{6}{subsection.19}%
 \contentsline {subsection}{\numberline {2.4}Interpretation}{6}{subsection.22}%
-\contentsline {section}{\numberline {3}Aufbau des \"Ubertragers}{6}{section.23}%
+\contentsline {section}{\numberline {3}Aufbau des Übertragers}{6}{section.23}%
 \contentsline {subsection}{\numberline {3.1}Schaltung und Berechnung}{6}{subsection.24}%
 \contentsline {subsection}{\numberline {3.2}Messvorgang}{6}{subsection.25}%
-\contentsline {subsection}{\numberline {3.3}Messergebnis}{7}{subsection.26}%
-\contentsline {subsection}{\numberline {3.4}Interpretation}{7}{subsection.27}%
-\contentsline {section}{\numberline {4}Aufbau des RFID-Tags}{7}{section.28}%
-\contentsline {subsection}{\numberline {4.1}Schaltung}{7}{subsection.29}%
-\contentsline {subsection}{\numberline {4.2}Messvorgang}{7}{subsection.32}%
-\contentsline {subsection}{\numberline {4.3}Messergebnis}{7}{subsection.33}%
-\contentsline {subsection}{\numberline {4.4}Interpretation}{8}{subsection.36}%
-\contentsline {section}{\numberline {5}Modulation vom Tag zum Leseger\"at}{8}{section.37}%
-\contentsline {subsection}{\numberline {5.1}Schaltung}{8}{subsection.38}%
-\contentsline {subsection}{\numberline {5.2}Messvorgang}{9}{subsection.43}%
-\contentsline {subsection}{\numberline {5.3}Messergebnis}{9}{subsection.44}%
-\contentsline {subsection}{\numberline {5.4}Interpretation}{11}{subsection.51}%
-\contentsline {section}{\numberline {6}ASK-Modulation vom Leseger\"at zum Tag}{11}{section.52}%
-\contentsline {subsection}{\numberline {6.1}Schaltung}{11}{subsection.53}%
-\contentsline {subsection}{\numberline {6.2}Messvorgang}{12}{subsection.58}%
-\contentsline {subsection}{\numberline {6.3}Messergebnis}{13}{subsection.59}%
-\contentsline {subsection}{\numberline {6.4}Interpretation}{14}{subsection.68}%
-\contentsline {section}{\numberline {7}Schaltungserweiterung mit ESP32}{14}{section.69}%
-\contentsline {subsection}{\numberline {7.1}Erweiterung des Leseger\"ats}{15}{subsection.70}%
-\contentsline {subsection}{\numberline {7.2}Erweiterung des Tags}{15}{subsection.73}%
-\contentsline {subsection}{\numberline {7.3}Signal- und Versorgungsschnittstellen}{16}{subsection.76}%
-\contentsline {section}{\numberline {8}ESP32-Kommunikation und experimenteller Aufbau}{16}{section.77}%
-\contentsline {subsection}{\numberline {8.1}Aufgabe der beiden ESP32}{16}{subsection.78}%
-\contentsline {subsection}{\numberline {8.2}Geplante UART-Kommunikation}{16}{subsection.79}%
-\contentsline {subsection}{\numberline {8.3}Vorversuch ohne vollst\"andige RFID-Schaltung}{17}{subsection.80}%
-\contentsline {subsection}{\numberline {8.4}Geplanter Ablauf}{17}{subsection.83}%
-\contentsline {subsection}{\numberline {8.5}Geplante Protokollerweiterungen}{17}{subsection.84}%
-\contentsline {subsubsection}{\numberline {8.5.1}Identifikationspr\"ufung mit Timeout}{17}{subsubsection.85}%
-\contentsline {subsubsection}{\numberline {8.5.2}LED-Toggle-Befehl}{18}{subsubsection.86}%
-\contentsline {subsubsection}{\numberline {8.5.3}Manchester-Kodierung}{18}{subsubsection.87}%
-\contentsline {subsection}{\numberline {8.6}Hinweise zur Software}{18}{subsection.88}%
-\contentsline {section}{\numberline {9}Geplante Messungen zur ESP32-Erweiterung}{18}{section.89}%
-\contentsline {subsection}{\numberline {9.1}Messung der UART-Signale}{18}{subsection.90}%
-\contentsline {subsection}{\numberline {9.2}Messung der ASK-Ansteuerung}{19}{subsection.93}%
-\contentsline {subsection}{\numberline {9.3}Messung der Versorgung des Tags}{20}{subsection.96}%
-\contentsline {subsection}{\numberline {9.4}Messung der Tag-Antwort}{20}{subsection.99}%
-\contentsline {subsection}{\numberline {9.5}Messung der LED-Ausg\"ange}{21}{subsection.102}%
-\contentsline {subsection}{\numberline {9.6}Messung der Protokollerweiterungen}{21}{subsection.105}%
-\contentsline {subsection}{\numberline {9.7}Erwarteter Nutzen der Messungen}{22}{subsection.108}%
+\contentsline {subsection}{\numberline {3.3}Messergebnis und Interpretation}{7}{subsection.26}%
+\contentsline {section}{\numberline {4}Aufbau des RFID-Tags}{7}{section.27}%
+\contentsline {subsection}{\numberline {4.1}Schaltung}{7}{subsection.28}%
+\contentsline {subsection}{\numberline {4.2}Messvorgang}{7}{subsection.31}%
+\contentsline {subsection}{\numberline {4.3}Messergebnis und Interpretation}{7}{subsection.32}%
+\contentsline {section}{\numberline {5}Modulation vom Tag zum Lesegerät}{8}{section.35}%
+\contentsline {subsection}{\numberline {5.1}Schaltung}{8}{subsection.36}%
+\contentsline {subsection}{\numberline {5.2}Messvorgang}{9}{subsection.41}%
+\contentsline {subsection}{\numberline {5.3}Messergebnis}{9}{subsection.42}%
+\contentsline {subsection}{\numberline {5.4}Interpretation}{10}{subsection.49}%
+\contentsline {section}{\numberline {6}ASK-Modulation vom Lesegerät zum Tag}{10}{section.50}%
+\contentsline {subsection}{\numberline {6.1}Schaltung}{10}{subsection.51}%
+\contentsline {subsection}{\numberline {6.2}Messvorgang}{11}{subsection.56}%
+\contentsline {subsection}{\numberline {6.3}Messergebnis und Interpretation}{12}{subsection.57}%
+\contentsline {section}{\numberline {7}Schaltungserweiterung mit ESP32}{13}{section.66}%
+\contentsline {subsection}{\numberline {7.1}Erweiterung des Lesegeräts}{13}{subsection.67}%
+\contentsline {subsection}{\numberline {7.2}Erweiterung des Tags}{14}{subsection.70}%
+\contentsline {subsection}{\numberline {7.3}Signal- und Versorgungsschnittstellen}{15}{subsection.73}%
+\contentsline {section}{\numberline {8}ESP32-Kommunikation und experimenteller Aufbau}{15}{section.74}%
+\contentsline {subsection}{\numberline {8.1}Aufgabe der beiden ESP32}{15}{subsection.75}%
+\contentsline {subsection}{\numberline {8.2}Geplante UART-Kommunikation}{15}{subsection.76}%
+\contentsline {subsection}{\numberline {8.3}Vorversuch ohne vollständige RFID-Schaltung}{15}{subsection.77}%
+\contentsline {subsection}{\numberline {8.4}Geplanter Ablauf}{16}{subsection.80}%
+\contentsline {subsection}{\numberline {8.5}Geplante Protokollerweiterungen}{16}{subsection.81}%
+\contentsline {subsubsection}{\numberline {8.5.1}Identifikationsprüfung mit Timeout}{16}{subsubsection.82}%
+\contentsline {subsubsection}{\numberline {8.5.2}LED-Toggle-Befehl}{17}{subsubsection.83}%
+\contentsline {subsubsection}{\numberline {8.5.3}Manchester-Kodierung}{17}{subsubsection.84}%
+\contentsline {subsection}{\numberline {8.6}Hinweise zur Software}{17}{subsection.85}%
+\contentsline {subsection}{\numberline {8.7}Programmablauf als Flussdiagramm}{17}{subsection.86}%
+\contentsline {section}{\numberline {9}Messungen zur ESP32-Erweiterung}{19}{section.91}%
+\contentsline {subsection}{\numberline {9.1}Messung der UART-Signale}{19}{subsection.92}%
+\contentsline {subsection}{\numberline {9.2}Messung der ASK-Ansteuerung}{20}{subsection.95}%
+\contentsline {subsection}{\numberline {9.3}Messung der Tag-Antwort}{21}{subsection.98}%
+\contentsline {subsection}{\numberline {9.4}Messung der LED-Ausgänge}{21}{subsection.101}%
+\contentsline {subsection}{\numberline {9.5}Messung der Protokollerweiterungen}{21}{subsection.104}%
+\contentsline {subsection}{\numberline {9.6}Auswertung der Messungen}{22}{subsection.107}%

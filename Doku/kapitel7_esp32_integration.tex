@@ -1,44 +1,41 @@
-\section{Schaltungserweiterung mit ESP32}
-Nachdem die Signal\"ubertragung zwischen Leseger\"at und Tag grundlegend gezeigt wurde, wird der Aufbau im n\"achsten Schritt um zwei ESP32 erweitert. Dabei geht es in diesem Kapitel noch nicht um den genauen Programmablauf, sondern nur um die notwendige Erweiterung der bestehenden Schaltungen.
+﻿\section{Schaltungserweiterung mit ESP32}
+Nachdem die Signalübertragung zwischen Lesegerät und Tag grundlegend gezeigt wurde, wird der Aufbau im nächsten Schritt um zwei ESP32 erweitert. Dabei geht es in diesem Kapitel noch nicht um den genauen Programmablauf, sondern nur um die notwendige Erweiterung der bestehenden Schaltungen.
 
-Ein ESP32 wird beim Leseger\"at platziert, der zweite ESP32 befindet sich auf der Tag-Seite. Dadurch sollen die bisher getrennt aufgebauten Modulations- und Demodulationsschaltungen sp\"ater mit digitalen Signalen angesteuert und ausgewertet werden k\"onnen.
+Ein ESP32 wird beim Lesegerät platziert, der zweite ESP32 befindet sich auf der Tag-Seite. Dadurch sollen die bisher getrennt aufgebauten Modulations- und Demodulationsschaltungen später mit digitalen Signalen angesteuert und ausgewertet werden können.
 
-\subsection{Erweiterung des Leseger\"ats}
-Auf der Seite des Leseger\"ats wird der ESP32 als Steuer- und Auswerteeinheit vorgesehen. Sein digitales Ausgangssignal wird zur Ansteuerung der ASK-Stufe verwendet. Damit kann der ESP32 sp\"ater festlegen, wann das Sendesignal aktiv ist und wann es abgeschaltet wird.
+\subsection{Erweiterung des Lesegeräts}
+Auf der Seite des Lesegeräts wird der ESP32 als Steuer- und Auswerteeinheit vorgesehen. Sein digitales Ausgangssignal wird zur Ansteuerung der ASK-Stufe verwendet. Damit kann der ESP32 später festlegen, wann das Sendesignal aktiv ist und wann es abgeschaltet wird.
 
-Zus\"atzlich wird ein Eingang f\"ur das empfangene beziehungsweise demodulierte Signal des Tags ben\"otigt. Dieses Signal wird vom Leseger\"at aus der Lastmodulation des Tags gewonnen und anschlie\ss end dem ESP32 zugef\"uhrt.
+Zusätzlich wird ein Eingang für das empfangene beziehungsweise demodulierte Signal des Tags benötigt. Dieses Signal wird vom Lesegerät aus der Lastmodulation des Tags gewonnen und anschließ end dem ESP32 zugeführt.
 
-F\"ur die Anzeige der Leitungsaktivit\"at werden zwei getrennte LED-Ausg\"ange eingeplant:
+Für die Anzeige der Leitungsaktivität werden zwei getrennte LED-Ausgänge eingeplant:
 
 \begin{itemize}
-  \item ein Ausgang f\"ur die TX-Aktivit\"at des Leseger\"ats,
-  \item ein Ausgang f\"ur die RX-Aktivit\"at des Leseger\"ats.
+  \item ein Ausgang für die TX-Aktivität des Lesegeräts,
+  \item ein Ausgang für die RX-Aktivität des Lesegeräts.
 \end{itemize}
 
-Diese LED-Anzeigen sollen m\"oglichst nahe an den tats\"achlichen Signalen liegen. Sie dienen daher nicht als frei programmierte Statusanzeige, sondern als sichtbare Kontrolle, ob auf der jeweiligen Leitung Aktivit\"at vorhanden ist.
-
-Die geplante Schaltungserweiterung des Leseger\"ats ist in \cref{fig:esp32_lesegeraet_platzhalter} dargestellt.
+Die geplante Schaltungserweiterung des Lesegeräts ist in \cref{fig:esp32_lesegeraet_platzhalter} dargestellt.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{Schaltungen/Lesegerät+ESP32.png}
-  \caption{Geplante Schaltungserweiterung des Leseger\"ats}
+  \caption{Geplante Schaltungserweiterung des Lesegeräts}
   \label{fig:esp32_lesegeraet_platzhalter}
 \end{figure}
 
 \subsection{Erweiterung des Tags}
-Auf der Tag-Seite wird ebenfalls ein ESP32 in die Schaltung eingebunden. Er soll sp\"ater die Modulationsstufe des Tags ansteuern und das vom Leseger\"at kommende Signal auswerten. Da der Tag im eigentlichen Versuch vom Leseger\"at versorgt werden soll, muss die Versorgung des ESP32 in die Tag-Schaltung integriert werden.
+Auf der Tag-Seite wird ebenfalls ein ESP32 in die Schaltung eingebunden. Er soll später die Modulationsstufe des Tags ansteuern und das vom Lesegerät kommende Signal auswerten. Da der Tag im eigentlichen Versuch vom Lesegerät versorgt werden soll, muss die Versorgung des ESP32 in die Tag-Schaltung integriert werden.
 
-Wichtig ist dabei, dass der ESP32 auf der Tag-Seite erst dann aktiv wird, wenn die notwendige Versorgungsspannung vorhanden ist. Die Schaltung muss deshalb so aufgebaut werden, dass der Mikrocontroller, die Modulationsstufe und die Empfangsauswertung eine gemeinsame und stabile Versorgung erhalten.
+Wichtig ist dabei, dass der ESP32 auf der Tag-Seite erst dann aktiv wird, wenn die notwendige Versorgungsspannung vorhanden ist.
 
-Auch beim Tag werden zwei LED-Ausg\"ange vorgesehen:
+Auch beim Tag werden zwei LED-Ausgänge vorgesehen:
 
 \begin{itemize}
-  \item ein Ausgang f\"ur die TX-Aktivit\"at des Tags,
-  \item ein Ausgang f\"ur die RX-Aktivit\"at des Tags.
+  \item ein Ausgang für die TX-Aktivität des Tags,
+  \item ein Ausgang für die RX-Aktivität des Tags.
 \end{itemize}
 
-Die LED-Anzeige soll auch hier m\"oglichst signalnah erfolgen. Ein kurzes Aufleuchten soll aus der tats\"achlichen Start- oder Leitungsaktivit\"at entstehen und nicht durch eine k\"unstliche Blinkroutine erzeugt werden.
 
 Die geplante Schaltungserweiterung des Tags ist in \cref{fig:esp32_tag_platzhalter} dargestellt.
 
@@ -51,7 +48,5 @@ Die geplante Schaltungserweiterung des Tags ist in \cref{fig:esp32_tag_platzhalt
 
 \subsection{Signal- und Versorgungsschnittstellen}
 Durch die Erweiterung entstehen auf beiden Seiten mehrere Schnittstellen zwischen analoger Schaltung und Mikrocontroller. Die wichtigsten Verbindungen sind die digitalen TX- und RX-Signale, die Ansteuerung der Modulationsstufe, das demodulierte Empfangssignal sowie die Versorgung des Tag-ESP32.
-
-Bei der weiteren Umsetzung muss darauf geachtet werden, dass die Pegel zum ESP32 passen. Die GPIOs des ESP32 arbeiten mit $3{,}3\,V$ und d\"urfen nicht direkt mit h\"oheren Spannungen belastet werden. Falls an einer Stelle gr\"o\ss ere Spannungen auftreten, ist eine Anpassung durch Spannungsteiler, Transistorstufe oder Schutzbeschaltung notwendig.
 
 Die genaue Funktion der beiden ESP32, der Kommunikationsablauf und der experimentelle Testaufbau werden im folgenden Kapitel beschrieben.

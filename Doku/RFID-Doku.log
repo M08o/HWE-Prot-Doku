@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  8 MAY 2026 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  19 MAY 2026 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -915,6 +915,26 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks49
 \@floatcapt=\box72
 )
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen304
+\pgfarrowlength=\dimen305
+\pgfarrowwidth=\dimen306
+\pgfarrowlinewidth=\dimen307
+)
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/circuitikz\circuitikz.s
 ty
 Package: circuitikz 2026/02/04{} The CircuiTikz circuit drawing package version
@@ -923,14 +943,6 @@ Package: circuitikz 2026/02/04{} The CircuiTikz circuit drawing package version
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
-aryarrows.meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen304
-\pgfarrowlength=\dimen305
-\pgfarrowwidth=\dimen306
-\pgfarrowlinewidth=\dimen307
 )
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarybending.code.tex
@@ -1017,24 +1029,24 @@ Package babel Info: 'ngerman' activates 'german' shorthands.
 )
 \openout1 = `RFID-Doku.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1101,7 +1113,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 41.
+Package hyperref Info: Link coloring OFF on input line 43.
 (RFID-Doku.out) (RFID-Doku.out)
 \@outlinefile=\write4
 \openout4 = `RFID-Doku.out'.
@@ -1119,18 +1131,18 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}] [2])
 \openout5 = `RFID-Doku.toc'.
 
  [3] (kapitel1_ne555.tex
-<Schaltungen/Timerschaltung.png, id=283, 559.49025pt x 514.3215pt>
+<Schaltungen/Timerschaltung.png, id=268, 559.49025pt x 514.3215pt>
 File: Schaltungen/Timerschaltung.png Graphic file (type png)
 <use Schaltungen/Timerschaltung.png>
 Package pdftex.def Info: Schaltungen/Timerschaltung.png  used on input line 9.
 (pdftex.def)             Requested size: 198.02815pt x 182.03998pt.
-<Timerschaltung/NE555_Output_toff_kalibriert.JPG, id=285, 361.35pt x 602.25pt>
+<Timerschaltung/NE555_Output_toff_kalibriert.JPG, id=270, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_toff_kalibriert.JPG Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_toff_kalibriert.JPG>
 Package pdftex.def Info: Timerschaltung/NE555_Output_toff_kalibriert.JPG  used 
 on input line 23.
 (pdftex.def)             Requested size: 124.62177pt x 207.7052pt.
-<Timerschaltung/NE555_Output_ton_kalibriert.JPG, id=286, 361.35pt x 602.25pt>
+<Timerschaltung/NE555_Output_ton_kalibriert.JPG, id=271, 361.35pt x 602.25pt>
 File: Timerschaltung/NE555_Output_ton_kalibriert.JPG Graphic file (type jpg)
 <use Timerschaltung/NE555_Output_ton_kalibriert.JPG>
 Package pdftex.def Info: Timerschaltung/NE555_Output_ton_kalibriert.JPG  used o
@@ -1141,13 +1153,13 @@ TeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/morit/AppData/Local/Programs/MiK
 TeX/fonts/enc/dvips/lm/lm-rm.enc} <./Schaltungen/Timerschaltung.png> <./Timersc
 haltung/NE555_Output_toff_kalibriert.JPG> <./Timerschaltung/NE555_Output_ton_ka
 libriert.JPG>]
-<Schaltungen/Signalaufbereitung.png, id=305, 749.199pt x 510.10574pt>
+<Schaltungen/Signalaufbereitung.png, id=290, 749.199pt x 510.10574pt>
 File: Schaltungen/Signalaufbereitung.png Graphic file (type png)
 <use Schaltungen/Signalaufbereitung.png>
 Package pdftex.def Info: Schaltungen/Signalaufbereitung.png  used on input line
  23.
 (pdftex.def)             Requested size: 396.06389pt x 269.6698pt.
-<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=307, 361.35pt x 602.2
+<Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg, id=292, 361.35pt x 602.2
 5pt>
 File: Signalaufbereitung/SignalaufbereitungVorEndstufe.jpg Graphic file (type j
 pg)
@@ -1159,7 +1171,7 @@ used on input line 36.
 nc} <./Schaltungen/Signalaufbereitung.png>]) (kapitel3_uebertrager.tex [6{C:/Us
 ers/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Si
 gnalaufbereitung/SignalaufbereitungVorEndstufe.jpg>]) (kapitel4_rfid_tag.tex
-<Schaltungen/Tag.png, id=328, 697.4055pt x 320.99925pt>
+<Schaltungen/Tag.png, id=313, 697.4055pt x 320.99925pt>
 File: Schaltungen/Tag.png Graphic file (type png)
 <use Schaltungen/Tag.png>
 Package pdftex.def Info: Schaltungen/Tag.png  used on input line 10.
@@ -1172,128 +1184,126 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 47.
  [7 <./Schaltungen/Tag.png>])
 (kapitel5_modulation.tex
-<Schaltungen/Lesegeraet_Modulation.png, id=341, 512.51476pt x 324.0105pt>
+<Schaltungen/Lesegeraet_Modulation.png, id=326, 512.51476pt x 324.0105pt>
 File: Schaltungen/Lesegeraet_Modulation.png Graphic file (type png)
 <use Schaltungen/Lesegeraet_Modulation.png>
 Package pdftex.def Info: Schaltungen/Lesegeraet_Modulation.png  used on input l
 ine 11.
 (pdftex.def)             Requested size: 396.06389pt x 250.3936pt.
- [8]
-<Schaltungen/Tag_Modulation.png, id=351, 315.579pt x 137.91525pt>
+<Schaltungen/Tag_Modulation.png, id=327, 315.579pt x 137.91525pt>
 File: Schaltungen/Tag_Modulation.png Graphic file (type png)
 <use Schaltungen/Tag_Modulation.png>
 Package pdftex.def Info: Schaltungen/Tag_Modulation.png  used on input line 18.
 
 (pdftex.def)             Requested size: 297.0498pt x 129.82343pt.
-<Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg, id=355, 361.35pt x 602.25pt>
-
-File: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg Graphic file (type jpg)
-<use Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg>
-Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg  used
- on input line 37.
-(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
- [9 <./Schaltungen/Lesegeraet_Modulation.png> <./Schaltungen/Tag_Modulation.png
->]
-<Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg, id=367, 361.35pt x 602.25p
+ [8 <./Schaltungen/Lesegeraet_Modulation.png>]
+<Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg, id=341, 361.35pt x 602.25p
 t>
 File: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg Graphic file (type jpg
 )
 <use Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg>
 Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite.jpg  us
-ed on input line 44.
+ed on input line 38.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-<Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg, id=368, 361.35pt x 602.25pt>
+<Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg, id=342, 361.35pt x 602.25pt>
+
+File: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg Graphic file (type jpg)
+<use Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg>
+Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg  used
+ on input line 45.
+(pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
+ [9 <./Schaltungen/Tag_Modulation.png> <./Modulation_Tag--Lesegeraet/Ue_t_Sekun
+daerseite.jpg>]
+<Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg, id=353, 361.35pt x 602.25pt>
 File: Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg Graphic file (type jpg)
 <use Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg>
 Package pdftex.def Info: Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg  used on inpu
-t line 51.
+t line 52.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
- [10 <./Modulation_Tag--Lesegeraet/Ue_t_Primaerseite.jpg> <./Modulation_Tag--Le
-segeraet/Ue_t_Sekundaerseite.jpg>])
-(kapitel6_ask_lesegeraet_tag.tex
-<Schaltungen/Lesegeraet_ModulationVonTag.png, id=377, 723.9045pt x 411.33675pt>
+) (kapitel6_ask_lesegeraet_tag.tex [10 <./Modulation_Tag--Lesegeraet/Ue_t_Prima
+erseite.jpg> <./Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg>]
+<Schaltungen/Lesegeraet_ModulationVonTag.png, id=364, 723.9045pt x 411.33675pt>
 
 File: Schaltungen/Lesegeraet_ModulationVonTag.png Graphic file (type png)
 <use Schaltungen/Lesegeraet_ModulationVonTag.png>
 Package pdftex.def Info: Schaltungen/Lesegeraet_ModulationVonTag.png  used on i
 nput line 11.
 (pdftex.def)             Requested size: 445.56714pt x 253.18713pt.
- [11 <./Modulation_Tag--Lesegeraet/Ue_t_Ua_t.jpg>]
-<Schaltungen/Tag_ModulationVonTag.png, id=385, 337.86224pt x 337.26pt>
+<Schaltungen/Tag_ModulationVonTag.png, id=365, 337.86224pt x 337.26pt>
 File: Schaltungen/Tag_ModulationVonTag.png Graphic file (type png)
 <use Schaltungen/Tag_ModulationVonTag.png>
 Package pdftex.def Info: Schaltungen/Tag_ModulationVonTag.png  used on input li
 ne 18.
 (pdftex.def)             Requested size: 247.53899pt x 247.09833pt.
- [12 <./Schaltungen/Lesegeraet_ModulationVonTag.png> <./Schaltungen/Tag_Modulat
+ [11 <./Schaltungen/Lesegeraet_ModulationVonTag.png> <./Schaltungen/Tag_Modulat
 ionVonTag.png>]
-<Modulation_Lesegeraet--Tag/NE555_Out.jpg, id=398, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/NE555_Out.jpg, id=378, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/NE555_Out.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/NE555_Out.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/NE555_Out.jpg  used on inpu
-t line 39.
+t line 37.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-<Modulation_Lesegeraet--Tag/Primaer_Out.jpg, id=399, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/Primaer_Out.jpg, id=379, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/Primaer_Out.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/Primaer_Out.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/Primaer_Out.jpg  used on in
-put line 46.
+put line 44.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-<Modulation_Lesegeraet--Tag/Sekundaer_In.jpg, id=400, 361.35pt x 602.25pt>
+<Modulation_Lesegeraet--Tag/Sekundaer_In.jpg, id=380, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/Sekundaer_In.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/Sekundaer_In.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/Sekundaer_In.jpg  used on i
-nput line 53.
+nput line 51.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
- [13 <./Modulation_Lesegeraet--Tag/NE555_Out.jpg> <./Modulation_Lesegeraet--Tag
-/Primaer_Out.jpg>]
-<Modulation_Lesegeraet--Tag/Sekundaer_out.jpg, id=412, 361.35pt x 602.25pt>
+[12 <./Modulation_Lesegeraet--Tag/NE555_Out.jpg> <./Modulation_Lesegeraet--Tag/
+Primaer_Out.jpg>]
+<Modulation_Lesegeraet--Tag/Sekundaer_out.jpg, id=391, 361.35pt x 602.25pt>
 File: Modulation_Lesegeraet--Tag/Sekundaer_out.jpg Graphic file (type jpg)
 <use Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>
 Package pdftex.def Info: Modulation_Lesegeraet--Tag/Sekundaer_out.jpg  used on 
-input line 60.
+input line 58.
 (pdftex.def)             Requested size: 207.93184pt x 346.55756pt.
-) (kapitel7_esp32_integration.tex [14 <./Modulation_Lesegeraet--Tag/Sekundaer_I
-n.jpg> <./Modulation_Lesegeraet--Tag/Sekundaer_out.jpg>]
+) (kapitel7_esp32_integration.tex
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
 14.
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<Schaltungen/Lesegerät+ESP32.png, id=420, 729.32475pt x 484.209pt>
+) [13 <./Modulation_Lesegeraet--Tag/Sekundaer_In.jpg> <./Modulation_Lesegeraet-
+-Tag/Sekundaer_out.jpg>]
+<Schaltungen/Lesegerät+ESP32.png, id=400, 729.32475pt x 484.209pt>
 File: Schaltungen/Lesegerät+ESP32.png Graphic file (type png)
 <use Schaltungen/Lesegerät+ESP32.png>
 Package pdftex.def Info: Schaltungen/Lesegerät+ESP32.png  used on input line 2
-4.
+2.
 (pdftex.def)             Requested size: 396.06389pt x 262.95403pt.
-<Schaltungen/Tag+ESP32.png, id=422, 634.7715pt x 366.77025pt>
+<Schaltungen/Tag+ESP32.png, id=402, 634.7715pt x 366.77025pt>
 File: Schaltungen/Tag+ESP32.png Graphic file (type png)
 <use Schaltungen/Tag+ESP32.png>
-Package pdftex.def Info: Schaltungen/Tag+ESP32.png  used on input line 47.
+Package pdftex.def Info: Schaltungen/Tag+ESP32.png  used on input line 44.
 (pdftex.def)             Requested size: 396.06389pt x 228.85028pt.
- [15{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc
-} <./Schaltungen/Lesegerät+ESP32.png>]) (kapitel8_esp32_kommunikation.tex
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-.
+ [14{C:/Users/morit/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc
+} <./Schaltungen/Lesegerät+ESP32.png>])
+(kapitel8_esp32_kommunikation.tex [15 <./Schaltungen/Tag+ESP32.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+5.
 
 (C:\Users\morit\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [16 <./Schaltungen/Tag+ESP32.png>] [17]) (kapitel9_esp32_messungen.tex [18] [
-19]
-[20]) [21] [22] (RFID-Doku.aux)
+) [16]
+[17]) (kapitel9_esp32_messungen.tex [18] [19] [20] [21]) [22] (RFID-Doku.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `RFID-Doku.out' has not changed.
-(rerunfilecheck)             Checksum: 5DA94568E3A9936954E497D06E9FF882;8657.
+(rerunfilecheck)             Checksum: 102428ACB7B4750D6E2F2C65DB60A584;8489.
  ) 
 Here is how much of TeX's memory you used:
- 54689 strings out of 467867
- 1406382 string characters out of 5418334
- 2153200 words of memory out of 5000000
- 82799 multiletter control sequences out of 15000+600000
+ 55426 strings out of 467867
+ 1423624 string characters out of 5418334
+ 2173734 words of memory out of 5000000
+ 83527 multiletter control sequences out of 15000+600000
  685186 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,19n,108p,732b,2041s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1311,9 +1321,9 @@ Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/
 Users/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/U
 sers/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Us
 ers/morit/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on RFID-Doku.pdf (22 pages, 2646147 bytes).
+Output written on RFID-Doku.pdf (22 pages, 2645222 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 524 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

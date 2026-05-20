@@ -1,15 +1,15 @@
-\section{Modulation vom Tag zum Leseger\"at}
-Nach dem Aufbau des Tags wurde die Kommunikation zwischen Leseger\"at und RFID-Tag betrachtet. Ziel ist es, die Lastmodulation des Tags sichtbar zu machen und das daraus entstehende demodulierte Signal am Ausgang des Leseger\"ats zu untersuchen.
+﻿\section{Modulation vom Tag zum Lesegerät}
+Nach dem Aufbau des Tags wurde die Kommunikation zwischen Lesegerät und RFID-Tag betrachtet. Ziel ist es, die Lastmodulation des Tags sichtbar zu machen und das entstehende demodulierte Signal am Ausgang des Lesegeräts zu untersuchen.
 
 \subsection{Schaltung}
-Die Gesamtschaltung besteht aus dem Leseger\"at in \cref{fig:lesegeraet_modulation_schaltung} und der Modulationsstufe des Tags in \cref{fig:tag_modulation_schaltung}. Das Leseger\"at erzeugt \"uber den \"Ubertrager das magnetische Wechselfeld und wertet \"uber den H\"ullkurvendetektor die durch den Tag verursachten Feld\"anderungen aus.
+Die Gesamtschaltung besteht aus dem Lesegerät in \cref{fig:lesegeraet_modulation_schaltung} und der Modulationsstufe des Tags in \cref{fig:tag_modulation_schaltung}. Das Lesegerät erzeugt über den Übertrager das magnetische Feld und wertet über den Hüllkurvendetektor die durch den Tag verursachten Feldänderungen aus.
 
-Am Tag wird dazu ein Rechtecksignal angelegt, das den Lasttransistor periodisch ein- und ausschaltet. Dadurch \"andert sich die Belastung des Resonanzkreises. Diese Last\"anderung wirkt sich \"uber die magnetische Kopplung auf das Feld des Leseger\"ats aus und kann dort nach dem H\"ullkurvendetektor als niederfrequentes Signal gemessen werden.
+Am Tag wird dazu ein Rechtecksignal angelegt, das den Lasttransistor periodisch ein- und ausschaltet. Dadurch ändert sich die Belastung des Resonanzkreises. Diese Laständerung wirkt sich auf das Feld des Lesegeräts aus und kann dort nach dem Hüllkurvendetektor gemessen werden.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{Schaltungen/Lesegeraet_Modulation}
-  \caption{Schaltung des Leseger\"ats zur Demodulation}
+  \caption{Schaltung des Lesegeräts zur Demodulation}
   \label{fig:lesegeraet_modulation_schaltung}
 \end{figure}
 
@@ -21,29 +21,30 @@ Am Tag wird dazu ein Rechtecksignal angelegt, das den Lasttransistor periodisch 
 \end{figure}
 
 \subsection{Messvorgang}
-Am Tag wird ein Rechtecksignal angelegt, das die Lastmodulation ansteuert. Als Anregung wird ein TTL-Pulsgenerator mit einer Spannung von $5\,V$ und einer Frequenz von $500\,Hz$ verwendet. Gemessen wird danach am Leseger\"at hinter dem H\"ullkurvendetektor beziehungsweise H\"ullkurvendemodulator mit dem Oszilloskop.
+Am Tag wird ein Rechtecksignal angelegt, das die Lastmodulation ansteuert. Als Anregung wird ein TTL-Pulsgenerator mit einer Spannung von $5\,V$ und einer Frequenz von $500\,Hz$ verwendet. Gemessen wird danach am Lesegerät hinter dem Hüllkurvendetektor beziehungsweise Hüllkurvendemodulator mit dem Oszilloskop.
 
-Dabei wird gepr\"uft, ob das am Tag angelegte Rechtecksignal im demodulierten Verlauf am Leseger\"at wieder erkennbar ist. Die Messung soll zeigen, dass die vom Tag verursachte Last\"anderung erfolgreich \"uber die induktive Kopplung zum Leseger\"at \"ubertragen wird.
+Dabei wird geprüft, ob das am Tag angelegte Rechtecksignal im demodulierten Verlauf am Lesegerät wieder erkennbar ist. Die Messung soll zeigen, dass die vom Tag verursachte Laständerung erfolgreich zum Lesegerät übertragen wird.
 
 \subsection{Messergebnis}
-In \cref{fig:modulation_primaerseite} ist auf CH1 das Eingangssignal und auf CH2 das modulierte Signal auf der Prim\"arseite des Leseger\"ats zu sehen. Die hochfrequente Anregung bleibt erhalten, gleichzeitig ist jedoch eine durch die Lastmodulation hervorgerufene \"Anderung der Signalamplitude erkennbar.
+In \cref{fig:modulation_sekundaerseite} ist auf CH1 das Eingangssignal und auf CH2 das modulierte Signal auf der Sekundärseite dargestellt.
+ 
+In \cref{fig:modulation_primaerseite} ist wieder auf CH1 das Eingangssignal und auf CH2 das modulierte Signal auf der Primärseite des Lesegeräts zu sehen. In beiden Aufnahmen ist erkennbar dass sich die Laständerung des Tags auf die Übertrager auswirkt.
 
-In \cref{fig:modulation_sekundaerseite} ist auf CH1 wieder das Eingangssignal und auf CH2 das modulierte Signal auf der Sekund\"arseite dargestellt. Auch dort zeigt sich, dass die Belastungs\"anderung des Tags auf das gekoppelte System \"ubertragen wird.
+Besonders deutlich wird die Modulation in \cref{fig:modulation_ue_ua}. Dort ist auf CH1 das Eingangssignal $U_e(t)$ und auf CH2 das modulierte beziehungsweise demodulierte Ausgangssignal $U_a(t)$ zu sehen. Das am Tag angelegte Rechtecksignal erscheint nach der Demodulation als Ausgangssignal $U_a(t)$ am Lesegerät wieder. Der Verlauf des Ausgangssignals folgt dem angelegten Rechtecksignal und bestätigt damit die erfolgreiche Signalübertragung vom Tag zum Lesegerät.
 
-Besonders deutlich wird die Modulation in \cref{fig:modulation_ue_ua}. Dort ist auf CH1 das Eingangssignal $U_e(t)$ und auf CH2 das modulierte beziehungsweise demodulierte Ausgangssignal $U_a(t)$ zu sehen. Das am Tag angelegte Rechtecksignal erscheint nach der Demodulation als Ausgangssignal $U_a(t)$ am Leseger\"at wieder. Der Verlauf des Ausgangssignals folgt dem angelegten Rechtecksignal und best\"atigt damit die erfolgreiche Signal\"ubertragung vom Tag zum Leseger\"at.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.42\linewidth, angle=-90]{Modulation_Tag--Lesegeraet/Ue_t_Primaerseite}
-  \caption{Messung der Modulation auf der Prim\"arseite}
-  \label{fig:modulation_primaerseite}
-\end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.42\linewidth, angle=-90]{Modulation_Tag--Lesegeraet/Ue_t_Sekundaerseite}
-  \caption{Messung der Modulation auf der Sekund\"arseite}
+  \caption{Messung der Modulation auf der Sekundärseite}
   \label{fig:modulation_sekundaerseite}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.42\linewidth, angle=-90]{Modulation_Tag--Lesegeraet/Ue_t_Primaerseite}
+	\caption{Messung der Modulation auf der Primärseite}
+	\label{fig:modulation_primaerseite}
 \end{figure}
 
 \begin{figure}[H]
@@ -54,4 +55,4 @@ Besonders deutlich wird die Modulation in \cref{fig:modulation_ue_ua}. Dort ist 
 \end{figure}
 
 \subsection{Interpretation}
-Die Messung best\"atigt das Funktionsprinzip der RFID-Kommunikation vom Tag zum Leseger\"at. Der Tag sendet kein eigenes HF-Signal aus, sondern ver\"andert durch Lastmodulation die Feldbelastung des Leseger\"ats. Durch die Auswertung nach dem H\"ullkurvendetektor kann diese \"Anderung sichtbar gemacht werden. Wird am Tag ein Rechtecksignal angelegt, so ist nach dem H\"ullkurvendetektor am Leseger\"at ein entsprechender Signalverlauf messbar.
+Die Messung bestätigt das Funktionsprinzip der RFID-Kommunikation vom Tag zum Lesegerät. Der Tag sendet kein eigenes HF-Signal aus, sondern verändert durch Lastmodulation die Feldbelastung des Lesegeräts. Durch die Auswertung nach dem Hüllkurvendetektor kann diese Änderung sichtbar gemacht werden. Wird am Tag ein Rechtecksignal angelegt, so ist nach dem Hüllkurvendetektor am Lesegerät ein entsprechender Signalverlauf messbar.

@@ -1,18 +1,18 @@
-\section{ESP32-Kommunikation und experimenteller Aufbau}
-Nach der Schaltungserweiterung wird festgelegt, welche Aufgaben die beiden ESP32 \"ubernehmen sollen. Dazu werden zwei Programme vorgesehen: eines f\"ur das Leseger\"at und eines f\"ur den Tag.
+﻿\section{ESP32-Kommunikation und experimenteller Aufbau}
+Nach der Schaltungserweiterung wird festgelegt, welche Aufgaben die beiden ESP32 übernehmen sollen. Dazu werden zwei Programme vorgesehen: eines für das Lesegerät und eines für den Tag.
 
 \subsection{Aufgabe der beiden ESP32}
-Der ESP32 beim Leseger\"at arbeitet als \texttt{esp-lesegeraet}. Er soll das digitale Sendesignal f\"ur die ASK-Modulation erzeugen und anschlie\ss end die Antwort des Tags empfangen. Das empfangene Byte wird im Serial Monitor ausgegeben. Danach sendet das Leseger\"at wieder ein eigenes Byte zur\"uck.
+Der ESP32 beim Lesegerät soll das digitale Sendesignal für die ASK-Modulation erzeugen und anschließ end die Antwort des Tags empfangen. Das empfangene Byte wird im Serial Monitor ausgegeben. Danach sendet das Lesegerät wieder ein eigenes Byte zurück.
 
-Der ESP32 beim Tag arbeitet als \texttt{esp-tag}. Sobald der Tag versorgt wird, startet dieser ESP32. Danach soll er ein erstes Byte an das Leseger\"at senden, auf die Antwort warten und anschlie\ss end im Wechselbetrieb weiter kommunizieren.
+Der ESP32 beim Tag soll starten sobald der Tag versorgt wird. Danach soll er ein erstes Byte an das Lesegerät senden, auf die Antwort warten und anschließ end im Wechselbetrieb weiter kommunizieren.
 
 \subsection{Geplante UART-Kommunikation}
-F\"ur die Daten\"ubertragung wird eine UART-Verbindung mit $1200\,Baud$ und 8-N-1 vorgesehen. Die niedrige Baudrate ist f\"ur den Versuchsaufbau sinnvoll, weil die Modulations- und Demodulationsschaltungen dadurch mehr Zeit haben, die einzelnen Signalzust\"ande sauber abzubilden.
+Für die Datenübertragung wird eine UART-Verbindung mit $1200\,Baud$ und 8-N-1 vorgesehen. Die niedrige Baudrate ist für den Versuchsaufbau sinnvoll, weil die Modulations- und Demodulationsschaltungen dadurch mehr Zeit haben, die einzelnen Signalzustände sauber abzubilden.
 
-Das Sendesignal des Leseger\"ats wird dabei als ASK-Signal interpretiert. Ist TX logisch High, dann ist das Sendesignal aktiv. Ist TX logisch Low, dann ist das Sendesignal aus. Der Tag empf\"angt dieses Signal und sendet anschlie\ss end \"uber seine Modulationsstufe zur\"uck.
+Das Sendesignal des Lesegeräts wird dabei als ASK-Signal interpretiert. Ist TX logisch High, dann ist das Sendesignal aktiv. Ist TX logisch Low, dann ist das Sendesignal aus. Der Tag empfängt dieses Signal und sendet anschließ end über seine Modulationsstufe zurück.
 
-\subsection{Vorversuch ohne vollst\"andige RFID-Schaltung}
-Bevor die ESP32 mit der vollst\"andigen Tag- und Leseger\"at-Schaltung verbunden werden, wurde die Kommunikation zuerst ohne die HF- beziehungsweise RFID-Schaltung getestet. Dazu wurden die beiden ESP32 direkt miteinander verbunden. Der TX-Ausgang des einen ESP32 wurde mit dem RX-Eingang des anderen ESP32 verbunden und umgekehrt.
+\subsection{Vorversuch ohne vollständige RFID-Schaltung}
+Bevor die ESP32 mit der vollständigen Tag- und Lesegerät-Schaltung verbunden werden, wurde die Kommunikation zuerst ohne die HF- beziehungsweise RFID-Schaltung getestet. Dazu wurden die beiden ESP32 direkt miteinander verbunden. Der TX-Ausgang des einen ESP32 wurde mit dem RX-Eingang des anderen ESP32 verbunden und umgekehrt.
 
 \begin{figure}[H]
   \centering
@@ -71,40 +71,151 @@ Bevor die ESP32 mit der vollst\"andigen Tag- und Leseger\"at-Schaltung verbunden
   \label{fig:esp32_direktaufbau}
 \end{figure}
 
-Der direkte Versuchsaufbau ist in \cref{fig:esp32_direktaufbau} dargestellt. Dieser Vorversuch ist wichtig, weil damit die Software und die UART-Kommunikation unabh\"angig von der analogen Modulationsstrecke gepr\"uft werden k\"onnen. Wenn die Daten direkt zwischen den beiden ESP32 korrekt \"ubertragen werden, kann ein sp\"aterer Fehler leichter der Modulationsschaltung, der Demodulation oder der Kopplung zwischen den Spulen zugeordnet werden.
+Der direkte Versuchsaufbau ist in \cref{fig:esp32_direktaufbau} dargestellt. Dieser Vorversuch ist wichtig, weil damit die Software und die UART-Kommunikation unabhängig von der analogen Modulationsstrecke geprüft werden können. Wenn die Daten direkt zwischen den beiden ESP32 korrekt übertragen werden, kann ein späterer Fehler leichter zugeordnet werden.
 
 \subsection{Geplanter Ablauf}
-Der Ablauf beginnt damit, dass sich der Tag dem Leseger\"at n\"ahert und dadurch versorgt wird. Nach dem Einschalten startet der ESP32 des Tags und sendet sofort ein erstes Byte an das Leseger\"at. Das Leseger\"at empf\"angt dieses Byte, gibt den Wert im Serial Monitor aus und sendet anschlie\ss end ein eigenes Byte zur\"uck.
+Der Ablauf beginnt damit, dass sich der Tag dem Lesegerät nähert und dadurch versorgt wird. Nach dem Einschalten startet der ESP32 des Tags und sendet sofort ein erstes Byte an das Lesegerät. Das Lesegerät empfängt dieses Byte, gibt den Wert im Serial Monitor aus und sendet anschließ end ein eigenes Byte zurück.
 
-Danach soll ein dauerhafter Wechselbetrieb entstehen. Tag und Leseger\"at senden sich jeweils ein Byte und warten anschlie\ss end auf die Antwort der Gegenseite. Zwischen den einzelnen \"Ubertragungen ist ein Abstand von ungef\"ahr $3\,s$ vorgesehen. Dieser Ablauf l\"auft so lange weiter, bis die Versorgung des Tags wieder wegf\"allt.
+Danach soll ein dauerhafter Wechselbetrieb entstehen. Tag und Lesegerät senden sich jeweils ein Byte und warten anschließ end auf die Antwort der Gegenseite. Zwischen den einzelnen Übertragungen ist ein Abstand von ungefähr $3\,s$ vorgesehen. Dieser Ablauf läuft so lange weiter, bis die Versorgung des Tags wieder wegfällt.
 
 \subsection{Geplante Protokollerweiterungen}
-Zus\"atzlich zum einfachen Wechselbetrieb sind drei Erweiterungen f\"ur die ESP32-Kommunikation vorgesehen. Diese Erweiterungen betreffen nicht die analoge Grundschaltung, sondern das Kommunikationsprotokoll zwischen Tag und Leseger\"at.
+Zusätzlich zum einfachen Wechselbetrieb sind drei Erweiterungen für die ESP32-Kommunikation vorgesehen. Diese Erweiterungen betreffen nicht die analoge Grundschaltung, sondern das Kommunikationsprotokoll zwischen Tag und Lesegerät.
 
-\subsubsection{Identifikationspr\"ufung mit Timeout}
-Als erste Erweiterung soll eine einfache Identifikationspr\"ufung eingebaut werden. Dadurch soll das Leseger\"at erkennen, ob sich ein passender Tag im Feld befindet. Der Tag sendet nach dem Start zuerst das Startbyte \texttt{0xAA}. Das Leseger\"at wartet auf dieses Byte und verwirft alle anderen empfangenen Werte. Wird \texttt{0xAA} korrekt erkannt, antwortet das Leseger\"at mit \texttt{0xAC} als Best\"atigung. Erst danach beginnt der eigentliche Datenaustausch.
+\subsubsection{Identifikationsprüfung mit Timeout}
+Als erste Erweiterung soll eine einfache Identifikationsprüfung eingebaut werden. Dadurch soll das Lesegerät erkennen, ob sich ein passender Tag im Feld befindet. Der Tag sendet nach dem Start zuerst das Startbyte \texttt{0xAA}. Das Lesegerät wartet auf dieses Byte und verwirft alle anderen empfangenen Werte. Wird \texttt{0xAA} korrekt erkannt, antwortet das Lesegerät mit \texttt{0xAC} als Bestätigung. Erst danach beginnt der eigentliche Datenaustausch.
 
-Der Timeout-Mechanismus geh\"ort dabei zur Identifikationspr\"ufung. Sobald das Leseger\"at die Best\"atigung gesendet hat, wird \"uberwacht, ob weiterhin Bytes vom Tag empfangen werden. Wenn innerhalb von ungef\"ahr $4\,s$ kein Byte ankommt, geht das Leseger\"at wieder in den Ausgangszustand zur\"uck und wartet erneut auf das Startbyte \texttt{0xAA}. Dadurch wird erkannt, wenn der Tag wieder aus dem Feld entfernt wurde oder nicht mehr versorgt ist.
+Der Timeout-Mechanismus gehört dabei zur Identifikationsprüfung. Sobald das Lesegerät die Bestätigung gesendet hat, wird überwacht, ob weiterhin Bytes vom Tag empfangen werden. Wenn innerhalb von ungefähr $4\,s$ kein Byte ankommt, geht das Lesegerät wieder in den Ausgangszustand zurück und wartet erneut auf das Startbyte \texttt{0xAA}. Dadurch wird erkannt, wenn der Tag wieder aus dem Feld entfernt wurde oder nicht mehr versorgt ist.
 
 \subsubsection{LED-Toggle-Befehl}
-Als zweite Erweiterung soll der Tag einen einfachen Steuerbefehl an das Leseger\"at senden k\"onnen. Daf\"ur wird das Byte \texttt{0xF0} verwendet. Der Tag sendet im normalen Betrieb Z\"ahlerbytes, ersetzt aber jedes f\"unfte gesendete Byte durch \texttt{0xF0}. Eine m\"ogliche Folge ist daher:
+Als zweite Erweiterung soll der Tag einen einfachen Steuerbefehl an das Lesegerät senden können. Dafür wird das Byte \texttt{0xF0} verwendet. Der Tag sendet im normalen Betrieb Zählerbytes, ersetzt aber jedes fünfte gesendete Byte durch \texttt{0xF0}. Eine mögliche Folge ist daher:
 \[
 \texttt{0xC0,\ 0xC1,\ 0xC2,\ 0xC3,\ 0xF0,\ 0xC4,\ ...}
 \]
 
-Empf\"angt das Leseger\"at \texttt{0xF0}, wird dieses Byte nicht als normales Datenbyte behandelt, sondern als Befehl. In diesem Fall werden die beiden LED-Ausg\"ange des Leseger\"ats dauerhaft umgeschaltet. Dadurch kann gezeigt werden, dass nicht nur Daten \"ubertragen werden, sondern dass der Tag auch eine gezielte Aktion beim Leseger\"at ausl\"osen kann.
+Empfängt das Lesegerät \texttt{0xF0}, wird dieses Byte nicht als normales Datenbyte behandelt, sondern als Befehl. In diesem Fall werden die beiden LED-Ausgänge des Lesegeräts dauerhaft umgeschaltet. Dadurch kann gezeigt werden, dass nicht nur Daten übertragen werden, sondern dass der Tag auch eine gezielte Aktion beim Lesegerät auslösen kann.
 
 \subsubsection{Manchester-Kodierung}
-Als dritte Erweiterung ist eine Manchester-Kodierung vorgesehen. Dabei werden die Daten nicht mehr direkt als einfache UART-Bits betrachtet, sondern jedes Datenbit wird durch zwei Signalzust\"ande dargestellt. Ein Datenbit \texttt{1} kann zum Beispiel als \texttt{01} und ein Datenbit \texttt{0} als \texttt{10} codiert werden. Dadurch entsteht bei jedem Bit eine Flanke, was f\"ur eine sp\"atere Auswertung des modulierten Signals hilfreich ist.
+Als dritte Erweiterung ist eine Manchester-Kodierung vorgesehen. Dabei werden die Daten nicht mehr direkt als einfache UART-Bits betrachtet, sondern jedes Datenbit wird durch zwei Signalzustände dargestellt. Ein Datenbit \texttt{1} kann zum Beispiel als \texttt{01} und ein Datenbit \texttt{0} als \texttt{10} codiert werden. Dadurch entsteht bei jedem Bit eine Flanke, was für eine spätere Auswertung des modulierten Signals hilfreich ist.
 
-Da jedes Datenbit auf zwei gesendete Bits erweitert wird, muss f\"ur die Umsetzung mit UART die Baudrate verdoppelt werden. Bei einer gew\"unschten effektiven Datenrate von $1200\,Baud$ w\"urde der ESP32 daher mit $2400\,Baud$ senden. Ein Datenbyte wird beim Senden in zwei UART-Bytes umgewandelt und beim Empfangen wieder zur\"uckdecodiert. Diese Manchester-Kodierung ist als n\"achster Ausbauschritt vorgesehen und noch nicht Teil des einfachen Grundbetriebs.
+Da jedes Datenbit auf zwei gesendete Bits erweitert wird, muss für die Umsetzung mit UART die Baudrate verdoppelt werden. Bei einer gewünschten effektiven Datenrate von $1200\,Baud$ würde der ESP32 daher mit $2400\,Baud$ senden. Ein Datenbyte wird beim Senden in zwei UART-Bytes umgewandelt und beim Empfangen wieder zurückdecodiert. Diese Manchester-Kodierung ist als nächster Ausbauschritt vorgesehen und noch nicht Teil des einfachen Grundbetriebs.
 
 \subsection{Hinweise zur Software}
-Die Programme sollen im Arduino-Framework f\"ur den ESP32 erstellt werden. Die Pinbelegung wird im Code \"ubersichtlich am Anfang angegeben. Zus\"atzlich soll der Tag-ESP32 seine CPU- beziehungsweise Taktfrequenz direkt nach dem Start so weit wie praktikabel reduzieren, damit die Leistungsaufnahme auf der Tag-Seite kleiner wird.
+Die Programme sollen im Arduino-Framework für den ESP32 erstellt werden. Die Pinbelegung wird im Code übersichtlich am Anfang angegeben. Zusätzlich soll der Tag-ESP32 seine CPU- beziehungsweise Taktfrequenz direkt nach dem Start so weit wie praktikabel reduzieren, damit die Leistungsaufnahme auf der Tag-Seite kleiner wird.
 
-Die TX- und RX-LEDs sollen nicht durch zus\"atzliche Blinkprogramme simuliert werden. Falls ein sichtbares Aufleuchten nicht direkt durch die Leitung m\"oglich ist, wird entweder eine einfache externe Beschaltung oder eine minimale Flankenerkennung im ESP32 verwendet.
+Die TX- und RX-LEDs sollen nicht durch zusätzliche Blinkprogramme simuliert werden. Falls ein sichtbares Aufleuchten nicht direkt durch die Leitung möglich ist, wird entweder eine einfache externe Beschaltung oder eine minimale Flankenerkennung im ESP32 verwendet.
 
-Der vollst\"andige Programmcode f\"ur die beiden ESP32 wird nicht direkt in diese Dokumentation eingef\"ugt, sondern im zugeh\"origen GitHub-Repository abgelegt. Dadurch bleibt die Dokumentation \"ubersichtlich und der Code kann unabh\"angig davon weiterbearbeitet werden. Das Repository ist unter folgender Adresse erreichbar:
+Der vollständige Programmcode für die beiden ESP32 wird nicht direkt in diese Dokumentation eingefügt, sondern im zugehörigen GitHub-Repository abgelegt. Dadurch bleibt die Dokumentation übersichtlich und der Code kann unabhängig davon weiterbearbeitet werden. Das Repository ist unter folgender Adresse erreichbar:
 \begin{center}
   \url{https://github.com/M08o/HWE-Prot-Doku.git}
 \end{center}
+
+\subsection{Programmablauf als Flussdiagramm}
+Die folgenden Flussdiagramme fassen den Ablauf der beiden Programme zusammen. Sie beziehen sich auf die im Repository abgelegten Dateien für Lesegerät und Tag.
+Der Programmablauf des Lesegeräts ist in \cref{fig:flussdiagramm_reader} dargestellt. Der Ablauf des Tags ist in \cref{fig:flussdiagramm_tag} dargestellt.
+
+\tikzset{
+  flowstart/.style={
+    rectangle,
+    rounded corners=3pt,
+    draw,
+    fill=green!18,
+    align=center,
+    minimum width=3.3cm,
+    minimum height=0.8cm
+  },
+  flowstep/.style={
+    rectangle,
+    draw,
+    fill=blue!10,
+    align=center,
+    text width=4.1cm,
+    minimum height=0.9cm
+  },
+  flowdecision/.style={
+    diamond,
+    draw,
+    fill=orange!18,
+    aspect=2.1,
+    align=center,
+    text width=3.0cm,
+    inner sep=1pt
+  },
+  flowarrow/.style={-Latex, thick, draw=blue!60!black}
+}
+
+\begin{figure}[H]
+  \centering
+  \resizebox{!}{0.72\textheight}{%
+  \begin{tikzpicture}[node distance=1.15cm and 1.7cm]
+    \node[flowstart] (start) {Start Lesegerät};
+    \node[flowstep, below=of start] (init) {Serial Monitor starten, UART2 und LEDs initialisieren};
+    \node[flowstep, below=of init] (waitstart) {Auf Startbyte \texttt{0xAA} vom Tag warten};
+    \node[flowdecision, below=of waitstart] (startok) {Startbyte korrekt?};
+    \node[flowstep, right=of startok] (ignore) {Byte verwerfen und weiter warten};
+    \node[flowstep, below=of startok] (ack) {ACK \texttt{0xAC} senden und aktiven Modus starten};
+    \node[flowstep, below=of ack] (waitbyte) {Auf Byte vom Tag warten};
+    \node[flowdecision, below=of waitbyte] (timeout) {Timeout?};
+    \node[flowstep, right=of timeout] (reset) {Zurück in den Startzustand};
+    \node[flowdecision, below=of timeout] (toggle) {Byte = \texttt{0xF0}?};
+    \node[flowstep, right=of toggle] (leds) {LED-Toggle-Modus umschalten};
+    \node[flowstep, below=of toggle] (delay) {$3\,s$ Antwortpause abwarten};
+    \node[flowstep, below=of delay] (reply) {Antwortbyte aus der \texttt{0xB0}-Reihe senden};
+
+    \draw[flowarrow] (start) -- (init);
+    \draw[flowarrow] (init) -- (waitstart);
+    \draw[flowarrow] (waitstart) -- (startok);
+    \draw[flowarrow] (startok) -- node[above] {nein} (ignore);
+    \draw[flowarrow] (ignore) |- (waitstart);
+    \draw[flowarrow] (startok) -- node[right] {ja} (ack);
+    \draw[flowarrow] (ack) -- (waitbyte);
+    \draw[flowarrow] (waitbyte) -- (timeout);
+    \draw[flowarrow] (timeout) -- node[above] {ja} (reset);
+    \draw[flowarrow] (reset.east) -- ++(1.0,0) |- (waitstart.east);
+    \draw[flowarrow] (timeout) -- node[right] {nein} (toggle);
+    \draw[flowarrow] (toggle) -- node[above] {ja} (leds);
+    \draw[flowarrow] (leds) |- (delay);
+    \draw[flowarrow] (toggle) -- node[right] {nein} (delay);
+    \draw[flowarrow] (delay) -- (reply);
+    \draw[flowarrow] (reply.west) -- ++(-1.5,0) |- (waitbyte.west);
+  \end{tikzpicture}
+  }
+  \caption{Flussdiagramm des ESP32-Lesegeräts}
+  \label{fig:flussdiagramm_reader}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \resizebox{!}{0.72\textheight}{%
+  \begin{tikzpicture}[node distance=1.15cm and 1.7cm]
+    \node[flowstart] (start) {Start Tag};
+    \node[flowstep, below=of start] (init) {CPU-Frequenz reduzieren, LEDs und UART2 initialisieren};
+    \node[flowstep, below=of init] (sendstart) {Startbyte \texttt{0xAA} senden};
+    \node[flowstep, below=of sendstart] (flush) {Echo der eigenen Sendung kurz verwerfen};
+    \node[flowstep, below=of flush] (waitack) {Auf ACK \texttt{0xAC} vom Lesegerät warten};
+    \node[flowdecision, below=of waitack] (ackok) {ACK korrekt?};
+    \node[flowstep, right=of ackok] (restart) {Bei Timeout Handshake neu starten};
+    \node[flowstep, below=of ackok] (payload) {Nutzbyte senden; jedes fünfte Byte ist \texttt{0xF0}};
+    \node[flowstep, below=of payload] (waitreader) {Auf Antwortbyte vom Lesegerät warten};
+    \node[flowdecision, below=of waitreader] (received) {Antwort empfangen?};
+    \node[flowstep, below=of received] (delay) {$3\,s$ warten};
+    \node[flowstep, below=of delay] (next) {Nächstes Nutzbyte oder Toggle-Befehl senden};
+
+    \draw[flowarrow] (start) -- (init);
+    \draw[flowarrow] (init) -- (sendstart);
+    \draw[flowarrow] (sendstart) -- (flush);
+    \draw[flowarrow] (flush) -- (waitack);
+    \draw[flowarrow] (waitack) -- (ackok);
+    \draw[flowarrow] (ackok) -- node[above] {nein} (restart);
+    \draw[flowarrow] (restart) |- (sendstart);
+    \draw[flowarrow] (ackok) -- node[right] {ja} (payload);
+    \draw[flowarrow] (payload) -- (waitreader);
+    \draw[flowarrow] (waitreader) -- (received);
+    \draw[flowarrow] (received.east) -- ++(1.4,0) |- node[pos=0.25, right] {nein} (waitreader.east);
+    \draw[flowarrow] (received) -- node[right] {ja} (delay);
+    \draw[flowarrow] (delay) -- (next);
+    \draw[flowarrow] (next.west) -- ++(-1.5,0) |- (waitreader.west);
+  \end{tikzpicture}
+  }
+  \caption{Flussdiagramm des ESP32-Tags}
+  \label{fig:flussdiagramm_tag}
+\end{figure}

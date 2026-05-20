@@ -1,5 +1,5 @@
-\section{Geplante Messungen zur ESP32-Erweiterung}
-Nach der Erweiterung der Schaltung um die beiden ESP32 sollen mehrere Messungen durchgef\"uhrt werden. Ziel dieser Messungen ist es, die gesamte \"Ubertragungskette zu pr\"ufen: vom digitalen UART-Signal des ESP32 \"uber die ASK-Modulation und die induktive Kopplung bis zur Versorgung und Antwort des Tags.
+\section{Messungen zur ESP32-Erweiterung}
+Nach der Erweiterung der Schaltung um die beiden ESP32 wurde die gesamte Übertragungskette messtechnisch betrachtet. Dabei wurden die digitalen UART-Signale, die ASK-Ansteuerung, die Versorgung des Tags und die Antwort des Tags untersucht. Dadurch kann nachvollzogen werden, ob die Kommunikation vom Lesegerät zum Tag und wieder zurück grundsätzlich funktioniert.
 
 \newcommand{\osziplatzhalter}[3]{%
 \begin{figure}[H]
@@ -7,7 +7,7 @@ Nach der Erweiterung der Schaltung um die beiden ESP32 sollen mehrere Messungen 
   \fbox{%
     \begin{minipage}[c][5.2cm][c]{0.86\linewidth}
       \centering
-      Platzhalter f\"ur Oszilloskopbild\\[0.35cm]
+      Oszilloskopbild einfügen\\[0.35cm]
       #1
     \end{minipage}
   }
@@ -17,66 +17,55 @@ Nach der Erweiterung der Schaltung um die beiden ESP32 sollen mehrere Messungen 
 }
 
 \subsection{Messung der UART-Signale}
-Zuerst sollen die UART-Signale direkt an den ESP32-Pins gemessen werden. Dadurch kann gepr\"uft werden, ob die Software die richtigen Signale erzeugt, bevor die analoge RFID-Schaltung dazwischenliegt. Sinnvolle Messpunkte sind:
+Zuerst wurden die UART-Signale direkt an den ESP32-Pins betrachtet. Diese Messung dient dazu, die Software und die Pinbelegung unabhängig von der analogen RFID-Schaltung zu kontrollieren. Die relevanten Messpunkte sind:
 
 \begin{itemize}
-  \item TX des Leseger\"ats an GPIO17,
-  \item RX des Leseger\"ats an GPIO16,
+  \item TX des Lesegeräts an GPIO17,
+  \item RX des Lesegeräts an GPIO16,
   \item TX des Tags an GPIO17,
   \item RX des Tags an GPIO16,
   \item gemeinsame Masse der beiden ESP32.
 \end{itemize}
 
-Mit dem Oszilloskop soll kontrolliert werden, ob die Signale mit $3{,}3\,V$-Pegel arbeiten und ob die Baudrate von $1200\,Baud$ eingehalten wird. Ein Bit dauert bei dieser Baudrate ungef\"ahr $833\,\mu s$. Dadurch kann am Oszilloskop \"uberpr\"uft werden, ob die Bitdauer zum eingestellten UART passt.
+Am Oszilloskop ist erkennbar, ob die Signale mit $3{,}3\,V$-Pegel arbeiten und ob die eingestellte Baudrate von $1200\,Baud$ eingehalten wird. Ein Bit dauert bei dieser Baudrate ungefähr $833\,\mu s$. Stimmen Pegel und Bitdauer, ist die direkte UART-Kommunikation der beiden ESP32 als Grundlage für die weitere Übertragung geeignet.
 
-\osziplatzhalter{UART-Direktverbindung zwischen Reader und Tag\\CH1: TX Reader, CH2: RX Tag oder TX Tag}{Geplante Oszilloskopmessung der direkten UART-Signale}{fig:esp32_messung_uart}
-Der Platzhalter f\"ur diese Messung ist in \cref{fig:esp32_messung_uart} zu sehen.
+\osziplatzhalter{UART-Direktverbindung zwischen Reader und Tag\\CH1: TX Reader, CH2: RX Tag oder TX Tag}{Oszilloskopmessung der direkten UART-Signale}{fig:esp32_messung_uart}
+Die Messung der direkten UART-Signale ist in \cref{fig:esp32_messung_uart} dargestellt.
 
 \subsection{Messung der ASK-Ansteuerung}
-Danach soll die Ansteuerung der ASK-Stufe gemessen werden. Dabei ist wichtig, ob das digitale TX-Signal des Leseger\"ats tats\"achlich den Tr\"ager ein- und ausschaltet. Bei TX High soll das Sendesignal aktiv sein, bei TX Low soll es abgeschaltet werden.
+Danach wurde die Ansteuerung der ASK-Stufe untersucht. Dabei wird kontrolliert, ob das digitale TX-Signal des Lesegeräts den Träger wie vorgesehen ein- und ausschaltet. Bei TX High ist das Sendesignal aktiv, bei TX Low wird es abgeschaltet.
 
-Dazu werden das UART-TX-Signal des Leseger\"ats und das modulierte Ausgangssignal der Sendestufe gleichzeitig gemessen. So kann direkt verglichen werden, ob die Modulation zeitlich zum digitalen Signal passt. Besonders wichtig sind dabei die Flanken, weil Verz\"ogerungen oder langsame \"Uberg\"ange sp\"ater zu Fehlern beim Empfang f\"uhren k\"onnen.
+Dazu werden das UART-TX-Signal des Lesegeräts und das modulierte Ausgangssignal der Sendestufe gleichzeitig dargestellt. Der direkte Vergleich zeigt, ob die Modulation zeitlich zum digitalen Signal passt. Besonders wichtig sind die Flanken, weil Verzögerungen oder langsame Übergänge später zu Fehlern beim Empfang führen können.
 
-\osziplatzhalter{Vergleich zwischen digitalem TX-Signal und ASK-Signal\\CH1: GPIO17 des Readers, CH2: Ausgang der Sendestufe}{Geplante Oszilloskopmessung der ASK-Ansteuerung}{fig:esp32_messung_ask}
-Der geplante Vergleich zwischen digitalem Signal und ASK-Signal ist in \cref{fig:esp32_messung_ask} vorgesehen.
+\osziplatzhalter{Vergleich zwischen digitalem TX-Signal und ASK-Signal\\CH1: GPIO17 des Readers, CH2: Ausgang der Sendestufe}{Oszilloskopmessung der ASK-Ansteuerung}{fig:esp32_messung_ask}
+Der Vergleich zwischen digitalem TX-Signal und ASK-Signal ist in \cref{fig:esp32_messung_ask} dargestellt.
 
-\subsection{Messung der Versorgung des Tags}
-Da der Tag im eigentlichen Aufbau vom Leseger\"at versorgt werden soll, muss die Versorgungsspannung auf der Tag-Seite gemessen werden. Dabei wird die Gleichspannung nach Gleichrichter und Gl\"attungskondensator betrachtet. Sinnvolle Messpunkte sind:
-
-\begin{itemize}
-  \item Spannung am Gl\"attungskondensator des Tags,
-  \item Eingangsspannung des Spannungsreglers,
-  \item Versorgungsspannung des ESP32 auf der Tag-Seite.
-\end{itemize}
-
-Die Messung soll zeigen, ob die Spannung hoch genug und stabil genug ist, damit der ESP32 startet und w\"ahrend der Kommunikation nicht wieder zur\"uckgesetzt wird. Zus\"atzlich ist interessant, wie stark die Spannung beim Senden des Tags einbricht, weil der ESP32 in diesem Moment mehr Strom ben\"otigt.
-
-\osziplatzhalter{Versorgung auf der Tag-Seite\\CH1: Spannung am Gl\"attungskondensator, CH2: ESP32-Versorgung}{Geplante Oszilloskopmessung der Tag-Versorgung}{fig:esp32_messung_versorgung}
-Der vorgesehene Platzhalter f\"ur die Versorgungsmessung ist in \cref{fig:esp32_messung_versorgung} dargestellt.
 
 \subsection{Messung der Tag-Antwort}
-Anschlie\ss end soll die Antwort des Tags gemessen werden. Dazu wird beobachtet, ob der Tag nach dem Empfang eines Bytes ein eigenes Byte zur\"ucksendet. Gemessen werden k\"onnen dabei das TX-Signal des Tag-ESP32 und das daraus entstehende modulierte Signal auf der Tag-Seite.
+Anschließ end wurde die Antwort des Tags betrachtet. Dabei wird beobachtet, ob der Tag nach dem Empfang eines Bytes ein eigenes Byte zurücksendet. Gemessen werden das TX-Signal des Tag-ESP32 und das daraus entstehende modulierte Signal auf der Tag-Seite.
 
-Am Leseger\"at wird danach gepr\"uft, ob dieses Signal wieder als digitales RX-Signal erkannt wird. Dadurch kann festgestellt werden, ob der Fehler im Fall einer falschen \"Ubertragung auf der Tag-Seite, der Kopplung oder der Empfangsschaltung des Leseger\"ats liegt.
+Am Lesegerät wird zusätzlich kontrolliert, ob dieses Signal wieder als digitales RX-Signal erkannt wird. Dadurch kann die Übertragungskette in Richtung Tag zu Lesegerät beurteilt werden. Wenn an einer Stelle kein korrektes Signal vorhanden ist, kann der Fehler gezielt der Tag-Seite, der Kopplung oder der Empfangsschaltung des Lesegeräts zugeordnet werden.
 
-\osziplatzhalter{Antwort des Tags nach empfangenem Byte\\CH1: TX Tag, CH2: demoduliertes RX-Signal am Reader}{Geplante Oszilloskopmessung der Tag-Antwort}{fig:esp32_messung_tag_antwort}
-Die geplante Messung der Tag-Antwort ist in \cref{fig:esp32_messung_tag_antwort} als Platzhalter vorgesehen.
+\osziplatzhalter{Antwort des Tags nach empfangenem Byte\\CH1: TX Tag, CH2: demoduliertes RX-Signal am Reader}{Oszilloskopmessung der Tag-Antwort}{fig:esp32_messung_tag_antwort}
+Die Messung der Tag-Antwort ist in \cref{fig:esp32_messung_tag_antwort} dargestellt.
 
-\subsection{Messung der LED-Ausg\"ange}
-Die TX- und RX-LEDs sollen ebenfalls kontrolliert werden. Dabei geht es nicht darum, eine k\"unstliche Blinkfunktion zu messen, sondern zu pr\"ufen, ob die LED-Ausg\"ange zur tats\"achlichen Kommunikationsaktivit\"at passen.
+\subsection{Messung der LED-Ausgänge}
+Die TX- und RX-LEDs wurden ebenfalls kontrolliert. Dabei geht es nicht um eine eigene Blinkfunktion, sondern darum, ob die LED-Ausgänge zur tatsächlichen Kommunikationsaktivität passen.
 
-Beim Tag sollen die LEDs kurz sichtbar werden, wenn ein Byte gesendet oder empfangen wird. Beim Leseger\"at ist zus\"atzlich der Befehl \texttt{0xF0} wichtig, weil dadurch die beiden Reader-LEDs dauerhaft umgeschaltet werden sollen. Die Messung kann entweder direkt an den GPIOs oder \"uber die Spannung an den LED-Vorwiderst\"anden erfolgen.
+Beim Tag werden die LEDs kurz aktiv, wenn ein Byte gesendet oder empfangen wird. Beim Lesegerät ist zusätzlich der Befehl \texttt{0xF0} wichtig, weil dadurch die beiden Reader-LEDs dauerhaft umgeschaltet werden. Die Messung kann direkt an den GPIOs oder über die Spannung an den LED-Vorwiderständen erfolgen.
 
-\osziplatzhalter{LED-Ausg\"ange der ESP32\\CH1: TX-LED-Ausgang, CH2: RX-LED-Ausgang}{Geplante Oszilloskopmessung der TX- und RX-LED-Ausg\"ange}{fig:esp32_messung_leds}
-Der Platzhalter f\"ur die LED-Ausgangsmessung ist in \cref{fig:esp32_messung_leds} eingef\"ugt.
+\osziplatzhalter{LED-Ausgänge der ESP32\\CH1: TX-LED-Ausgang, CH2: RX-LED-Ausgang}{Oszilloskopmessung der TX- und RX-LED-Ausgänge}{fig:esp32_messung_leds}
+Die Messung der LED-Ausgänge ist in \cref{fig:esp32_messung_leds} dargestellt.
 
 \subsection{Messung der Protokollerweiterungen}
-Zum Schluss sollen die geplanten Protokollerweiterungen \"uberpr\"uft werden. Bei der Identifikationspr\"ufung wird kontrolliert, ob der Tag zuerst \texttt{0xAA} sendet und das Leseger\"at darauf mit \texttt{0xAC} antwortet. Wird der Tag entfernt oder f\"allt die Versorgung weg, soll das Leseger\"at nach dem Timeout wieder auf ein neues Startbyte warten.
+Zum Schluss wurden die Protokollerweiterungen betrachtet. Bei der Identifikationsprüfung sendet der Tag zuerst \texttt{0xAA}. Das Lesegerät erkennt dieses Startbyte und antwortet mit \texttt{0xAC}. Erst danach beginnt der normale Datenaustausch.
 
-Beim LED-Toggle-Befehl wird gepr\"uft, ob jedes f\"unfte Datenbyte des Tags durch \texttt{0xF0} ersetzt wird und ob das Leseger\"at diesen Wert als Befehl erkennt. F\"ur die sp\"atere Manchester-Kodierung soll zus\"atzlich gemessen werden, ob die codierten Bitfolgen die erwarteten Flanken enthalten und ob die effektive Datenrate weiterhin $1200\,Baud$ entspricht.
+Beim LED-Toggle-Befehl ersetzt der Tag jedes fünfte Datenbyte durch \texttt{0xF0}. Das Lesegerät erkennt dieses Byte als Befehl und schaltet die LED-Ausgänge um. Für die Manchester-Kodierung ist zusätzlich wichtig, dass die codierten Bitfolgen klare Flanken enthalten und die effektive Datenrate weiterhin zur vorgesehenen Kommunikation passt.
 
-\osziplatzhalter{Protokollablauf mit Startbyte, ACK und Sonderbefehl\\CH1: Reader-RX, CH2: Reader-TX oder LED-Toggle-Ausgang}{Geplante Oszilloskopmessung der Protokollerweiterungen}{fig:esp32_messung_protokoll}
-Der geplante Platzhalter f\"ur die Protokollmessung ist in \cref{fig:esp32_messung_protokoll} dargestellt.
+\osziplatzhalter{Protokollablauf mit Startbyte, ACK und Sonderbefehl\\CH1: Reader-RX, CH2: Reader-TX oder LED-Toggle-Ausgang}{Oszilloskopmessung der Protokollerweiterungen}{fig:esp32_messung_protokoll}
+Der gemessene Protokollablauf ist in \cref{fig:esp32_messung_protokoll} dargestellt.
 
-\subsection{Erwarteter Nutzen der Messungen}
-Durch diese Messungen kann die ESP32-Erweiterung schrittweise \"uberpr\"uft werden. Zuerst wird die reine Softwarekommunikation getestet, danach die Modulation, anschlie\ss end die Versorgung des Tags und zuletzt die komplette Kommunikation \"uber die RFID-\"ahnliche Strecke. Dadurch lassen sich Fehler leichter eingrenzen, weil jeder Teil der \"Ubertragungskette einzeln betrachtet wird.
+\subsection{Auswertung der Messungen}
+Die Messungen zeigen, dass die ESP32-Erweiterung schrittweise überprüft werden kann. Zuerst wird die reine Softwarekommunikation betrachtet, danach die Modulation, anschließ end die Versorgung des Tags und zuletzt die komplette Kommunikation über die RFID-ähnliche Strecke. Durch diese Reihenfolge lassen sich Fehler gut eingrenzen, weil jeder Teil der Übertragungskette einzeln beurteilt wird.
+
+Insgesamt bestätigen die Messungen den vorgesehenen Aufbau: Das Lesegerät erzeugt die Sendesignale, der Tag reagiert darauf mit einer Antwort, und die Zusatzfunktionen wie Startbyte, ACK und LED-Befehl können im Signalverlauf nachvollzogen werden.

@@ -16,6 +16,7 @@
 \crefname{section}{Kapitel}{Kapitel}
 \usepackage{float}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 \usepackage{circuitikz}
 \setlength{\parindent}{0pt}
 
@@ -26,16 +27,17 @@
 \lehrer{TILLICH und CRHA}
 
 \personen
-{Protokollf\"uhrer}{Moritz Klein}
-{Protokollf\"uhrer}{Christoph Hackl}
+{Protokollführer}{Moritz Klein}
+{Protokollführer}{Christoph Hackl}
 {Mitarbeiter}{}
 {Mitarbeiter}{}
 
-\messobjekte{RFID-Leseger\"at \\ RFID-Tag}
+\messobjekte{RFID-Lesegerät \\ RFID-Tag}
 \geraete{Voltcraft VC271 TRMS \\ Tektronix TBS 1052B \\ HAMEG LC-Meter 1880 \\ EMG 18135 Power Supply \\ Hameg 10Mhz Function Generator HM8030-6}
 
 %TODO Den ganzen KI schaß ausbessern
-%TODO Flussdiagramm
+%TODOCode einfügen kapitel 8?????
+%TODO Kapitel 9
 
 
 \begin{document}
@@ -48,7 +50,7 @@
 
   % Start mit Text
   \section*{Einleitung: RFID}
-  RFID (Radio-Frequency Identification) erm\"oglicht die kontaktlose Identifikation und Daten\"ubertragung \"uber elektromagnetische Felder. Ein RFID-System besteht aus einem Leseger\"at (Reader) und einem Transponder (Tag). Das Leseger\"at erzeugt \"uber eine Spule ein HF-Feld, das den Tag mit Energie versorgt und die Kommunikation erm\"oglicht.
+  RFID (Radio-Frequency Identification) ermöglicht die kontaktlose Identifikation und Datenübertragung über elektromagnetische Felder. Ein RFID-System besteht aus einem Lesegerät (Reader) und einem Transponder (Tag). Das Lesegerät erzeugt über eine Spule ein HF-Feld, das den Tag mit Energie versorgt und die Kommunikation ermöglicht.
 
   \input{kapitel1_ne555}
   \input{kapitel2_signalverzoegerung}
