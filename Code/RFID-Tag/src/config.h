@@ -39,9 +39,9 @@ static constexpr int      INTERANL_LED_PIN   = 2;   // Interne LED des ESP32 (GP
 static constexpr uint32_t LED_PULSE_MS       = 80;
 
 // ─── PROTOKOLL ───────────────────────────────────────────────
-static constexpr uint8_t  START_BYTE         = 0xAA;  // Startbyte das Tag sendet
+static constexpr uint8_t  START_BYTE         = 0xF0;  // Startbyte das Tag sendet
 static constexpr uint8_t  ACK_BYTE           = 0xAC;  // Erwartetes ACK vom Reader
-static constexpr uint8_t  CMD_TOGGLE_LEDS    = 0xF0;  // Befehl: beide LEDs toggeln
+static constexpr uint8_t  CMD_TOGGLE_LEDS    = 0xFF;  // Befehl: beide LEDs toggeln
 static constexpr uint8_t  DATA_BYTE_MIN      = 0xC0;  // Nutzdaten-Bereich Start
 static constexpr uint8_t  DATA_BYTE_MAX      = 0xCF;  // Nutzdaten-Bereich Ende
 static constexpr uint32_t REPLY_DELAY_MS     = 3000;

@@ -1,71 +1,42 @@
 \section{Messungen zur ESP32-Erweiterung}
-Nach der Erweiterung der Schaltung um die beiden ESP32 wurde die gesamte Übertragungskette messtechnisch betrachtet. Dabei wurden die digitalen UART-Signale, die ASK-Ansteuerung, die Versorgung des Tags und die Antwort des Tags untersucht. Dadurch kann nachvollzogen werden, ob die Kommunikation vom Lesegerät zum Tag und wieder zurück grundsätzlich funktioniert.
+Nach der Erweiterung der Schaltung um die beiden ESP32 wurde die gesamte Übertragungskette gemessen. Dabei wurden die digitalen UART-Signale, die ASK-Ansteuerung und die Antwort des Tags untersucht. Dadurch kann nachvollzogen werden, ob die Kommunikation vom Lesegerät zum Tag und wieder zurück grundsätzlich funktioniert.
 
-\newcommand{\osziplatzhalter}[3]{%
+\newcommand{\oszibild}[3]{%
 \begin{figure}[H]
   \centering
-  \fbox{%
-    \begin{minipage}[c][5.2cm][c]{0.86\linewidth}
-      \centering
-      Oszilloskopbild einfügen\\[0.35cm]
-      #1
-    \end{minipage}
-  }
+  \includegraphics[width=0.42\linewidth, angle=-90]{#1}
   \caption{#2}
   \label{#3}
 \end{figure}
 }
 
 \subsection{Messung der UART-Signale}
-Zuerst wurden die UART-Signale direkt an den ESP32-Pins betrachtet. Diese Messung dient dazu, die Software und die Pinbelegung unabhängig von der analogen RFID-Schaltung zu kontrollieren. Die relevanten Messpunkte sind:
+Zuerst wurden die digitalen Signale innerhalb der aufgebauten RFID-Schaltung betrachtet.
 
-\begin{itemize}
-  \item TX des Lesegeräts an GPIO17,
-  \item RX des Lesegeräts an GPIO16,
-  \item TX des Tags an GPIO17,
-  \item RX des Tags an GPIO16,
-  \item gemeinsame Masse der beiden ESP32.
-\end{itemize}
+Am Oszilloskop ist erkennbar, dass die Signale nach der RFID-Schaltung wieder als auswertbare digitale Signale herauskommen. Die Flanken der gesendeten und empfangenen Signale liegen zeitlich sehr nahe beieinander. Die eingestellte Baudrate von $1200\,Baud$ wird eingehalten, ein Bit dauert bei dieser Baudrate ungefähr $833\,\mu s$. Deshalb kann der ESP32 das über die Schaltung übertragene Signal wieder als UART-Signal erkennen.
 
-Am Oszilloskop ist erkennbar, ob die Signale mit $3{,}3\,V$-Pegel arbeiten und ob die eingestellte Baudrate von $1200\,Baud$ eingehalten wird. Ein Bit dauert bei dieser Baudrate ungefähr $833\,\mu s$. Stimmen Pegel und Bitdauer, ist die direkte UART-Kommunikation der beiden ESP32 als Grundlage für die weitere Übertragung geeignet.
+\oszibild{ESP_UART/READER_TX_Tag_RX.JPG}{UART-Signal vom Lesegerät zum Tag}{fig:esp32_messung_uart_reader_tag}
+In \cref{fig:esp32_messung_uart_reader_tag} ist die Übertragung vom Lesegerät zum Tag dargestellt. CH2 zeigt das TX-Signal des Lesegeräts vor der Modulation, CH1 das daraus zurückgewonnene RX-Signal am Tag nach Demodulator und Signalaufbereitung. Die fallenden und steigenden Flanken der beiden Kanäle liegen nahezu übereinander. Dadurch ist sichtbar, dass das Start- und Datenmuster nach der RFID-Schaltung am Tag wieder mit der gleichen zeitlichen Lage ankommt.
 
-\osziplatzhalter{UART-Direktverbindung zwischen Reader und Tag\\CH1: TX Reader, CH2: RX Tag oder TX Tag}{Oszilloskopmessung der direkten UART-Signale}{fig:esp32_messung_uart}
-Die Messung der direkten UART-Signale ist in \cref{fig:esp32_messung_uart} dargestellt.
+\oszibild{ESP_UART/TAG_TX_READE_RX.JPG}{UART-Signal vom Tag zum Lesegerät}{fig:esp32_messung_uart_tag_reader}
+Die Gegenrichtung ist in \cref{fig:esp32_messung_uart_tag_reader} zu sehen. CH2 zeigt das TX-Signal des Tags vor der Modulation der Antwort, CH1 das daraus zurückgewonnene RX-Signal am Lesegerät nach Demodulator und Signalaufbereitung. Auch hier folgt das empfangene Signal dem gesendeten Signal eindeutig. Die Low-Phasen des UART-Bytes sind am RX-Signal wieder vorhanden, wodurch das Lesegerät die Antwort des Tags auswerten kann.
 
 \subsection{Messung der ASK-Ansteuerung}
-Danach wurde die Ansteuerung der ASK-Stufe untersucht. Dabei wird kontrolliert, ob das digitale TX-Signal des Lesegeräts den Träger wie vorgesehen ein- und ausschaltet. Bei TX High ist das Sendesignal aktiv, bei TX Low wird es abgeschaltet.
+Danach wurde die Ansteuerung der ASK-Stufe untersucht. Das digitale TX-Signal des Lesegeräts steuert dabei den Träger. Bei TX High ist der Träger aktiv, bei TX Low wird er abgeschaltet.
 
-Dazu werden das UART-TX-Signal des Lesegeräts und das modulierte Ausgangssignal der Sendestufe gleichzeitig dargestellt. Der direkte Vergleich zeigt, ob die Modulation zeitlich zum digitalen Signal passt. Besonders wichtig sind die Flanken, weil Verzögerungen oder langsame Übergänge später zu Fehlern beim Empfang führen können.
 
-\osziplatzhalter{Vergleich zwischen digitalem TX-Signal und ASK-Signal\\CH1: GPIO17 des Readers, CH2: Ausgang der Sendestufe}{Oszilloskopmessung der ASK-Ansteuerung}{fig:esp32_messung_ask}
-Der Vergleich zwischen digitalem TX-Signal und ASK-Signal ist in \cref{fig:esp32_messung_ask} dargestellt.
-
+\oszibild{ESP_UART/ReaderTX_ASK.JPG}{Vergleich zwischen Reader-TX und ASK-Signal}{fig:esp32_messung_ask}
+Der Vergleich zwischen digitalem TX-Signal und ASK-Signal ist in \cref{fig:esp32_messung_ask} dargestellt. Während der High-Phasen des digitalen Signals ist ein deutliches Trägersignal sichtbar. In den Low-Phasen verschwindet der Träger fast vollständig. Damit ist zu erkennen, dass die ASK-Stufe das UART-Signal in eine Amplitudenmodulation umsetzt.
 
 \subsection{Messung der Tag-Antwort}
-Anschließend wurde die Antwort des Tags betrachtet. Dabei wird beobachtet, ob der Tag nach dem Empfang eines Bytes ein eigenes Byte zurücksendet. Gemessen werden das TX-Signal des Tag-ESP32 und das daraus entstehende modulierte Signal auf der Tag-Seite.
+Anschließend wurde die Antwort des Tags betrachtet. Nach dem Empfang eines Bytes erzeugt der Tag ein eigenes Antwortsignal. Gemessen werden das TX-Signal des Tag-ESP32 und das daraus entstehende modulierte Signal auf der Tag-Seite.
 
-Am Lesegerät wird zusätzlich kontrolliert, ob dieses Signal wieder als digitales RX-Signal erkannt wird. Dadurch kann die Übertragungskette in Richtung Tag zu Lesegerät beurteilt werden. Wenn an einer Stelle kein korrektes Signal vorhanden ist, kann der Fehler gezielt der Tag-Seite, der Kopplung oder der Empfangsschaltung des Lesegeräts zugeordnet werden.
-
-\osziplatzhalter{Antwort des Tags nach empfangenem Byte\\CH1: TX Tag, CH2: demoduliertes RX-Signal am Reader}{Oszilloskopmessung der Tag-Antwort}{fig:esp32_messung_tag_antwort}
-Die Messung der Tag-Antwort ist in \cref{fig:esp32_messung_tag_antwort} dargestellt.
-
-\subsection{Messung der LED-Ausgänge}
-Die TX- und RX-LEDs wurden ebenfalls kontrolliert. Dabei geht es nicht um eine eigene Blinkfunktion, sondern darum, ob die LED-Ausgänge zur tatsächlichen Kommunikationsaktivität passen.
-
-Beim Tag werden die LEDs kurz aktiv, wenn ein Byte gesendet oder empfangen wird. Beim Lesegerät ist zusätzlich der Befehl \texttt{0xF0} wichtig, weil dadurch die beiden Reader-LEDs dauerhaft umgeschaltet werden. Die Messung kann direkt an den GPIOs oder über die Spannung an den LED-Vorwiderständen erfolgen.
-
-\osziplatzhalter{LED-Ausgänge der ESP32\\CH1: TX-LED-Ausgang, CH2: RX-LED-Ausgang}{Oszilloskopmessung der TX- und RX-LED-Ausgänge}{fig:esp32_messung_leds}
-Die Messung der LED-Ausgänge ist in \cref{fig:esp32_messung_leds} dargestellt.
-
-\subsection{Messung der Protokollerweiterungen}
-Zum Schluss wurden die Protokollerweiterungen betrachtet. Bei der Identifikationsprüfung sendet der Tag zuerst \texttt{0xAA}. Das Lesegerät erkennt dieses Startbyte und antwortet mit \texttt{0xAC}. Erst danach beginnt der normale Datenaustausch.
-
-Beim LED-Toggle-Befehl ersetzt der Tag jedes fünfte Datenbyte durch \texttt{0xF0}. Das Lesegerät erkennt dieses Byte als Befehl und schaltet die LED-Ausgänge um. Für die Manchester-Kodierung ist zusätzlich wichtig, dass die codierten Bitfolgen klare Flanken enthalten und die effektive Datenrate weiterhin zur vorgesehenen Kommunikation passt.
-
-\osziplatzhalter{Protokollablauf mit Startbyte, ACK und Sonderbefehl\\CH1: Reader-RX, CH2: Reader-TX oder LED-Toggle-Ausgang}{Oszilloskopmessung der Protokollerweiterungen}{fig:esp32_messung_protokoll}
-Der gemessene Protokollablauf ist in \cref{fig:esp32_messung_protokoll} dargestellt.
+\oszibild{ESP_UART/TAG_TX_SPUle.JPG}{Modulierte Antwort des Tags an der Spule}{fig:esp32_messung_tag_spule}
+Die modulierte Antwort des Tags ist in \cref{fig:esp32_messung_tag_spule} dargestellt. Beim Umschalten des Tag-Signals verändert sich die Amplitude des Spulensignals deutlich. In der Mitte der Aufnahme ist eine starke Amplitudenerhöhung zu sehen, danach geht das Signal wieder auf den vorherigen Trägerzustand zurück.
 
 \subsection{Auswertung der Messungen}
-Die Messungen zeigen, dass die ESP32-Erweiterung schrittweise überprüft werden kann. Zuerst wird die reine Softwarekommunikation betrachtet, danach die Modulation, anschließ end die Versorgung des Tags und zuletzt die komplette Kommunikation über die RFID-ähnliche Strecke. Durch diese Reihenfolge lassen sich Fehler gut eingrenzen, weil jeder Teil der Übertragungskette einzeln beurteilt wird.
+Die Messungen zeigen, dass die ESP32-Erweiterung über die RFID-Schaltung grundsätzlich funktioniert. In beiden Übertragungsrichtungen bleiben die UART-Muster nach Demodulator und Signalaufbereitung erkennbar. Die ASK-Messung zeigt zusätzlich, dass das digitale Signal des Lesegeräts den Träger passend ein- und ausschaltet. Die Messung an der Tag-Spule zeigt, dass auch die Antwort des Tags als Modulation auf der Spulenseite sichtbar wird.
 
-Insgesamt bestätigen die Messungen den vorgesehenen Aufbau: Das Lesegerät erzeugt die Sendesignale, der Tag reagiert darauf mit einer Antwort, und die Zusatzfunktionen wie Startbyte, ACK und LED-Befehl können im Signalverlauf nachvollzogen werden.
+Insgesamt bestätigen die Messungen den vorgesehenen Aufbau: Das Lesegerät erzeugt die Sendesignale, die ASK-Stufe setzt das digitale Signal in ein moduliertes Trägersignal um, und der Tag reagiert darauf mit einer eigenen Antwort. Damit ist die grundlegende Kommunikation zwischen Lesegerät und Tag nachvollziehbar nachgewiesen.
+
+Bei der Bewertung der einzelnen Erweiterungen zeigte sich, dass Erweiterung 1 und Erweiterung 2 funktionieren. Erweiterung 3 konnte dagegen nicht erfolgreich umgesetzt werden und hat in der getesteten Form nicht funktioniert.

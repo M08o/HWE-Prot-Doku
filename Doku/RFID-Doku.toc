@@ -43,8 +43,6 @@
 \contentsline {subsection}{\numberline {8.7}Programmablauf als Flussdiagramm}{17}{subsection.86}%
 \contentsline {section}{\numberline {9}Messungen zur ESP32-Erweiterung}{19}{section.91}%
 \contentsline {subsection}{\numberline {9.1}Messung der UART-Signale}{19}{subsection.92}%
-\contentsline {subsection}{\numberline {9.2}Messung der ASK-Ansteuerung}{20}{subsection.95}%
-\contentsline {subsection}{\numberline {9.3}Messung der Tag-Antwort}{21}{subsection.98}%
-\contentsline {subsection}{\numberline {9.4}Messung der LED-Ausgänge}{21}{subsection.101}%
-\contentsline {subsection}{\numberline {9.5}Messung der Protokollerweiterungen}{21}{subsection.104}%
-\contentsline {subsection}{\numberline {9.6}Auswertung der Messungen}{22}{subsection.107}%
+\contentsline {subsection}{\numberline {9.2}Messung der ASK-Ansteuerung}{20}{subsection.97}%
+\contentsline {subsection}{\numberline {9.3}Messung der Tag-Antwort}{21}{subsection.100}%
+\contentsline {subsection}{\numberline {9.4}Auswertung der Messungen}{21}{subsection.103}%

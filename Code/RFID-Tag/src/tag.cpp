@@ -1,4 +1,4 @@
-﻿#include "tag.h"
+#include "tag.h"
 
 #include "config.h"
 #include "led.h"
@@ -13,6 +13,7 @@ enum class TagState : uint8_t {
     SendStart,
     FlushStartEcho,
     WaitForAck,
+    FlushPayloadEcho,
     WaitForByte,
     WaitBeforeReply
 };
@@ -84,26 +85,47 @@ void tagUpdate() {
                 triggerRxLed();
 
                 if (received == ACK_BYTE) {
+                    // Send first payload byte and flush its echo before processing replies
                     sendByte(nextPayload());
-                    s_state = TagState::WaitForByte;
+                    s_echoFlushUntilMs = millis() + START_ECHO_FLUSH_MS;
+                    s_state = TagState::FlushPayloadEcho;
                 }
             } else if (static_cast<int32_t>(millis() - s_deadlineMs) >= 0) {
                 resetHandshake();
             }
             break;
 
+        case TagState::FlushPayloadEcho:
+            // Drop echoed bytes from our own payload transmission
+            while (ReaderSerial.available() > 0) {
+                ReaderSerial.read();
+            }
+
+            if (static_cast<int32_t>(millis() - s_echoFlushUntilMs) >= 0) {
+                // Wait for a reply from reader
+                s_deadlineMs = millis() + ACK_TIMEOUT_MS;
+                s_state = TagState::WaitForByte;
+            }
+            break;
+
         case TagState::WaitForByte:
             if (manchesterReadByte(ReaderSerial, received)) {
                 triggerRxLed();
+                // Got a byte from reader — schedule reply after REPLY_DELAY_MS
                 s_deadlineMs = millis() + REPLY_DELAY_MS;
                 s_state = TagState::WaitBeforeReply;
+            } else if (static_cast<int32_t>(millis() - s_deadlineMs) >= 0) {
+                // no response in time; restart handshake
+                resetHandshake();
             }
             break;
 
         case TagState::WaitBeforeReply:
             if (static_cast<int32_t>(millis() - s_deadlineMs) >= 0) {
+                // Send next payload and flush its echo before accepting further replies
                 sendByte(nextPayload());
-                s_state = TagState::WaitForByte;
+                s_echoFlushUntilMs = millis() + START_ECHO_FLUSH_MS;
+                s_state = TagState::FlushPayloadEcho;
             }
             break;
     }

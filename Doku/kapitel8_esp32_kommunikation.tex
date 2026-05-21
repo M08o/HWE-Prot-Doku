@@ -1,4 +1,4 @@
-﻿\section{ESP32-Kommunikation und experimenteller Aufbau}
+\section{ESP32-Kommunikation und experimenteller Aufbau}
 Nach der Schaltungserweiterung wird festgelegt, welche Aufgaben die beiden ESP32 übernehmen sollen. Dazu werden zwei Programme vorgesehen: eines für das Lesegerät und eines für den Tag.
 
 \subsection{Aufgabe der beiden ESP32}
@@ -155,11 +155,13 @@ Der Programmablauf des Lesegeräts ist in \cref{fig:flussdiagramm_reader} darges
     \node[flowstep, below=of startok] (ack) {ACK \texttt{0xAC} senden und aktiven Modus starten};
     \node[flowstep, below=of ack] (waitbyte) {Auf Byte vom Tag warten};
     \node[flowdecision, below=of waitbyte] (timeout) {Timeout?};
-    \node[flowstep, right=of timeout] (reset) {Zurück in den Startzustand};
-    \node[flowdecision, below=of timeout] (toggle) {Byte = \texttt{0xF0}?};
+    \node[flowdecision, below=of timeout] (zerocount) {Drei \texttt{0x00} in Folge?};
+    \node[flowdecision, below=of zerocount] (toggle) {Byte = \texttt{0xF0}?};
     \node[flowstep, right=of toggle] (leds) {LED-Toggle-Modus umschalten};
     \node[flowstep, below=of toggle] (delay) {$3\,s$ Antwortpause abwarten};
-    \node[flowstep, below=of delay] (reply) {Antwortbyte aus der \texttt{0xB0}-Reihe senden};
+    \node[flowdecision, below=of delay] (replytimeout) {Timeout während Antwortpause?};
+    \node[flowstep, below=of replytimeout] (reply) {Antwortbyte aus der \texttt{0xB0}-Reihe senden};
+    \coordinate (readerloopright) at ($(leds.east)+(0.9,0)$);
 
     \draw[flowarrow] (start) -- (init);
     \draw[flowarrow] (init) -- (waitstart);
@@ -169,13 +171,16 @@ Der Programmablauf des Lesegeräts ist in \cref{fig:flussdiagramm_reader} darges
     \draw[flowarrow] (startok) -- node[right] {ja} (ack);
     \draw[flowarrow] (ack) -- (waitbyte);
     \draw[flowarrow] (waitbyte) -- (timeout);
-    \draw[flowarrow] (timeout) -- node[above] {ja} (reset);
-    \draw[flowarrow] (reset.east) -- ++(1.0,0) |- (waitstart.east);
-    \draw[flowarrow] (timeout) -- node[right] {nein} (toggle);
+    \draw[flowarrow] (timeout.east) -- node[pos=0.25, above] {ja} (readerloopright |- timeout.east) -- (readerloopright |- waitstart.east) -- (waitstart.east);
+    \draw[flowarrow] (timeout) -- node[right] {nein} (zerocount);
+    \draw[flowarrow] (zerocount.east) -- node[pos=0.25, above] {ja} (readerloopright |- zerocount.east) -- (readerloopright |- waitstart.east) -- (waitstart.east);
+    \draw[flowarrow] (zerocount) -- node[right] {nein} (toggle);
     \draw[flowarrow] (toggle) -- node[above] {ja} (leds);
     \draw[flowarrow] (leds) |- (delay);
     \draw[flowarrow] (toggle) -- node[right] {nein} (delay);
-    \draw[flowarrow] (delay) -- (reply);
+    \draw[flowarrow] (delay) -- (replytimeout);
+    \draw[flowarrow] (replytimeout.east) -- node[pos=0.25, above] {ja} (readerloopright |- replytimeout.east) -- (readerloopright |- waitstart.east) -- (waitstart.east);
+    \draw[flowarrow] (replytimeout) -- node[right] {nein} (reply);
     \draw[flowarrow] (reply.west) -- ++(-1.5,0) |- (waitbyte.west);
   \end{tikzpicture}
   }
@@ -193,27 +198,28 @@ Der Programmablauf des Lesegeräts ist in \cref{fig:flussdiagramm_reader} darges
     \node[flowstep, below=of sendstart] (flush) {Echo der eigenen Sendung kurz verwerfen};
     \node[flowstep, below=of flush] (waitack) {Auf ACK \texttt{0xAC} vom Lesegerät warten};
     \node[flowdecision, below=of waitack] (ackok) {ACK korrekt?};
-    \node[flowstep, right=of ackok] (restart) {Bei Timeout Handshake neu starten};
     \node[flowstep, below=of ackok] (payload) {Nutzbyte senden; jedes fünfte Byte ist \texttt{0xF0}};
-    \node[flowstep, below=of payload] (waitreader) {Auf Antwortbyte vom Lesegerät warten};
+    \node[flowstep, below=of payload] (flushpayload) {Echo des Nutzbytes kurz verwerfen};
+    \node[flowstep, below=of flushpayload] (waitreader) {Auf Antwortbyte vom Lesegerät warten};
     \node[flowdecision, below=of waitreader] (received) {Antwort empfangen?};
     \node[flowstep, below=of received] (delay) {$3\,s$ warten};
     \node[flowstep, below=of delay] (next) {Nächstes Nutzbyte oder Toggle-Befehl senden};
+    \coordinate (tagloopright) at ($(received.east)+(2.0,0)$);
 
     \draw[flowarrow] (start) -- (init);
     \draw[flowarrow] (init) -- (sendstart);
     \draw[flowarrow] (sendstart) -- (flush);
     \draw[flowarrow] (flush) -- (waitack);
     \draw[flowarrow] (waitack) -- (ackok);
-    \draw[flowarrow] (ackok) -- node[above] {nein} (restart);
-    \draw[flowarrow] (restart) |- (sendstart);
+    \draw[flowarrow] (ackok.east) -- node[above] {nein} (tagloopright |- ackok.east) -- (tagloopright |- sendstart.east) -- (sendstart.east);
     \draw[flowarrow] (ackok) -- node[right] {ja} (payload);
-    \draw[flowarrow] (payload) -- (waitreader);
+    \draw[flowarrow] (payload) -- (flushpayload);
+    \draw[flowarrow] (flushpayload) -- (waitreader);
     \draw[flowarrow] (waitreader) -- (received);
-    \draw[flowarrow] (received.east) -- ++(1.4,0) |- node[pos=0.25, right] {nein} (waitreader.east);
+    \draw[flowarrow] (received.east) -- node[above] {nein} (tagloopright |- received.east) -- (tagloopright |- sendstart.east) -- (sendstart.east);
     \draw[flowarrow] (received) -- node[right] {ja} (delay);
     \draw[flowarrow] (delay) -- (next);
-    \draw[flowarrow] (next.west) -- ++(-1.5,0) |- (waitreader.west);
+    \draw[flowarrow] (next.west) -- ++(-1.5,0) |- (flushpayload.west);
   \end{tikzpicture}
   }
   \caption{Flussdiagramm des ESP32-Tags}
